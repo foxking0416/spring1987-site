@@ -2,7 +2,18 @@ const DEF_BUILD_WORK_NAME = "工程階段";
 const DEF_BUILD_CASE_HTML_PATH = "../BuildCase/"
 const DEF_ABOUT_HTML_PATH = "../About/"
 
-const DEF_IMAGE_FILE_PATH = "../Image/"
+// GitHub Pages / 正式站：用絕對路徑，避免子路徑或區分大小寫導致圖片 404
+(function(){
+	var base = "";
+	if (typeof window !== "undefined" && window.location && (window.location.protocol === "http:" || window.location.protocol === "https:")) {
+		var p = window.location.pathname;
+		var i = p.indexOf("/Home");
+		base = (i >= 0 ? window.location.origin + p.substring(0, i) : "");
+		if (base && base.charAt(base.length - 1) !== "/") base += "/";
+	}
+	window.DEF_SITE_BASE = base;
+})();
+const DEF_IMAGE_FILE_PATH = (window.DEF_SITE_BASE || "") + (window.DEF_SITE_BASE ? "Image/" : "../Image/");
 const DEF_BANNER_PATH = DEF_IMAGE_FILE_PATH + "Home/Banner";
 const DEF_BUILD_CASE_PATH = DEF_IMAGE_FILE_PATH + "BuildCase/";
 
@@ -1040,30 +1051,32 @@ function CreateShowBuildCase2Box( nPageKey, kPageDataList, kShowBuildCaseBox ){
 	}
 
 	for ( let i = 0; i < kPageDataList.length; i++ ) {
-		const strImagePath = DEF_BUILD_CASE_PATH + kPageDataList[ i ].ImagePath + "/" + DEF_SHOW_FOLDER_NAME + "/" + kPageDataList[ i ].ShowImage;
-		const strMapImagePath = DEF_BUILD_CASE_PATH + kPageDataList[ i ].ImagePath + "/map.png"
+		var kItem = kPageDataList[ i ];
+		var showImg = Array.isArray( kItem.ShowImage ) ? kItem.ShowImage[ 0 ] : kItem.ShowImage;
+		const strImagePath = DEF_BUILD_CASE_PATH + kItem.ImagePath + "/" + DEF_SHOW_FOLDER_NAME + "/" + showImg;
+		const strMapImagePath = DEF_BUILD_CASE_PATH + kItem.ImagePath + "/map.png"
 
 		const kItemTemplate = $( kShowBuildCaseBox ).find( ".cItemTemplate" ).clone( true );
 		$( kItemTemplate ).attr( 'class', "cItemBase" );
 		$( kItemTemplate ).find( ".cImage" ).css( { "background-image" : "url(" + strImagePath + ")" } );
 		$( kItemTemplate ).find( "data" ).text( nPageKey.toString() + "_" + i.toString() );
-		$( kItemTemplate ).find( ".cDetaiInfo .cTitle h1" ).text( kPageDataList[ i ].Name );
+		$( kItemTemplate ).find( ".cDetaiInfo .cTitle h1" ).text( kItem.Name );
 		
-		if( kPageDataList[ i ].StartYear == DEF_BUILD_WORK_NAME ){
-			$( kItemTemplate ).find( ".cDetaiInfo .cStartYear detaiData" ).text( kPageDataList[ i ].StartYear );
+		if( kItem.StartYear == DEF_BUILD_WORK_NAME ){
+			$( kItemTemplate ).find( ".cDetaiInfo .cStartYear detaiData" ).text( kItem.StartYear );
 		}
 		else{
-			$( kItemTemplate ).find( ".cDetaiInfo .cStartYear detaiData" ).text( "民國" + kPageDataList[ i ].StartYear + "年" );
+			$( kItemTemplate ).find( ".cDetaiInfo .cStartYear detaiData" ).text( "民國" + kItem.StartYear + "年" );
 		}
-		if( kPageDataList[ i ].FinishYear == DEF_BUILD_WORK_NAME ){
-			$( kItemTemplate ).find( ".cDetaiInfo .cFinishYear detaiData" ).text( kPageDataList[ i ].FinishYear );
+		if( kItem.FinishYear == DEF_BUILD_WORK_NAME ){
+			$( kItemTemplate ).find( ".cDetaiInfo .cFinishYear detaiData" ).text( kItem.FinishYear );
 		}
 		else{
-			$( kItemTemplate ).find( ".cDetaiInfo .cFinishYear detaiData" ).text( "民國" + kPageDataList[ i ].FinishYear + "年" );
+			$( kItemTemplate ).find( ".cDetaiInfo .cFinishYear detaiData" ).text( "民國" + kItem.FinishYear + "年" );
 		}
 
-		$( kItemTemplate ).find( ".cDetaiInfo .cBoss detaiData" ).text( kPageDataList[ i ].Owner );
-		$( kItemTemplate ).find( ".cDetaiInfo .cDesign detaiData" ).text( kPageDataList[ i ].Design );
+		$( kItemTemplate ).find( ".cDetaiInfo .cBoss detaiData" ).text( kItem.Owner );
+		$( kItemTemplate ).find( ".cDetaiInfo .cDesign detaiData" ).text( kItem.Design );
 		$( kItemTemplate ).find( ".cDetaiInfo .cMap" ).css( { "background-image" : "url(" + strMapImagePath + ")" } );
 		$( kItemTemplate ).appendTo( kShowBuildCaseBox );
 
