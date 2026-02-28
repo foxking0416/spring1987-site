@@ -12,6 +12,7 @@ let m_WinningRecordDataMap = new Map();
 ConnectionButton();
 GetBannerData();
 GetWinningRecordData();
+InitAwardsLightBox();
 
 function ConnectionButton() {
     $( window ).resize(function() {
@@ -102,6 +103,72 @@ function ProcessWinningData( kDataList ){
     	kBigToSmallDataList.push( kSmallToBigDataList[i] );
     }
     ShowWinningRecord( kBigToSmallDataList );
+}
+
+// --- 得獎照片 Lightbox ---
+
+const kAwardsPhotoList = [
+    { path: "../Image/WinningRecord/Awards/向山金質獎.jpg" },
+    { path: "../Image/WinningRecord/Awards/2015國家卓越建設獎.jpg" },
+    { path: "../Image/WinningRecord/Awards/海洋之星國家卓越建設獎.jpg" },
+    { path: "../Image/WinningRecord/Awards/原生植物園全國景觀風貌改造大獎.jpg" },
+    { path: "../Image/WinningRecord/Awards/哨船頭園冶獎.jpg" },
+    { path: "../Image/WinningRecord/Awards/3號船渠園冶獎.jpg" },
+    { path: "../Image/WinningRecord/Awards/烏山頭石材長城獎.jpg" },
+    { path: "../Image/WinningRecord/Awards/烏山頭農田水利工程績優施工廠商.jpg" },
+    { path: "../Image/WinningRecord/Awards/阿里山優良農建獎.jpg" },
+    { path: "../Image/WinningRecord/Awards/向山優良環保工地.jpg" }
+];
+
+let m_nCurrentAwardIndex = 0;
+
+function InitAwardsLightBox() {
+    $( ".cAwardsPhotoBox .cPhotoCard" ).each( function( i ) {
+        $( this ).attr( "data-index", i );
+        $( this ).css( "cursor", "pointer" );
+        $( this ).click( function() {
+            ShowAwardLightBox( parseInt( $( this ).attr( "data-index" ) ) );
+        });
+    });
+
+    $( ".cPhotoLightBox .cMask" ).click( function() {
+        $( ".cPhotoLightBox" ).css( "display", "none" );
+    });
+
+    $( ".cPhotoLightBox .cEscButton" ).click( function() {
+        $( ".cPhotoLightBox" ).css( "display", "none" );
+    });
+
+    $( ".cPhotoLightBox .cControlBox .cLastButton" ).click( function() {
+        const nPrev = ( m_nCurrentAwardIndex - 1 + kAwardsPhotoList.length ) % kAwardsPhotoList.length;
+        ShowAwardLightBox( nPrev );
+    });
+
+    $( ".cPhotoLightBox .cControlBox .cNextButton" ).click( function() {
+        const nNext = ( m_nCurrentAwardIndex + 1 ) % kAwardsPhotoList.length;
+        ShowAwardLightBox( nNext );
+    });
+}
+
+function ShowAwardLightBox( nIndex ) {
+    m_nCurrentAwardIndex = nIndex;
+    const strImagePath = kAwardsPhotoList[ nIndex ].path;
+
+    $( ".cPhotoLightBox" ).css( "display", "flex" );
+    $( ".cPhotoLightBox .cImage" ).css( { "display": "block", "background-image": "url(" + strImagePath + ")" } );
+    $( ".cPhotoLightBox .cImage_360" ).css( "display", "none" );
+    $( ".cPhotoLightBox .cDescription" ).css( "display", "none" );
+    $( ".cPhotoLightBox .cInfoButton" ).css( "display", "none" );
+
+    const imgTemp = new Image();
+    imgTemp.onload = function() {
+        if ( this.height > this.width ) {
+            $( ".cPhotoLightBox .cImageBox" ).css( { "width": "calc( 100vw * 0.27 )", "height": "41.25vw" } );
+        } else {
+            $( ".cPhotoLightBox .cImageBox" ).css( { "width": "55%", "height": "calc( 100vw * 0.36 )" } );
+        }
+    };
+    imgTemp.src = strImagePath;
 }
 
 function ShowWinningRecord( kDataByYearList ){

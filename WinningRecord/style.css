@@ -346,6 +346,216 @@ html, body {
   }
 }
 
+.cAwardsPhotoBox {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto calc( 100vw * 0.03 ) auto;
+}
+.cAwardsPhotoBox .cPhotoGrid {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc( 100vw * 0.015 );
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+.cAwardsPhotoBox .cPhotoGrid .cPhotoCard {
+  width: calc( (100% - calc( 100vw * 0.015 ) * 4) / 5 );
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+@media only screen and (max-width: 1040px) {
+  .cAwardsPhotoBox {
+    width: 90%;
+  }
+  .cAwardsPhotoBox .cPhotoGrid {
+    gap: calc( 100vw * 0.03 );
+  }
+  .cAwardsPhotoBox .cPhotoGrid .cPhotoCard {
+    width: calc( (100% - calc( 100vw * 0.03 )) / 2 );
+  }
+}
+.cAwardsPhotoBox .cPhotoGrid .cPhotoCard:hover {
+  box-shadow: 0 6px 20px rgba(0, 138, 58, 0.3);
+  transform: translateY(-3px);
+}
+.cAwardsPhotoBox .cPhotoGrid .cPhotoCard .cPhoto {
+  width: 100%;
+  padding-top: 72%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.cAwardsPhotoBox .cPhotoGrid .cPhotoCard .cCaption {
+  background-color: #008a3a;
+  color: #fff;
+  font-size: calc( 100vw * 0.009 );
+  font-weight: 600;
+  line-height: 1.4;
+  padding: calc( 100vw * 0.007 ) calc( 100vw * 0.008 );
+  text-align: center;
+  -webkit-box-flex: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+@media only screen and (max-width: 1040px) {
+  .cAwardsPhotoBox .cPhotoGrid .cPhotoCard .cCaption {
+    font-size: calc( 100vw * 0.028 );
+    padding: calc( 100vw * 0.02 ) calc( 100vw * 0.02 );
+  }
+}
+
+.cPhotoLightBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 3;
+  display: none;
+}
+.cPhotoLightBox .cMask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.cPhotoLightBox .cImageBox {
+  position: relative;
+  width: 55%;
+  height: calc( 100vw * 0.36 );
+  background-color: #fff;
+}
+@media only screen and (max-width: 1040px) {
+  .cPhotoLightBox .cImageBox {
+    width: 99%;
+    height: calc( 100vw * 0.66 );
+  }
+}
+.cPhotoLightBox .cImageBox .cImage, .cPhotoLightBox .cImageBox .cImage_360 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.cPhotoLightBox .cImageBox .cDescription {
+  position: absolute;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 4;
+  color: #FFF;
+  border: 3px solid #FFF;
+}
+.cPhotoLightBox .cImageBox .cDescription pre {
+  padding: calc( 100vw * 0.07 );
+  font-size: calc( 100vw * 0.015 );
+  line-height: calc( 100vw * 0.03 );
+  white-space: pre-wrap;
+}
+.cPhotoLightBox .cImageBox .cInfoButton, .cPhotoLightBox .cImageBox .cEscButton {
+  position: absolute;
+  top: calc( 100vw * 0.03 );
+  width: calc( 100vw * 0.02 );
+  height: calc( 100vw * 0.02 );
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: calc( 100vw * 0.015 );
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+@media only screen and (max-width: 1040px) {
+  .cPhotoLightBox .cImageBox .cInfoButton, .cPhotoLightBox .cImageBox .cEscButton {
+    width: calc( 100vw * 0.06 );
+    height: calc( 100vw * 0.06 );
+  }
+}
+.cPhotoLightBox .cImageBox .cInfoButton:hover, .cPhotoLightBox .cImageBox .cEscButton:hover {
+  opacity: 0.7;
+}
+.cPhotoLightBox .cImageBox .cInfoButton {
+  left: calc( 100vw * 0.03 );
+  background-color: #fff;
+  border-radius: calc( 100vw * 0.02 );
+  color: #008a3a;
+  display: none;
+}
+.cPhotoLightBox .cImageBox .cEscButton {
+  right: calc( 100vw * 0.03 );
+  font-size: calc( 100vw * 0.03 );
+  color: #008a3a;
+}
+@media only screen and (max-width: 1040px) {
+  .cPhotoLightBox .cImageBox .cEscButton {
+    font-size: calc( 100vw * 0.09 );
+  }
+}
+.cPhotoLightBox .cImageBox .cControlBox {
+  position: absolute;
+  width: 100%;
+  height: calc( 100vw * 0.022 );
+  bottom: calc( 100vw * 0.01 );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+@media only screen and (max-width: 1040px) {
+  .cPhotoLightBox .cImageBox .cControlBox {
+    bottom: calc( 100vw * 0.03 );
+  }
+}
+.cPhotoLightBox .cImageBox .cControlBox .cLastButton, .cPhotoLightBox .cImageBox .cControlBox .cNextButton {
+  width: calc( 100vw * 0.022 );
+  height: calc( 100vw * 0.022 );
+  margin-left: calc( 100vw * 0.005 );
+  margin-right: calc( 100vw * 0.005 );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #008a3a;
+  color: #fff;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+@media only screen and (max-width: 1040px) {
+  .cPhotoLightBox .cImageBox .cControlBox .cLastButton, .cPhotoLightBox .cImageBox .cControlBox .cNextButton {
+    width: calc( 100vw * 0.066 );
+    height: calc( 100vw * 0.066 );
+  }
+}
+.cPhotoLightBox .cImageBox .cControlBox .cLastButton:hover, .cPhotoLightBox .cImageBox .cControlBox .cNextButton:hover {
+  opacity: 0.7;
+}
+
 .cFooterBox {
   margin-top: 0 !important;
 }
