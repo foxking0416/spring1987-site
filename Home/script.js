@@ -13,7 +13,7 @@ const DEF_DATABASE_PROJECT_PATH = DEF_DATABASE_PATH + "Project.json";
 const DEF_BUILD_CASE_BIOLD_TYPE_10_1_ICON = DEF_IMAGE_FILE_PATH + "Icon/BuildCaseSystem/BuildType/10_1.png"
 
 const DEF_ALL = "all";
-const DEF_SHOW_FOLDER_NAME = "show";
+const DEF_SHOW_FOLDER_NAME = "Show";
 
 const DEF_URL_KEY = "Info";
 const DEF_URL_VAULE_BUILD_CASE = "BuildCase";
@@ -890,6 +890,13 @@ function ProcessAllBuildData( kDataList ){
 }
 
 function GetAllBuildData(){
+	// 優先使用 script 標籤預載的資料（支援直接開檔 file:// 或 AJAX 被阻擋時）
+	if ( typeof window.PROJECT_JSON_DATA !== "undefined" && window.PROJECT_JSON_DATA && window.PROJECT_JSON_DATA.ProjectList ) {
+		ProcessAllBuildData( window.PROJECT_JSON_DATA.ProjectList );
+		ShowBuildData( false );
+		document.dispatchEvent( eventReadFileFinish );
+		return;
+	}
 	$.ajax({
 		url: DEF_DATABASE_PROJECT_PATH,
 		method: "post",
