@@ -889,10 +889,41 @@ function ProcessAllBuildData( kDataList ){
 
 }
 
+function UpdateAreaButtonVisibility(){
+	// 隱藏沒有建案的縣市按鈕
+	const kAreaBaseList = $( ".cSubSearchBox_Area .cAreaBase" );
+	for ( let i = 0; i < kAreaBaseList.length; i++ ) {
+		const strArea = $( kAreaBaseList[ i ] ).find( "data" ).text();
+		if ( !m_kBuild_PositionMap.has( strArea ) ) {
+			$( kAreaBaseList[ i ] ).hide();
+		}
+	}
+
+	// 若整個大區域底下的縣市都被隱藏，則隱藏該大區域按鈕
+	const kRegionList = $( ".cSubSearchBox_Area .cSubButtonBase" );
+	for ( let i = 0; i < kRegionList.length; i++ ) {
+		const kRegion = kRegionList[ i ];
+		const strRegionName = $( kRegion ).find( ".cArea_Button data" ).text();
+		if ( strRegionName === eMainPositionEnum.All ) continue;
+		if ( $( kRegion ).find( ".cAreaBase:visible" ).length === 0 ) {
+			$( kRegion ).hide();
+		}
+	}
+
+	// 同步更新手機版下拉選單
+	$( "select[name='SubSearchBox_Area'] option" ).each( function() {
+		const val = $( this ).val();
+		if ( val !== "all" && !m_kBuild_PositionMap.has( val ) ) {
+			$( this ).remove();
+		}
+	});
+}
+
 function GetAllBuildData(){
 	// 優先使用 script 標籤預載的資料（支援直接開檔 file:// 或 AJAX 被阻擋時）
 	if ( typeof window.PROJECT_JSON_DATA !== "undefined" && window.PROJECT_JSON_DATA && window.PROJECT_JSON_DATA.ProjectList ) {
 		ProcessAllBuildData( window.PROJECT_JSON_DATA.ProjectList );
+		UpdateAreaButtonVisibility();
 		ShowBuildData( false );
 		document.dispatchEvent( eventReadFileFinish );
 		return;
@@ -904,6 +935,7 @@ function GetAllBuildData(){
 		dataType: "json",
 		success: function(res){
 			ProcessAllBuildData( res.ProjectList );
+			UpdateAreaButtonVisibility();
 			ShowBuildData( false );
 			document.dispatchEvent( eventReadFileFinish );
 			return;
