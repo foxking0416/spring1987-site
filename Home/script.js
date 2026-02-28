@@ -890,23 +890,33 @@ function ProcessAllBuildData( kDataList ){
 }
 
 function UpdateAreaButtonVisibility(){
-	// 隱藏沒有建案的縣市按鈕
+	// 隱藏沒有建案的縣市按鈕（直接設定 inline style，不受父層 display:none 影響）
 	const kAreaBaseList = $( ".cSubSearchBox_Area .cAreaBase" );
 	for ( let i = 0; i < kAreaBaseList.length; i++ ) {
 		const strArea = $( kAreaBaseList[ i ] ).find( "data" ).text();
 		if ( !m_kBuild_PositionMap.has( strArea ) ) {
-			$( kAreaBaseList[ i ] ).hide();
+			kAreaBaseList[ i ].style.display = "none";
 		}
 	}
 
 	// 若整個大區域底下的縣市都被隱藏，則隱藏該大區域按鈕
+	// 用 element.style.display 檢查 inline style，避免受父層隱藏影響
 	const kRegionList = $( ".cSubSearchBox_Area .cSubButtonBase" );
 	for ( let i = 0; i < kRegionList.length; i++ ) {
 		const kRegion = kRegionList[ i ];
 		const strRegionName = $( kRegion ).find( ".cArea_Button data" ).text();
 		if ( strRegionName === eMainPositionEnum.All ) continue;
-		if ( $( kRegion ).find( ".cAreaBase:visible" ).length === 0 ) {
-			$( kRegion ).hide();
+		const kAllAreaBases = $( kRegion ).find( ".cAreaBase" );
+		if ( kAllAreaBases.length === 0 ) continue;
+		let bAllHidden = true;
+		for ( let j = 0; j < kAllAreaBases.length; j++ ) {
+			if ( kAllAreaBases[ j ].style.display !== "none" ) {
+				bAllHidden = false;
+				break;
+			}
+		}
+		if ( bAllHidden ) {
+			kRegion.style.display = "none";
 		}
 	}
 
