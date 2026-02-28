@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StockKeeper - 火狐資訊</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- <link rel="icon" href="FoxInfo_Big.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="FoxInfo_Small.png" type="image/png" sizes="16x16" > -->
+  <link rel="icon" href="FoxInfo.svg" type="image/svg+xml">
+  
+  <!-- Optional: Apple Touch Icon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="FoxInfo_Big.png">
+  
+  <!-- Optional: fallback -->
+  <link rel="shortcut icon" href="FoxInfo.ico">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <img src="images/FoxInfo_Big.png" alt="火狐資訊 Logo" class="logo">
+      <h1>火狐資訊 - StockKeeper</h1>
+      <button class="hamburger-menu-toggle" aria-label="Toggle navigation">
+        <span class="hamburger-icon"></span>
+        <span class="hamburger-icon"></span>
+        <span class="hamburger-icon"></span>
+      </button>
+      
+      <nav id="main-nav">
+        <ul>
+          <li><a href="#intro">簡介</a></li>
+          <li><a href="#features">程式特點</a></li>
+          <li><a href="#tutorials">教學</a></li>
+          <li><a href="#download">下載</a></li>
+          <li><a href="/updates/release_index.html">更新紀錄</a></li>
+          <li><a href="#contact">聯絡方式</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="intro" class="hero-section">
+      <div class="container">
+        <h2>您的專屬股票經理人，輕鬆管理您的股票投資</h2>
+        <p>這是一個簡單易用的股票交易記帳程式，專為投資者打造。</p>
+        <p>精心設計的 UI 及多項自動帶入的功能，讓使用過程更加簡單直覺，無論是新手還是經驗豐富的投資者，都能輕鬆上手。</p>
+        <p>不再需要自己建立繁瑣的 Excel 表格公式，不再需要自己查詢每年的配股配息，就算公司減資或分割也不用擔心，確保你的投資明細一目了然。</p>
+        <a href="#download" class="button primary-button">立即下載 StockKeeper</a>
+      </div>
+    </section>
+
+    <section id="features" class="features-section">
+      <div class="container">
+        <h2>StockKeeper 程式特點</h2>
+        <div class="carousel-container">
+          <div class="carousel-track">
+            <div class="feature-item">
+              <h3>自動計算費用</h3>
+              <p>自動計算所有的手續費及交易稅。自動區分普通股票交易稅0.3%，普通ETF交易稅0.1%，債券ETF交易稅0%。</p>
+            </div>
+            <div class="feature-item">
+              <h3>自動帶入股利</h3>
+              <p>自動帶入每年的股利資訊，精準自動帶入多位小數點數字，不再有小數誤差。</p>
+            </div>
+            <div class="feature-item">
+              <h3>精準補充保費</h3>
+              <p>自動計算補充保費，區分「盈餘分配」及「法定盈餘公積」，精準計算股利補充保費。</p>
+            </div>
+            <div class="feature-item">
+              <h3>自動帶入減資</h3>
+              <p>自動抓取公告減資資料，並區分現金減資與虧損減資，投資紀錄不間斷。</p>
+            </div>
+            <div class="feature-item">
+              <h3>自動帶入分割</h3>
+              <p>自動抓取公告分割/合併資料，調整庫存股數，確保持股數據正確無誤。</p>
+            </div>
+            <div class="feature-item">
+              <h3>年化報酬率</h3>
+              <p>即時顯示個股及總投資平均年化報酬率，隨時掌握您的投資績效。</p>
+            </div>
+            <div class="feature-item">
+              <h3>彈性交易設定</h3>
+              <p>自訂各帳號交易折數、小數進位方式，符合您的個人化交易習慣。</p>
+            </div>
+          </div>
+          <button class="carousel-button prev">&lt;</button>
+          <button class="carousel-button next">&gt;</button>
+        </div>
+		<div class="carousel-indicators">
+        </div>
+      </div>
+    </section>
+
+<section id="latest-release" class="latest-release-section">
+  <div class="container">
+    <h2>最新版本更新</h2>
+
+    <div class="latest-release-card">
+      <div class="latest-release-info">
+        <span class="release-version">v2.8.0</span>
+        <span class="release-date">2026 / 01</span>
+      </div>
+
+      <h3>功能補強 & 易用性提升</h3>
+
+      <p>
+        本次更新重點包含
+        <span class="highlight-field">交易彈性調整</span>、
+        <span class="highlight-field">UI 操作優化</span>，
+        並修正多項使用者回報的計算問題。
+      </p>
+
+      <div class="latest-release-actions">
+        <a href="/updates/releases/release-v2.8.0.html" class="button primary-button">
+          查看完整更新內容
+        </a>
+        <a href="/download/latest.html" class="button">
+          立即下載
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <section id="tutorials" class="tutorials-section">
+      <div class="container">
+        <h2>學習 StockKeeper 使用技巧</h2>
+        <div class="tutorial-grid">
+          <a href="tutorials/tutorial_如何調整欄位顯示及順序.html" class="tutorial-card">
+            <img src="images/Tutorial/如何調整欄位顯示及順序/Main.png" alt="如何調整欄位顯示及順序">
+            <h3>如何調整欄位顯示及順序</h3>
+            <p>自訂您的顯示介面，自由設定對您最重要的資訊。</p>
+          </a>
+          <a href="tutorials/tutorial_交易資料顯示方向.html" class="tutorial-card">
+            <img src="images/Tutorial/交易資料顯示方向/Main.png" alt="如何調整交易欄位顯示方向">
+            <h3>如何調整交易欄位顯示方向</h3>
+            <p>自由調整顯示方向，讓操作更符合您的習慣。</p>
+          </a>
+          <a href="tutorials/tutorial_防呆功能.html" class="tutorial-card">
+            <img src="images/Tutorial/防呆功能/Main.png" alt="防呆功能">
+            <h3>防呆功能</h3>
+            <p>檢查庫存資料是否有任何不合理之處。</p>
+          </a>
+          <a href="tutorials/tutorial_如何匯入Excel對帳單.html" class="tutorial-card">
+            <img src="images/Tutorial/如何匯入Excel對帳單/Main.png" alt="防呆功能">
+            <h3>如何匯入Excel對帳單</h3>
+            <p>匯入劵商提供的對帳單，一次將歷史交易全部匯入進系統中。</p>
+          </a>
+          <a href="tutorials/tutorial_自訂股票代碼及名稱.html" class="tutorial-card">
+            <img src="images/Tutorial/自訂股票代碼及名稱/Main.png" alt="自訂股票代碼及名稱設定">
+            <h3>自訂股票代碼及名稱</h3>
+            <p>根據自訂股票代碼的設定，程式可以自訂未公開發行或已下市的公司的股票代碼及名稱。</p>
+          </a>
+          <a href="tutorials/tutorial_併購設定教學.html" class="tutorial-card">
+            <img src="images/Tutorial/併購設定/Main.png" alt="併購設定">
+            <h3>併購設定</h3>
+            <p>根據併購設定，程式會自動將原有股票依照換股條件或是現金收購價進行調整。</p>
+          </a>
+          <a href="tutorials/tutorial_設定暫存檔位置.html" class="tutorial-card">
+            <img src="images/Tutorial/設定暫存檔位置/Main.png" alt="設定暫存檔位置">
+            <h3>設定暫存檔位置</h3>
+            <p>使用者可自由設定交易資料及UI檔案儲存路徑。</p>
+          </a>
+          <a href="tutorials/tutorial_重新下載資料.html" class="tutorial-card">
+            <img src="images/Tutorial/重新下載資料/Main.png" alt="重新下載資料">
+            <h3>重新下載資料</h3>
+            <p>若資料有誤或遺失，可透過此功能重新下載最新資料。</p>
+          </a>
+          <a href="tutorials/tutorial_各項計算設定.html" class="tutorial-card">
+            <img src="images/Tutorial/各項計算設定/Main.png" alt="各項計算設定">
+            <h3>各項計算設定</h3>
+            <p>進階設定手續費、小數進位方式、股利匯費等各種計算方式。</p>
+          </a>
+          <!-- <a href="tutorials/tutorial2.html" class="tutorial-card">
+            <img src="images/tutorial_placeholder2.png" alt="如何調整欄位顯示及順序">
+            <h3>如何調整欄位顯示及順序</h3>
+            <p>自訂您的顯示介面，讓操作更符合您的習慣。</p>
+          </a> -->
+        </div>
+        <p class="more-tutorials">更多教學將陸續推出，敬請期待！</p>
+      </div>
+    </section>
+
+    <section id="download" class="download-section">
+      <div class="container">
+        <h2>立即下載 StockKeeper_v2.8.0</h2>
+        <div class="download-options">
+          <div class="download-item">
+            <div class="download-icon-wrapper">
+              <i class="fa-brands fa-windows"></i></div>
+            <p>支援 Windows 10 / 11</p>
+            <a href="http://firefoxinfo.com/download/latest.html"
+              class="button download-button" download>下載 Windows 版</a>
+          </div>
+          <div class="download-item coming-soon">
+            <div class="download-icon-wrapper">
+              <i class="fa-brands fa-apple"></i>
+              <i class="fa-brands fa-android"></i></div>
+            <p>iOS / Android</p>
+            <span class="button disabled-button">開發中...</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+	<section id="contact" class="contact-section">
+	  <div class="container">
+		<h2>聯絡我們</h2>
+		<p>有任何問題或建議，歡迎透過以下方式聯繫我們：</p>
+		<div class="contact-links">
+		  <img src="images/FoxInfo_Big.png" alt="公司 Logo" class="contact-logo"> 
+		  <a href="https://www.facebook.com/profile.php?id=61572408166979" target="_blank" class="button social-button"><i class="fa-brands fa-facebook"></i>Facebook 粉絲頁</a>
+		  <a href="mailto:foxking0416@gmail.com" class="button social-button">Email：foxking0416@gmail.com</a>
+		  </div>
+	  </div>
+	</section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 火狐資訊. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
