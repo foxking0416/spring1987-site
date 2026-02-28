@@ -1,0 +1,775 @@
+/*--- Debug ---*/
+//$urlImagePath : "https://www.bst.idv.tw:8081/SPR/Image/"
+/*--- Debug End ---*/
+
+/*--- Release --- */
+$urlImagePath : "../Image/"
+/*--- Release End --- */
+
+$urlImageBanner_0 : $urlImagePath + "Home/Banner/0.jpg"
+$urlImageBanner_1 : $urlImagePath + "Home/Banner/0.jpg"
+$urlImageBanner_2 : $urlImagePath + "Home/Banner/0.jpg"
+
+$urlImageAbout : $urlImagePath + "Home/About/0.jpg"
+
+$urlImageBuildCaseSystem_BuildType_0_0: $urlImagePath + "Icon/BuildCaseSystem/BuildType/0_0.png"
+$urlImageBuildCaseSystem_BuildType_0_1: $urlImagePath + "Icon/BuildCaseSystem/BuildType/0_1.png"
+$urlImageBuildCaseSystem_BuildType_1_0: $urlImagePath + "Icon/BuildCaseSystem/BuildType/1_0.png"
+$urlImageBuildCaseSystem_BuildType_1_1: $urlImagePath + "Icon/BuildCaseSystem/BuildType/1_1.png"
+$urlImageBuildCaseSystem_BuildType_2_0: $urlImagePath + "Icon/BuildCaseSystem/BuildType/2_0.png"
+$urlImageBuildCaseSystem_BuildType_2_1: $urlImagePath + "Icon/BuildCaseSystem/BuildType/2_1.png"
+$urlImageBuildCaseSystem_BuildType_3_0: $urlImagePath + "Icon/BuildCaseSystem/BuildType/3_0.png"
+$urlImageBuildCaseSystem_BuildType_3_1: $urlImagePath + "Icon/BuildCaseSystem/BuildType/3_1.png"
+$urlImageBuildCaseSystem_BuildType_4_0: $urlImagePath + "Icon/BuildCaseSystem/BuildType/4_0.png"
+$urlImageBuildCaseSystem_BuildType_4_1: $urlImagePath + "Icon/BuildCaseSystem/BuildType/4_1.png"
+$urlImageBuildCaseSystem_BuildType_5_0: $urlImagePath + "Icon/BuildCaseSystem/BuildType/5_0.png"
+$urlImageBuildCaseSystem_BuildType_5_1: $urlImagePath + "Icon/BuildCaseSystem/BuildType/5_1.png"
+$urlImageBuildCaseSystem_BuildType_6_0: $urlImagePath + "Icon/BuildCaseSystem/BuildType/6_0.png"
+$urlImageBuildCaseSystem_BuildType_6_1: $urlImagePath + "Icon/BuildCaseSystem/BuildType/6_1.png"
+$urlImageBuildCaseSystem_BuildType_7_0: $urlImagePath + "Icon/BuildCaseSystem/BuildType/7_0.png"
+$urlImageBuildCaseSystem_BuildType_7_1: $urlImagePath + "Icon/BuildCaseSystem/BuildType/7_1.png"
+$urlImageBuildCaseSystem_BuildType_8_0: $urlImagePath + "Icon/BuildCaseSystem/BuildType/8_0.png"
+$urlImageBuildCaseSystem_BuildType_8_1: $urlImagePath + "Icon/BuildCaseSystem/BuildType/8_1.png"
+$urlImageBuildCaseSystem_BuildType_9_0: $urlImagePath + "Icon/BuildCaseSystem/BuildType/9_0.png"
+$urlImageBuildCaseSystem_BuildType_9_1: $urlImagePath + "Icon/BuildCaseSystem/BuildType/9_1.png"
+$urlImageBuildCaseSystem_BuildType_10_0: $urlImagePath + "Icon/BuildCaseSystem/BuildType/10_0.png"
+$urlImageBuildCaseSystem_BuildType_10_1: $urlImagePath + "Icon/BuildCaseSystem/BuildType/10_1.png"
+
+$urlImageBuildCaseSystem_Time_0_0: $urlImagePath + "Icon/BuildCaseSystem/Time/0_0.svg"
+$urlImageBuildCaseSystem_Time_0_1: $urlImagePath + "Icon/BuildCaseSystem/Time/0_1.svg"
+$urlImageBuildCaseSystem_Time_1_0: $urlImagePath + "Icon/BuildCaseSystem/Time/1_0.svg"
+$urlImageBuildCaseSystem_Time_1_1: $urlImagePath + "Icon/BuildCaseSystem/Time/1_1.svg"
+$urlImageBuildCaseSystem_Time_2_0: $urlImagePath + "Icon/BuildCaseSystem/Time/2_0.svg"
+$urlImageBuildCaseSystem_Time_2_1: $urlImagePath + "Icon/BuildCaseSystem/Time/2_1.svg"
+
+$urlImageBuildCaseSystem_Money_0_0: $urlImagePath + "Icon/BuildCaseSystem/Money/0_0.svg"
+$urlImageBuildCaseSystem_Money_0_1: $urlImagePath + "Icon/BuildCaseSystem/Money/0_1.svg"
+$urlImageBuildCaseSystem_Money_1_0: $urlImagePath + "Icon/BuildCaseSystem/Money/1_0.svg"
+$urlImageBuildCaseSystem_Money_1_1: $urlImagePath + "Icon/BuildCaseSystem/Money/1_1.svg"
+$urlImageBuildCaseSystem_Money_2_0: $urlImagePath + "Icon/BuildCaseSystem/Money/2_0.svg"
+$urlImageBuildCaseSystem_Money_2_1: $urlImagePath + "Icon/BuildCaseSystem/Money/2_1.svg"
+$urlImageBuildCaseSystem_Money_3_0: $urlImagePath + "Icon/BuildCaseSystem/Money/3_0.svg"
+$urlImageBuildCaseSystem_Money_3_1: $urlImagePath + "Icon/BuildCaseSystem/Money/3_1.svg"
+$urlImageBuildCaseSystem_Money_4_0: $urlImagePath + "Icon/BuildCaseSystem/Money/4_0.svg"
+$urlImageBuildCaseSystem_Money_4_1: $urlImagePath + "Icon/BuildCaseSystem/Money/4_1.svg"
+$urlImageBuildCaseSystem_Money_5_0: $urlImagePath + "Icon/BuildCaseSystem/Money/5_0.svg"
+$urlImageBuildCaseSystem_Money_5_1: $urlImagePath + "Icon/BuildCaseSystem/Money/5_1.svg"
+
+$urlImageBuildCaseSystem_Wonderful_0_0: $urlImagePath + "Icon/BuildCaseSystem/Wonderful/0_0.svg"
+
+$urlImageBuildCaseSystem_DemoCaseShow: $urlImagePath + "BuildCase/0_DemoCase/Show/0.jpg"
+$urlImageBuildCaseSystem_DemoCaseMap: $urlImagePath + "BuildCase/0_DemoCase/map.png"
+
+$colorDarkGray: #646464
+$colorGray_1: #a0a0a0
+$colorGray_2: #f4f4f4
+$colorGray_3: #4d4d4d
+$colorSprGreen_1: #008a3a
+$colorSprGreen_2: #dddda7
+
+
+@mixin fRwdControl($point)
+  @if $point == "pc"
+    @media only screen and (max-width: 1920px)
+      @content 
+  @else if $point == "pad" 
+    @media only screen and (max-width: 1040px)  
+      @content 
+  @else if $point == "mobile" 
+    @media only screen and (max-width: 320px)   
+      @content
+
+@mixin fCenterAttributes( $justifyContent:initial, $alignItems:center )
+  display: flex
+  align-items: $alignItems
+  justify-content: $justifyContent
+  
+@mixin fButtonAttributes( $w, $h, $radius, $fontSize, $color, $backgroundColor, $borderColor )
+  width: $w
+  height: $h
+  background-color: $backgroundColor
+  border: 1px solid $borderColor
+  border-radius: $radius
+  font-size: $fontSize
+  font-weight: bold
+  color: $color
+  user-select: none
+  cursor: pointer
+  &:hover
+    opacity: 0.7
+  
+@mixin fBanneImagerAttributes($url,$width:100vw)
+  width: $width
+  background-size: cover
+  background-repeat: no-repeat
+  background-image: url( $url )
+  border: 0px solid #000
+  padding: 0px
+  margin: 0px
+
+*
+  font-family: '微軟正黑體'
+
+html, body
+  margin: 0
+  padding: 0
+  
+.cTopBox
+  height: calc( 100vw * 0.35 )
+  width: 100%
+  +fRwdControl( "pad" )
+    height: calc( 100vw * 0.65 )
+  .cBanner
+    width: 100%
+    height: calc( 100vw * 0.3 )
+    position: absolute
+    overflow: hidden
+    top: calc( 100vw * 0.05 ) // 100px
+    +fRwdControl( "pad" )
+      height: calc( 100vw * 0.6 )
+    .cImage
+      position: absolute
+      width: calc( 100vw * 3 )
+      height: 100%
+      display: flex
+      left: -100vw
+      .cPreImage
+        +fBanneImagerAttributes( $urlImageBanner_0 )
+      .cMainImage
+        +fBanneImagerAttributes( $urlImageBanner_1 )
+      .cNextImage
+        +fBanneImagerAttributes( $urlImageBanner_2 )
+    .cImageControl
+      position: absolute
+      z-index: 1
+      bottom: calc( 100vw * 0.04 )
+      right: calc( 100vw * 0.09 )
+      +fRwdControl( "pad" )
+        bottom: calc( 100vw * 0.08 )
+      +fCenterAttributes( center )
+      .cPreButton,.cNextButton 
+        +fButtonAttributes( calc( 100vw * 0.025 ), calc( 100vw * 0.025 ), 0px, calc( 100vw * 0.01 ),#fff, $colorGray_1, $colorGray_1)
+        +fCenterAttributes( center )
+        +fRwdControl( "pad" )
+          width: calc( 100vw * 0.075 )
+          height: calc( 100vw * 0.075 )
+          font-size: calc( 100vw * 0.03 )
+      .cPreButton
+        margin-right: calc( 100vw * 0.002 )
+        +fRwdControl( "pad" )
+          margin-right: calc( 100vw * 0.012 )
+      .cNextButton
+        margin-left: calc( 100vw * 0.002 )
+        +fRwdControl( "pad" )
+          margin-left: calc( 100vw * 0.012 )
+    .cInfoBanner
+      position: absolute
+      z-index: 1
+      color: #fff
+      height: calc( 100vw * 0.015 )
+      overflow: hidden
+      +fCenterAttributes( center, flex-end )
+      flex-direction: column
+      bottom: calc( 100vw * 0.016 )
+      right: calc( 100vw * 0.09 )
+      font-size: calc( 100vw * 0.012 )
+      +fRwdControl( "pad" )
+        font-size: calc( 100vw * 0.030 )
+        height: calc( 100vw * 0.045 )
+      .cInfo
+        +fCenterAttributes( center, flex-end )
+        flex-direction: column
+        position: relative
+        top: calc( 0vw * 0.015 )
+        .cPreInfo,.cMainInfo,.cNextInfo
+          line-height: calc( 100vw * 0.014 )
+          height: calc( 100vw * 0.015 )
+          +fRwdControl( "pad" )
+            line-height: calc( 100vw * 0.042 )
+            height: calc( 100vw * 0.045 )
+      
+.cOriginBox
+  display: flex
+  width: 100%
+  height: calc( 100vw * 0.27 )
+  background-color: $colorSprGreen_2
+  +fRwdControl( "pad" )
+    //+fCenterAttributes( center )
+    flex-direction: column
+    height: calc( 100vw * 1.2 )
+    padding-top: calc( 100vw * 0.06 )
+  .cLeftInfo
+    width: 60%
+    +fRwdControl( "pad" )
+      width: 100%
+    .cTitle
+      margin-left: calc( 100vw * 0.12 )
+      margin-top: calc( 100vw * 0.03 )
+      +fRwdControl( "pad" )
+        margin: 0
+        +fCenterAttributes( center )
+        flex-direction: column
+      h1
+        font-size: calc( 100vw * 0.025 )
+        margin: 0px
+        +fRwdControl( "pad" )
+          font-size: calc( 100vw * 0.075 )
+      .cLine
+        margin-left: calc( 100vw * 0.005 )
+        margin-top: calc( 100vw * 0.005 )
+        width: calc( 100vw * 0.04 )
+        border-bottom: 7px solid $colorSprGreen_1
+        +fRwdControl( "pad" )
+          width: calc( 100vw * 0.12 )
+    .cInfoBox
+      margin-left: calc( 100vw * 0.125 )
+      margin-top: calc( 100vw * 0.015 )
+      font-size: calc( 100vw * 0.0105 )
+      +fRwdControl( "pad" )
+        margin-left: 0
+        margin-top: calc( 100vw * 0.045 )
+        font-size: calc( 100vw * 0.0315 )
+        padding-left: calc( 100vw * 0.08 )
+        padding-right: calc( 100vw * 0.08 )
+      .cSlogan_1,.cSlogan_2,.cSlogan_3
+        +fCenterAttributes( center )
+        margin-top: calc( 100vw * 0.007 )
+        font-size: calc( 100vw * 0.012 )
+        color: $colorSprGreen_1
+        font-weight: 600
+        +fRwdControl( "pad" )
+          font-size: calc( 100vw * 0.036 )
+          margin-top: calc( 100vw * 0.021 )
+    .cAboutButton
+      +fButtonAttributes( calc( 100vw * 0.085 ), calc( 100vw * 0.03 ), 0px, calc( 100vw * 0.012 ),#fff, $colorSprGreen_1, $colorSprGreen_1)
+      +fCenterAttributes( center )
+      margin-top: calc( 100vw * 0.007 )
+      margin-left: calc( 100vw * 0.125 )
+      +fRwdControl( "pad" )
+        margin-left: auto
+        margin-right: auto
+        width: calc( 100vw * 0.24 )
+        height: calc( 100vw * 0.09 )
+        font-size: calc( 100vw * 0.036 )
+        margin-top: calc( 100vw * 0.06 )
+  .cRightImage
+    width: 40%
+    +fCenterAttributes()
+    +fRwdControl( "pad" )
+      width: 100%
+      height: calc( 100vw * 0.5 )
+    .cImage
+      margin-left: 10%
+      background-image: url( $urlImageAbout )
+      background-size: 100%
+      background-repeat: no-repeat
+      width: 70%
+      height: 60%
+      +fRwdControl( "pad" )
+        margin-left: auto
+        margin-right: auto
+        margin: auto
+        height: 80%
+ 
+.cBuildCaseBox
+  position: relative
+  height: calc( 100vw * 0.7 )// 由 JS 決定
+  .cTitle
+    +fCenterAttributes( center )
+    flex-direction: column
+    margin-top: calc( 100vw * 0.03 )
+    h1
+      font-size: calc( 100vw * 0.025 )
+      margin: 0px
+      +fRwdControl( "pad" )
+        font-size: calc( 100vw * 0.075 )
+    .cLine
+      margin-top: calc( 100vw * 0.009 )
+      width: calc( 100vw * 0.04 )
+      border-bottom: 7px solid $colorSprGreen_1
+      +fRwdControl( "pad" )
+        width: calc( 100vw * 0.12 )
+    .cInfo
+      font-size: calc( 100vw * 0.011 )
+      margin-top: calc( 100vw * 0.011 )
+      +fRwdControl( "pad" )
+        font-size: calc( 100vw * 0.033 )
+        margin-top: calc( 100vw * 0.030 )
+  .cBuildCaseSystem
+    position: absolute
+    top: calc( 100vw * 0.07 ) // 由 JS 決定
+    width: 100%
+    overflow: hidden
+    +fRwdControl( "pad" )
+      top: calc( 100vw * 0.2 ) // 由 JS 決定
+    .cMainSearchBox
+      +fCenterAttributes( center )
+      margin-top: calc( 100vw * 0.02 )
+      +fRwdControl( "pad" )
+        display: none
+      .cBuildTypeButton, .cAreaButton, .cTimeButton, .cMoneyButton, .cWonderfulButton
+        +fCenterAttributes( center )
+        margin-left: calc( 100vw * 0.0058 )
+        margin-right: calc( 100vw * 0.0058 )
+        width: calc( 100vw * 0.1065 )
+        height:  calc( 100vw * 0.0225 )
+        background-color: #fff
+        border: 2px solid $colorSprGreen_1
+        font-size: calc( 100vw * 0.012 )
+        font-weight: bold
+        color: $colorSprGreen_1
+        user-select: none
+        cursor: pointer
+        &:hover
+          background-color: $colorSprGreen_1
+          color: #fff
+    .cMainSearch_PhoneBox
+      +fCenterAttributes( center )
+      display: none
+      +fRwdControl( "pad" )
+        display: flex
+      height: calc( 100vw * 0.2 )
+      select
+        width: calc( 100vw * 0.6 )
+        height: calc( 100vw * 0.1 )
+        font-size: calc( 100vw * 0.036 )
+        background-color: $colorSprGreen_1
+        color: #fff
+        text-align: center
+        text-align-last: center
+        -webkit-appearance: none
+        -moz-appearance: none
+        //padding-top: calc( 100vw * 0.025 )
+    .cSubSearchBox_BuildType,.cSubSearchBox_Area,.cSubSearchBox_Time,.cSubSearchBox_Money,.cSubSearchBox_Wonderful,.cSubSearchBox_Phone_Area
+      height: calc( 100vw * 0.040 )
+      +fRwdControl( "pad" )
+        height: calc( 100vw * 0.3 )
+        flex-wrap: wrap
+    .cSubSearchBox_BuildType
+      +fCenterAttributes( center )
+      margin-top: calc( 100vw * 0.02 )
+      +fRwdControl( "pad" )
+        height: calc( 100vw * 0.45 )
+      .cSubButtonBase
+        +fCenterAttributes( center )
+        width: calc( 100vw * 0.05 )
+        height:  calc( 100vw * 0.05 )
+        //border: 2px solid $colorSprGreen_1
+        margin-left: calc( 100vw * 0.006 )
+        margin-right: calc( 100vw * 0.006 )
+        user-select: none
+        cursor: pointer
+        +fRwdControl( "pad" )
+          width: calc( 100vw * 0.15 )
+          height: calc( 100vw * 0.15 )
+          margin-left: calc( 100vw * 0.012 )
+          margin-right: calc( 100vw * 0.012 )
+        data
+          display: none
+        .cImage
+          width: 80%
+          height: 90%
+          background-size: 100%
+          background-repeat: no-repeat
+      .cBuild_Button
+        .cImage
+          background-image: url( $urlImageBuildCaseSystem_BuildType_0_0 )
+        &:hover
+          .cImage
+            background-image: url( $urlImageBuildCaseSystem_BuildType_0_1 )
+      .cLandscape_Button
+        .cImage
+          background-image: url( $urlImageBuildCaseSystem_BuildType_1_0 )
+        &:hover
+          .cImage
+            background-image: url( $urlImageBuildCaseSystem_BuildType_1_1 )
+      .cDecoration_Button
+        .cImage
+          background-image: url( $urlImageBuildCaseSystem_BuildType_2_0 )
+        &:hover
+          .cImage
+            background-image: url( $urlImageBuildCaseSystem_BuildType_2_1 )
+      .cPlant_Button
+        .cImage
+          background-image: url( $urlImageBuildCaseSystem_BuildType_3_0 )
+        &:hover
+          .cImage
+            background-image: url( $urlImageBuildCaseSystem_BuildType_3_1 )
+      .cCement_Button
+        .cImage
+          background-image: url( $urlImageBuildCaseSystem_BuildType_4_0 )
+        &:hover
+          .cImage
+            background-image: url( $urlImageBuildCaseSystem_BuildType_4_1 )
+      .cSport_Button
+        .cImage
+          background-image: url( $urlImageBuildCaseSystem_BuildType_5_0 )
+        &:hover
+          .cImage
+            background-image: url( $urlImageBuildCaseSystem_BuildType_5_1 )
+      .cWood_Button
+        .cImage
+          background-image: url( $urlImageBuildCaseSystem_BuildType_6_0 )
+        &:hover
+          .cImage
+            background-image: url( $urlImageBuildCaseSystem_BuildType_6_1 )
+      .cTemple_Button
+        .cImage
+          background-image: url( $urlImageBuildCaseSystem_BuildType_7_0 )
+        &:hover
+          .cImage
+            background-image: url( $urlImageBuildCaseSystem_BuildType_7_1 )
+      .cHistoricSite_Button
+        .cImage
+          background-image: url( $urlImageBuildCaseSystem_BuildType_8_0 )
+        &:hover
+          .cImage
+            background-image: url( $urlImageBuildCaseSystem_BuildType_8_1 )
+      .cGreenbuild_Button
+        .cImage
+          background-image: url( $urlImageBuildCaseSystem_BuildType_9_0 )
+        &:hover
+          .cImage
+            background-image: url( $urlImageBuildCaseSystem_BuildType_9_1 )
+      .cAll_Button
+        .cImage
+          background-image: url( $urlImageBuildCaseSystem_BuildType_10_0 )
+        &:hover
+          .cImage
+            background-image: url( $urlImageBuildCaseSystem_BuildType_10_1 )
+    .cSubSearchBox_Area
+      +fCenterAttributes( center )
+      margin-top: calc( 100vw * 0.02 )
+      +fRwdControl( "pad" )
+        display: none
+      .cSubButtonBase
+        +fCenterAttributes( center )
+        flex-direction: column
+        border-right: 2px solid #000 
+        user-select: none
+        &:hover
+          .cArea_Button
+            border-bottom: 5px solid $colorSprGreen_1
+        .cArea_Button
+          font-size: calc( 100vw * 0.015 )
+          font-weight: bold
+          margin-left: calc( 100vw * 0.01 )
+          margin-right: calc( 100vw * 0.01 )
+          padding-bottom: calc( 100vw * 0.003 )
+          border-bottom: 5px solid rgba(0,0,0,0)
+          cursor: pointer
+          data
+            display: none
+          //+fRwdControl( "pad" )
+            font-size: calc( 100vw * 0.045 )
+        .SubAreaBox
+          +fCenterAttributes( center )
+          font-size: calc( 100vw * 0.012 )
+          font-weight: bold
+          margin-top: calc( 100vw * 0.01 )
+          margin-left: calc( 100vw * 0.005 )
+          margin-right: calc( 100vw * 0.005 )
+          //+fRwdControl( "pad" )
+            font-size: calc( 100vw * 0.036 )
+          .cAreaBase
+            margin-left: calc( 100vw * 0.005 )
+            margin-right: calc( 100vw * 0.005 )
+            cursor: pointer
+            data
+              display: none
+            &:hover
+              color: $colorSprGreen_1
+      .cAll_Button
+        border-right: 0px solid #000 
+    .cSubSearchBox_Phone_Area
+      display: none
+      +fRwdControl( "pad" )
+        +fCenterAttributes( center ) 
+      select
+        width: calc( 100vw * 0.6 )
+        height: calc( 100vw * 0.1 )
+        font-size: calc( 100vw * 0.036 )
+        background-color: $colorSprGreen_2
+        color: #000
+        text-align: center
+        text-align-last: center
+        -webkit-appearance: none
+        -moz-appearance: none
+    .cSubSearchBox_Time
+      +fCenterAttributes( center )
+      margin-top: calc( 100vw * 0.02 )
+      .cNearToFar_Button,.cFarToNear_Button,.cAll_Button
+        +fCenterAttributes( center )
+        width: calc( 100vw * 0.06 )
+        height:  calc( 100vw * 0.06 )
+        //border: 2px solid $colorSprGreen_1
+        margin-left: calc( 100vw * 0.02 )
+        margin-right: calc( 100vw * 0.02 )
+        user-select: none
+        cursor: pointer
+        +fRwdControl( "pad" )
+          width: calc( 100vw * 0.18 )
+          height:  calc( 100vw * 0.18 )
+          margin-left: calc( 100vw * 0.06 )
+          margin-right: calc( 100vw * 0.06 )
+        data
+          display: none
+        .cImage
+          width: 100%
+          height: 90%
+          background-size: 100%
+          background-repeat: no-repeat
+      .cNearToFar_Button
+        .cImage
+          background-image: url( $urlImageBuildCaseSystem_Time_0_0 )
+        &:hover
+          .cImage
+            background-image: url( $urlImageBuildCaseSystem_Time_0_1 )
+      .cFarToNear_Button
+        .cImage
+          background-image: url( $urlImageBuildCaseSystem_Time_1_0 )
+        &:hover
+          .cImage
+            background-image: url( $urlImageBuildCaseSystem_Time_1_1 )
+      .cAll_Button
+        .cImage
+          background-image: url( $urlImageBuildCaseSystem_Time_2_0 )
+        &:hover
+          .cImage
+            background-image: url( $urlImageBuildCaseSystem_Time_2_1 )
+    .cSubSearchBox_Money
+      +fCenterAttributes( center )
+      margin-top: calc( 100vw * 0.02 )
+      +fRwdControl( "pad" )
+        height: calc( 100vw * 0.35 )
+      .cSubButtonBase
+        +fCenterAttributes( center )
+        width: calc( 100vw * 0.06 )
+        height:  calc( 100vw * 0.06 )
+        //border: 2px solid $colorSprGreen_1
+        margin-left: calc( 100vw * 0.01 )
+        margin-right: calc( 100vw * 0.01 )
+        user-select: none
+        cursor: pointer
+        +fRwdControl( "pad" )
+          width: calc( 100vw * 0.18 )
+          height:  calc( 100vw * 0.18 )
+        data
+          display: none
+        .cImage
+          width: 100%
+          height: 90%
+          background-size: 100%
+          background-repeat: no-repeat
+      .c1000_Button
+        .cImage
+          background-image: url( $urlImageBuildCaseSystem_Money_0_0 )
+        &:hover
+          .cImage
+            background-image: url( $urlImageBuildCaseSystem_Money_0_1 )
+      .c1000-2500_Button
+        .cImage
+          background-image: url( $urlImageBuildCaseSystem_Money_1_0 )
+        &:hover
+          .cImage
+            background-image: url( $urlImageBuildCaseSystem_Money_1_1 )
+      .c2500-5000_Button
+        .cImage
+          background-image: url( $urlImageBuildCaseSystem_Money_2_0 )
+        &:hover
+          .cImage
+            background-image: url( $urlImageBuildCaseSystem_Money_2_1 )
+      .c5000-10000_Button
+        .cImage
+          background-image: url( $urlImageBuildCaseSystem_Money_3_0 )
+        &:hover
+          .cImage
+            background-image: url( $urlImageBuildCaseSystem_Money_3_1 )
+      .c10000_Button
+        .cImage
+          background-image: url( $urlImageBuildCaseSystem_Money_4_0 )
+        &:hover
+          .cImage
+            background-image: url( $urlImageBuildCaseSystem_Money_4_1 )
+      .cAll_Button
+        .cImage
+          background-image: url( $urlImageBuildCaseSystem_Money_5_0 )
+        &:hover
+          .cImage
+            background-image: url( $urlImageBuildCaseSystem_Money_5_1 )
+    .cSubSearchBox_Wonderful
+      +fCenterAttributes( center )
+      margin-top: calc( 100vw * 0.02 )
+      .cWonderful_Button
+        +fCenterAttributes( center )
+        width: calc( 100vw * 0.06 )
+        height:  calc( 100vw * 0.06 )
+        //border: 2px solid $colorSprGreen_1
+        user-select: none
+        cursor: pointer
+        +fRwdControl( "pad" )
+          width: calc( 100vw * 0.18 )
+          height:  calc( 100vw * 0.18 )
+        data
+          display: none
+        .cImage
+          width: 100%
+          height: 80%
+          background-size: 100%
+          background-repeat: no-repeat
+          background-image: url( $urlImageBuildCaseSystem_Wonderful_0_0 )
+    .cNoCaseInfoBox
+      +fCenterAttributes( center )
+      height: calc( 100vw * 0.3 )
+      width: 100vw
+      font-size: calc( 100vw * 0.016 )
+      color: $colorSprGreen_1
+      .cInfoBox
+        margin-top: calc( 100vw * 0.02 )
+        height: 95%
+        width: 95%
+        border: 2px solid $colorSprGreen_1
+        +fCenterAttributes( center )
+    .cBuildCaseSlideBox
+      position: relative
+      width: calc( 100vw * 3 )
+      height: calc( 100vw * 0.3 )
+      display: flex
+      left: -100vw
+      +fRwdControl( "pad" )
+        height: auto
+      .cPreImage, .cMainImage, .cNextImage
+        height: 100%
+        width: 100vw
+        .cShowBuildCaseBox
+          margin-top: calc( 100vw * 0.02 )
+          width: 100%
+          display: flex
+          flex-wrap: wrap
+          .cItemTemplate,.cItemBase
+            +fCenterAttributes( center )
+            width: 50%
+            height: calc( 100vw * 0.15 )
+            +fRwdControl( "pad" )
+              width: 100%
+              height: calc( 100vw * 0.3 )
+            //background-color: $colorSprGreen_1
+            data
+              display: none
+            .cImage
+              width: 99%
+              height: 98.5%
+              background-image: url( $urlImageBuildCaseSystem_DemoCaseShow )
+              background-size: 100%
+              background-repeat: no-repeat
+              background-color: #000
+              &:hover
+                .cDetaiInfo
+                  width: 50%
+                  height: 100%
+                  .cDetaiInfoBox
+                    width: 100%
+                    height: 100%
+                    .cTitle
+                      width: 80%
+                      height: 30%
+                      opacity: 1
+                      h1
+                        font-size: calc( 100vw * 0.012 )
+                    .cStartYear,.cFinishYear,.cBoss,.cDesign
+                      font-size: calc( 100vw * 0.01 )
+                      width: 100%
+                      height: 10%
+                      opacity: 1
+                      display: flex
+                  .cMap
+                    width: 33%
+                    height: 100%
+              .cDetaiInfo
+                position: relative
+                width: 0% // 50%
+                height: 100% // 100%
+                background-color: #000
+                background-color: rgba( 0,0,0, 0.7 )
+                margin-left: auto
+                transition-duration: 0.5s
+                overflow: hidden
+                +fRwdControl( "pad" )
+                  display: none
+                .cDetaiInfoBox
+                  width: 0% // 100%
+                  height: 0% // 100%
+                  position: absolute
+                  top: 0
+                  left: 0
+                  color: #fff
+                  padding-left: calc( 100vw * 0.01 )
+                  z-index: 2
+                  .cTitle
+                    width: 0% // 80%
+                    height: 0% // 30%
+                    margin: 0
+                    display: flex
+                    align-items: flex-start
+                    opacity: 0
+                    transition-delay: 0.1s
+                    transition-duration: 0.5s
+                    h1
+                      font-size: 0 // calc( 100vw * 0.012 )
+                      margin: 0
+                  .cStartYear,.cFinishYear,.cBoss,.cDesign
+                    position: relative
+                    font-size: 0 //calc( 100vw * 0.01 )
+                    width: 0 // 100%
+                    height: 0 // 10%
+                    display: flex
+                    margin-top: calc( 100vw * 0.001 )
+                    opacity: 0
+                    transition-delay: 0.1s
+                    transition-duration: 0.5s
+                    display: none
+                    detaiData
+                      margin-left: calc( 100vw * 0.002 )
+                  .cStartYear
+                    margin-top: calc( 100vw * 0.02 )
+                .cMap
+                  width: 0 // 33%
+                  height: 0 // 100%
+                  position: absolute
+                  top: calc( 100vw * 0.001 )
+                  right: calc( 100vw * 0.005 )
+                  background-size: 100%
+                  background-image: url( $urlImageBuildCaseSystem_DemoCaseMap )
+                  background-repeat: no-repeat
+                  z-index: 1
+    .cPageControlBox
+      +fCenterAttributes( center )
+      margin-top: calc( 100vw * 0.03 )
+      +fRwdControl( "pad" )
+        display: none
+      .cPreButton,.cNextButton,.cPageTemplate,.cPageBase
+        +fCenterAttributes( center )
+        width: calc( 100vw * 0.025 )
+        height: calc( 100vw * 0.025 )
+        background-color: #fff
+        border: 2px solid $colorSprGreen_1
+        font-size: calc( 100vw * 0.01 )
+        font-weight: bold
+        color: $colorSprGreen_1
+        user-select: none
+        cursor: pointer
+        &:hover
+          background-color: $colorSprGreen_1
+          color: #fff
+      .cPageTemplate,.cPageBase
+        border: 2px solid rgba(0,0,0,0.0)
+        &:hover
+          border: 2px solid $colorSprGreen_1
+      .cPageBox
+        +fCenterAttributes( center )
+
+  
+.cItemTemplate
+  display: none !important
+.cPageTemplate
+  display: none !important

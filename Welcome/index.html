@@ -1,0 +1,229 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>華春營造有限公司</title>
+<link rel="stylesheet" href="spring/css/style.css"  type="text/css">
+<link rel="stylesheet" href="spring/css/jquery-ui.min.css" type="text/css">
+<link rel="icon" href="../Image/favicon.ico" type="image/x-icon" />
+
+<!--<script type="text/javascript" src="spring/js/main.js"></script>-->
+<style>
+			body {
+				overflow-x:hidden;
+				overflow-y:hidden;
+			}
+
+			::-webkit-scrollbar { 
+				display: none; 
+			}
+			
+			.element { 
+				overflow: -moz-scrollbars-none; 
+			}
+			
+			.labelfold {
+				border-radius: 5px;
+				color:#AAAAAA;
+				background-color:#550000;
+				position:absolute;	
+				padding:5px;
+				-moz-user-select: none; 
+				-khtml-user-select: none; 
+				-webkit-user-select: none; 
+				-o-user-select: none;
+				box-shadow: 1px 1px 15px #111111;
+				-webkit-box-shadow: 1px 1px 15px #111111;
+				
+				width:45px;
+				z-index:0;
+				opacity:1.0;
+				height: 20px;
+				overflow-y:hidden;
+			}
+			.labelfold:hover{
+
+				
+				width:450px;
+				z-index:1;
+				opacity:0.9;
+				padding-top:5px;
+				padding-right:5px;
+				padding-bottom:15px;
+				padding-left:5px;
+				height:auto;
+				max-height: 100px;
+				overflow-y:auto;
+			}
+			
+			.labelexpand{
+				border-radius: 5px;
+				color:#AAAAAA;
+				background-color:#550000;
+				position:absolute;
+				width:450px;
+				padding:5px;
+				padding-top:5px;
+				padding-right:5px;
+				padding-bottom:15px;
+				padding-left:5px;
+				-moz-user-select: none; 
+				-khtml-user-select: none; 
+				-webkit-user-select: none; 
+				-o-user-select: none;
+				box-shadow: 5px 5px 5px #111111;
+				-webkit-box-shadow: 5px 5px 5px #111111;
+				max-height: 250px;
+				overflow-y:auto;
+				z-index:1;
+				opacity:0.9;
+			}
+			
+			
+			#skip{
+				border-radius: 10px;
+				background-color:#005500;
+				color: #ffffff;
+				position:absolute;
+				height: 43px;
+				width:180px;
+				cursor: pointer;
+				opacity:0.8s;
+				bottom:50px;
+				right:50px;
+				padding-left:10px;
+				padding-top:10px;
+				font-size:26px;
+				box-shadow: 5px 5px 5px #111111;
+				-webkit-box-shadow: 5px 5px 5px #111111;
+				z-index:100;
+				overflow-y:hidden;
+			}
+			
+			#skipDescription{
+				position:absolute;
+				bottom:110px;
+				right:60px;
+				font-size:14px;
+				overflow-y:hidden;
+				display:none;
+			}
+			
+			#skiplogo{
+				background: url(/spring/images/arrow.png) right no-repeat;
+				background-size: 40px 40px;
+				margin-right:20px;
+				right:20px;
+			}
+			
+			.phraseOfMajorProject:hover{
+
+			}
+
+			.bar1 {
+			  -moz-transform:rotate(0deg) translate(0, -40px);
+			  -webkit-transform:rotate(0deg) translate(0, -40px);opacity:0.12;
+			}
+			.bar2 {
+			  -moz-transform:rotate(45deg) translate(0, -40px);
+			  -webkit-transform:rotate(45deg) translate(0, -40px);opacity:0.25;
+			}
+			.bar3 {
+			  -moz-transform:rotate(90deg) translate(0, -40px);
+			  -webkit-transform:rotate(90deg) translate(0, -40px);opacity:0.37;
+			}
+			.bar4 {
+			  -moz-transform:rotate(135deg) translate(0, -40px);
+			  -webkit-transform:rotate(135deg) translate(0, -40px);opacity:0.50;
+			}
+			.bar5 {
+			  -moz-transform:rotate(180deg) translate(0, -40px);
+			  -webkit-transform:rotate(180deg) translate(0, -40px);opacity:0.62;
+			}
+			.bar6 {
+			  -moz-transform:rotate(225deg) translate(0, -40px);
+			  -webkit-transform:rotate(225deg) translate(0, -40px);opacity:0.75;
+			}
+			.bar7 {
+			  -moz-transform:rotate(270deg) translate(0, -40px);
+			  -webkit-transform:rotate(270deg) translate(0, -40px);opacity:0.87;
+			}
+			.bar8 {
+			  -moz-transform:rotate(315deg) translate(0, -40px);
+			  -webkit-transform:rotate(315deg) translate(0, -40px);opacity:1;
+			}
+
+			
+			/* set up the bar spinners */
+			#spinner{
+				position: absolute;
+				margin-left: auto;
+				margin-right: auto;
+				left: 0;
+				right: 0;
+				margin-top: 200px;
+				width:100px;
+				height:100px;
+			 
+				-moz-border-radius:100px;
+				-moz-transform:scale(0.5);
+				-webkit-transform:scale(0.5);
+			}
+			
+			#spinner div{
+				width:10px;
+				height:30px;
+				background:#000;
+				position:absolute;
+				top:35px;
+				left:45px;
+			}
+			
+</style>
+
+</head>
+
+
+<body>
+  <div class="Animationlogo">
+    <img src="spring/images/logo_green.svg" alt="Logo" >
+    <img src="spring/images/text.svg" alt="LogoName">
+  </div>
+  
+  <div id="spinner">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
+  <div class="bar4"></div>
+  <div class="bar5"></div>
+  <div class="bar6"></div>
+  <div class="bar7"></div>
+  <div class="bar8"></div>
+</div>
+
+  <div id="skipDescription">
+	
+  </div>
+  
+  <div id="skip" onClick="jumpToHomePage()" >
+	<div id="skiplogo">
+	<p>進入首頁</p>
+	</div>
+  </div>
+<div id="footer" > 版權所有©2021 華春營造有限公司 所有權利保留</div>
+</div>
+<!-- partial -->
+	<script type ="text/javascript" src="spring/js/jquery-1.11.2.min.js"></script>
+	<script type ="text/javascript" src="spring/js/jquery-ui.js"></script>
+	<script type ="text/javascript" src="spring/js/three.min.js"></script>
+	<script type ="text/javascript" src="spring/js/THREEx.KeyboardState.js"></script>
+	<script type ="text/javascript" src="spring/js/OBJLoader.js"></script>
+	<script type ="text/javascript" src="spring/js/MTLLoader.js"></script>
+	<script type ="text/javascript" src="spring/js/OBJMTLLoader.js"></script>
+	<script type ="text/javascript" src="spring/js/mouseKeyboard.js"></script>
+	<script type ="text/javascript" src="spring/js/tween.min.js"></script>
+	<!--<script type ="text/javascript" src="spring/js/Tween.js"></script>-->
+	<script type ="text/javascript" src="spring/js/taiwanpoints.js"></script>
+	<script src="./script.js?version=DEMO 0.1"></script>
+</body>
+</html>

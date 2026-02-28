@@ -1,0 +1,2 @@
+# This file prevents that your .php view files are accessed directly from the outside
+Options -Indexes

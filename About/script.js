@@ -1,0 +1,41 @@
+const DEF_IMAGE_FILE_PATH = "../Image/"
+const DEF_ABOUT_IMAGE_PATH = DEF_IMAGE_FILE_PATH + "About/";
+const DEF_BANNER_IMAGE_PATH = DEF_ABOUT_IMAGE_PATH + "Banner/";
+
+const DEF_DATABASE_PATH = "../Database/";
+const DEF_DATABASE_EXPERIENCE_PATH = DEF_DATABASE_PATH + "About.json";
+const DEF_BANNER_SWITCH_TIMMER = 5000;
+
+GetBannerData();
+
+function GetBannerData(){
+	$.ajax({
+		url: DEF_DATABASE_EXPERIENCE_PATH,
+		method: "post",
+		data: {},
+		dataType: "json",
+		success: function(res){
+			ProcessBannerData( res.Banner )
+			return;
+		},
+		error: function(res){
+			console.log( "資料庫異常" );
+		}
+	})
+}
+
+function ProcessBannerData( kDataList ){
+    
+    
+	let kBannerTextureUrlList = [];
+	let kShowBannerID = { pre : 0, main : 1, next : 2 };
+    let nBannerMainID =  0;
+    
+    kBannerTextureUrlList = ProcessImageListByAbbreviation( kDataList );
+    if( kBannerTextureUrlList.length == 1 ){
+		kBannerTextureUrlList.push( kBannerTextureUrlList[ 0 ] );
+		kBannerTextureUrlList.push( kBannerTextureUrlList[ 0 ] );
+	}
+	
+	CreatBanner( kShowBannerID, nBannerMainID, kBannerTextureUrlList, DEF_BANNER_IMAGE_PATH, DEF_BANNER_SWITCH_TIMMER );
+}

@@ -1,0 +1,293 @@
+/*--- Debug ---*/
+//$urlImagePath : "https://www.bst.idv.tw:8081/SPR/Image/"
+/*--- Debug End ---*/
+
+/*--- Release --- */
+$urlImagePath : "../Image/"
+/*--- Release End --- */
+
+$urlImageBanner_0 : $urlImagePath + "BuildCase/0_DemoCase/Show/0.jpg"
+$urlImageBanner_1 : $urlImagePath + "BuildCase/0_DemoCase/Show/0.jpg"
+$urlImageBanner_2 : $urlImagePath + "BuildCase/0_DemoCase/Show/0.jpg"
+
+$urlIdeaBoxImage : $urlImagePath + "About/0.jpg"
+
+$colorDarkGray: #646464
+$colorGray_1: #a0a0a0
+$colorGray_2: #f4f4f4
+$colorGray_3: #4d4d4d
+$colorSprGreen_1: #008a3a
+$colorSprGreen_2: #dddda7
+
+@mixin fRwdControl($point)
+  @if $point == "pc"
+    @media only screen and (max-width: 1920px)
+      @content 
+  @else if $point == "pad" 
+    @media only screen and (max-width: 1040px)  
+      @content 
+  @else if $point == "mobile" 
+    @media only screen and (max-width: 320px)   
+      @content
+
+@mixin fCenterAttributes( $justifyContent:initial, $alignItems:center )
+  display: flex
+  align-items: $alignItems
+  justify-content: $justifyContent
+  
+
+@mixin fButtonAttributes( $w, $h, $radius, $fontSize, $color, $backgroundColor, $borderColor )
+  width: $w
+  height: $h
+  background-color: $backgroundColor
+  border: 1px solid $borderColor
+  border-radius: $radius
+  font-size: $fontSize
+  font-weight: bold
+  color: $color
+  user-select: none
+  cursor: pointer
+  &:hover
+    opacity: 0.7
+
+@mixin fBanneImagerAttributes($url,$width:100vw)
+  width: $width
+  background-size: cover
+  background-repeat: no-repeat
+  background-image: url( $url )
+  border: 0px solid #000
+  padding: 0px
+  margin: 0px
+
+*
+  font-family: '微軟正黑體'
+
+html, body
+  margin: 0
+  padding: 0
+
+.cTopBox
+  height: calc( 100vw * 0.35 )
+  width: 100%
+  +fRwdControl( "pad" )
+    height: calc( 100vw * 0.65 )
+  .cBanner
+    width: 100%
+    height: calc( 100vw * 0.3 )
+    position: absolute
+    overflow: hidden
+    top: calc( 100vw * 0.05 ) // 100px
+    +fRwdControl( "pad" )
+      height: calc( 100vw * 0.6 )
+    .cImage
+      position: absolute
+      width: calc( 100vw * 3 )
+      height: 100%
+      display: flex
+      left: -100vw
+      .cPreImage
+        +fBanneImagerAttributes( $urlImageBanner_0 )
+      .cMainImage
+        +fBanneImagerAttributes( $urlImageBanner_1 )
+      .cNextImage
+        +fBanneImagerAttributes( $urlImageBanner_2 )
+    .cImageControl
+      position: absolute
+      z-index: 1
+      bottom: calc( 100vw * 0.04 )
+      right: calc( 100vw * 0.09 )
+      +fRwdControl( "pad" )
+        bottom: calc( 100vw * 0.08 )
+      +fCenterAttributes( center )
+      .cPreButton,.cNextButton 
+        +fButtonAttributes( calc( 100vw * 0.025 ), calc( 100vw * 0.025 ), 0px, calc( 100vw * 0.01 ),#fff, $colorGray_1, $colorGray_1)
+        +fCenterAttributes( center )
+        +fRwdControl( "pad" )
+          width: calc( 100vw * 0.075 )
+          height: calc( 100vw * 0.075 )
+          font-size: calc( 100vw * 0.03 )
+      .cPreButton
+        margin-right: calc( 100vw * 0.002 )
+        +fRwdControl( "pad" )
+          margin-right: calc( 100vw * 0.012 )
+      .cNextButton
+        margin-left: calc( 100vw * 0.002 )
+        +fRwdControl( "pad" )
+          margin-left: calc( 100vw * 0.012 )
+    .cInfoBanner
+      position: absolute
+      z-index: 1
+      color: #fff
+      height: calc( 100vw * 0.015 )
+      overflow: hidden
+      +fCenterAttributes( center, flex-end )
+      flex-direction: column
+      bottom: calc( 100vw * 0.016 )
+      right: calc( 100vw * 0.09 )
+      font-size: calc( 100vw * 0.012 )
+      +fRwdControl( "pad" )
+        font-size: calc( 100vw * 0.036 )
+        height: calc( 100vw * 0.045 )
+      .cInfo
+        +fCenterAttributes( center, flex-end )
+        flex-direction: column
+        position: relative
+        top: calc( 0vw * 0.015 )
+        .cPreInfo,.cMainInfo,.cNextInfo
+          line-height: calc( 100vw * 0.014 )
+          height: calc( 100vw * 0.015 )
+          +fRwdControl( "pad" )
+            line-height: calc( 100vw * 0.042 )
+            height: calc( 100vw * 0.045 )
+        
+.cOriginInfoBox
+  //display: flex
+  width: 100%
+  //height: calc( 100vw * 0.27 )
+  background-color: $colorSprGreen_2
+  +fCenterAttributes( center )
+  flex-direction: column
+  padding-bottom: calc( 100vw * 0.03 )
+  .cTitle
+    //margin-left: calc( 100vw * 0.12 )
+    padding-top: calc( 100vw * 0.03 )
+    h1
+      font-size: calc( 100vw * 0.025 )
+      margin: 0px
+      +fRwdControl("pad")
+        font-size: calc( 100vw * 0.06 )
+    .cLine
+      margin-left: calc( 100vw * 0.005 )
+      margin-top: calc( 100vw * 0.005 )
+      width: calc( 100vw * 0.04 )
+      border-bottom: 7px solid $colorSprGreen_1
+      +fRwdControl("pad")
+        width: calc( 100vw * 0.11 )
+  .cContent
+    +fCenterAttributes( center )
+    flex-direction: column
+    .cMainInfo
+      font-size: calc( 100vw * 0.0105 )
+      line-height: calc( 100vw * 0.02 )
+      +fRwdControl("pad")
+        font-size: calc( 100vw * 0.045 )
+        line-height: calc( 100vw * 0.075 )
+      pre
+        white-space: pre-wrap
+        padding-left: calc( 100vw * 0.225 )
+        padding-right: calc( 100vw * 0.225 )
+        +fRwdControl("pad")
+          padding-left: calc( 100vw * 0.05 )
+          padding-right: calc( 100vw * 0.05 )
+    .cSlogan
+      +fCenterAttributes( center )
+      flex-direction: column
+      font-size: calc( 100vw * 0.011 )
+      line-height: calc( 100vw * 0.02 )
+      font-weight: 600
+      color: $colorSprGreen_1
+      +fRwdControl("pad")
+        font-size: calc( 100vw * 0.045 )
+        line-height: calc( 100vw * 0.08 )
+    .cTimeline
+      margin-top: calc( 100vw * 0.04 )
+      margin-left: calc( 100vw * 0.062 )
+      +fRwdControl("pad")
+        margin-top: calc( 100vw * 0.08 )
+        margin-left: 0
+      .cA_Rank, .cB_Rank, .cC_Rank
+        +fCenterAttributes( center )
+        font-size: calc( 100vw * 0.011 )
+        line-height: calc( 100vw * 0.02 )
+        font-weight: 600
+        +fRwdControl("pad")
+          font-size: calc( 100vw * 0.045 )
+          line-height: calc( 100vw * 0.08 )
+        .cIcon
+          width: calc( 100vw * 0.012 )
+          height: calc( 100vw * 0.012 )
+          background-color: #fff
+          border: calc( 100vw * 0.005 )
+          border-style: solid
+          border-color:  $colorSprGreen_1
+          border-radius: calc( 100vw * 0.015 )
+          margin-right: calc( 100vw * 0.012 )
+          margin-left: calc( 100vw * 0.01 )
+          +fRwdControl("pad")
+            width: calc( 100vw * 0.036 )
+            height: calc( 100vw * 0.036 )
+            border-radius: calc( 100vw * 0.060 )
+            border: calc( 100vw * 0.01 )
+            border-style: solid
+            border-color:  $colorSprGreen_1
+      .cLine
+        width: 1px
+        height: calc( 100vw * 0.06 )
+        border-left: 2px dashed $colorSprGreen_1
+        margin-top: calc( 100vw * 0.002 * -1 )
+        margin-bottom: calc( 100vw * 0.002 * -1 )
+        margin-left: calc( 100vw * 0.042 )
+        +fRwdControl("pad")
+          margin-left: calc( 100vw * 0.127 )
+
+.cIdeaBox
+  position: relative
+  width: 100%
+  //height: calc( 100vw * 0.27 )
+  //background-color: $colorSprGreen_2
+  
+  +fCenterAttributes( center )
+  flex-direction: column
+  padding-bottom: calc( 100vw * 0.04 )
+  .cBackgroundImage
+    background-image: url($urlIdeaBoxImage)
+    background-size: cover
+    background-repeat: no-repeat
+    width: 100%
+    height: 110%
+    position: absolute
+    opacity: 0.1
+    z-index: -1
+  .cTitle
+    //margin-left: calc( 100vw * 0.12 )
+    padding-top: calc( 100vw * 0.03 )
+    +fCenterAttributes( center )
+    flex-direction: column
+    h1
+      font-size: calc( 100vw * 0.025 )
+      margin: 0px
+      +fRwdControl("pad")
+        font-size: calc( 100vw * 0.06 )
+    .cLine
+      //margin-left: calc( 100vw * 0.005 )
+      margin-top: calc( 100vw * 0.005 )
+      width: calc( 100vw * 0.04 )
+      border-bottom: 7px solid $colorSprGreen_1
+      +fRwdControl("pad")
+        width: calc( 100vw * 0.11 )
+  .cContent
+    +fCenterAttributes( center )
+    flex-direction: column
+    .cInfoBox
+      +fCenterAttributes( center )
+      flex-direction: column
+      margin-top: calc( 100vw * 0.03 )
+      +fRwdControl("pad")
+        margin-top: calc( 100vw * 0.06 )
+      .cName
+        font-size: calc( 100vw * 0.014 )
+        line-height: calc( 100vw * 0.03 )
+        font-weight: 600
+        color: $colorSprGreen_1
+        +fRwdControl("pad")
+          font-size: calc( 100vw * 0.045 )
+          line-height: calc( 100vw * 0.08 )
+      .cInfo
+        font-size: calc( 100vw * 0.012 )
+        line-height: calc( 100vw * 0.02 )
+        +fRwdControl("pad")
+          font-size: calc( 100vw * 0.043 )
+          line-height: calc( 100vw * 0.08 )
+        
+.cFooterBox
+  margin-top: 0 !important

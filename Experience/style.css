@@ -1,0 +1,560 @@
+@charset "UTF-8";
+/*--- Debug --- */
+/*--- Debug End --- */
+/*--- Release --- */
+/*--- Release End --- */
+* {
+  font-family: "微軟正黑體";
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.cTopBox {
+  height: calc( 100vw * 0.35 );
+  width: 100%;
+}
+@media only screen and (max-width: 1040px) {
+  .cTopBox {
+    height: calc( 100vw * 0.65 );
+  }
+}
+.cTopBox .cBanner {
+  width: 100%;
+  height: calc( 100vw * 0.3 );
+  position: absolute;
+  overflow: hidden;
+  top: calc( 100vw * 0.05 );
+}
+@media only screen and (max-width: 1040px) {
+  .cTopBox .cBanner {
+    height: calc( 100vw * 0.6 );
+  }
+}
+.cTopBox .cBanner .cImage {
+  position: absolute;
+  width: calc( 100vw * 3 );
+  height: 100%;
+  display: -webkit-box;
+  display: flex;
+  left: -100vw;
+}
+.cTopBox .cBanner .cImage .cPreImage {
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../Image/BuildCase/0_DemoCase/Show/0.jpg");
+  border: 0px solid #000;
+  padding: 0px;
+  margin: 0px;
+}
+.cTopBox .cBanner .cImage .cMainImage {
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../Image/BuildCase/0_DemoCase/Show/0.jpg");
+  border: 0px solid #000;
+  padding: 0px;
+  margin: 0px;
+}
+.cTopBox .cBanner .cImage .cNextImage {
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../Image/BuildCase/0_DemoCase/Show/0.jpg");
+  border: 0px solid #000;
+  padding: 0px;
+  margin: 0px;
+}
+.cTopBox .cBanner .cImageControl {
+  position: absolute;
+  z-index: 1;
+  bottom: calc( 100vw * 0.04 );
+  right: calc( 100vw * 0.09 );
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+@media only screen and (max-width: 1040px) {
+  .cTopBox .cBanner .cImageControl {
+    bottom: calc( 100vw * 0.08 );
+  }
+}
+.cTopBox .cBanner .cImageControl .cPreButton, .cTopBox .cBanner .cImageControl .cNextButton {
+  width: calc( 100vw * 0.025 );
+  height: calc( 100vw * 0.025 );
+  background-color: #a0a0a0;
+  border: 1px solid #a0a0a0;
+  border-radius: 0px;
+  font-size: calc( 100vw * 0.01 );
+  font-weight: bold;
+  color: #fff;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+.cTopBox .cBanner .cImageControl .cPreButton:hover, .cTopBox .cBanner .cImageControl .cNextButton:hover {
+  opacity: 0.7;
+}
+@media only screen and (max-width: 1040px) {
+  .cTopBox .cBanner .cImageControl .cPreButton, .cTopBox .cBanner .cImageControl .cNextButton {
+    width: calc( 100vw * 0.075 );
+    height: calc( 100vw * 0.075 );
+    font-size: calc( 100vw * 0.03 );
+  }
+}
+.cTopBox .cBanner .cImageControl .cPreButton {
+  margin-right: calc( 100vw * 0.002 );
+}
+@media only screen and (max-width: 1040px) {
+  .cTopBox .cBanner .cImageControl .cPreButton {
+    margin-right: calc( 100vw * 0.012 );
+  }
+}
+.cTopBox .cBanner .cImageControl .cNextButton {
+  margin-left: calc( 100vw * 0.002 );
+}
+@media only screen and (max-width: 1040px) {
+  .cTopBox .cBanner .cImageControl .cNextButton {
+    margin-left: calc( 100vw * 0.012 );
+  }
+}
+
+.cTopInfoBox {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  padding-bottom: calc( 100vw * 0.04 );
+}
+.cTopInfoBox .cTitle {
+  padding-top: calc( 100vw * 0.03 );
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+}
+.cTopInfoBox .cTitle h1 {
+  font-size: calc( 100vw * 0.025 );
+  margin: 0px;
+}
+@media only screen and (max-width: 1040px) {
+  .cTopInfoBox .cTitle h1 {
+    font-size: calc( 100vw * 0.06 );
+  }
+}
+.cTopInfoBox .cTitle .cLine {
+  margin-top: calc( 100vw * 0.005 );
+  width: calc( 100vw * 0.04 );
+  border-bottom: 7px solid #008a3a;
+}
+@media only screen and (max-width: 1040px) {
+  .cTopInfoBox .cTitle .cLine {
+    width: calc( 100vw * 0.11 );
+  }
+}
+.cTopInfoBox .cExperienceTypeBox_Phone {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  margin-top: calc( 100vw * 0.03 );
+  display: none;
+}
+@media only screen and (max-width: 1040px) {
+  .cTopInfoBox .cExperienceTypeBox_Phone {
+    display: -webkit-box;
+    display: flex;
+  }
+}
+.cTopInfoBox .cExperienceTypeBox_Phone select {
+  width: calc( 100vw * 0.45 );
+  height: calc( 100vw * 0.09 );
+  text-align: center;
+  font-size: calc( 100vw * 0.05 );
+  background-color: #008a3a;
+  color: #fff;
+  padding: calc( 100vw * 0.01 );
+}
+.cTopInfoBox .cExperienceTypeBox {
+  margin-top: calc( 100vw * 0.03 );
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+@media only screen and (max-width: 1040px) {
+  .cTopInfoBox .cExperienceTypeBox {
+    display: none;
+  }
+}
+.cTopInfoBox .cExperienceTypeBox .cType_1_Button, .cTopInfoBox .cExperienceTypeBox .cType_2_Button, .cTopInfoBox .cExperienceTypeBox .cType_3_Button {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  margin-left: calc( 100vw * 0.02 );
+  margin-right: calc( 100vw * 0.02 );
+  width: calc( 100vw * 0.1 );
+  height: calc( 100vw * 0.02 );
+  font-size: calc( 100vw * 0.01 );
+  font-weight: 600;
+  color: #008a3a;
+  background-color: #fff;
+  border: calc( 100vw * 0.0015 ) solid #008a3a;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+.cTopInfoBox .cExperienceTypeBox .cType_1_Button:hover, .cTopInfoBox .cExperienceTypeBox .cType_2_Button:hover, .cTopInfoBox .cExperienceTypeBox .cType_3_Button:hover {
+  background-color: #008a3a;
+  color: #fff;
+}
+.cTopInfoBox .cTitleInfo {
+  margin-top: calc( 100vw * 0.03 );
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  width: 60%;
+}
+@media only screen and (max-width: 1040px) {
+  .cTopInfoBox .cTitleInfo {
+    width: 90%;
+  }
+}
+.cTopInfoBox .cTitleInfo .cMainInfo par {
+  font-size: calc( 100vw * 0.012 );
+}
+@media only screen and (max-width: 1040px) {
+  .cTopInfoBox .cTitleInfo .cMainInfo par {
+    font-size: calc( 100vw * 0.035 );
+  }
+}
+
+.cPhotoBox {
+  position: relative;
+  overflow: hidden;
+}
+.cPhotoBox .cPhotoSlideBox {
+  position: relative;
+  width: calc( 100vw * 3 );
+  height: calc( 100vw * 0.45 );
+  display: -webkit-box;
+  display: flex;
+  left: -100vw;
+  z-index: 0;
+}
+.cPhotoBox .cPhotoSlideBox .cPreImage, .cPhotoBox .cPhotoSlideBox .cMainImage, .cPhotoBox .cPhotoSlideBox .cNextImage {
+  height: 100%;
+  width: 100vw;
+}
+.cPhotoBox .cPhotoSlideBox .cPreImage .cShowBuildCaseBox, .cPhotoBox .cPhotoSlideBox .cMainImage .cShowBuildCaseBox, .cPhotoBox .cPhotoSlideBox .cNextImage .cShowBuildCaseBox {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+}
+.cPhotoBox .cPhotoSlideBox .cPreImage .cShowBuildCaseBox .cItemTemplate, .cPhotoBox .cPhotoSlideBox .cPreImage .cShowBuildCaseBox .cItemBase, .cPhotoBox .cPhotoSlideBox .cMainImage .cShowBuildCaseBox .cItemTemplate, .cPhotoBox .cPhotoSlideBox .cMainImage .cShowBuildCaseBox .cItemBase, .cPhotoBox .cPhotoSlideBox .cNextImage .cShowBuildCaseBox .cItemTemplate, .cPhotoBox .cPhotoSlideBox .cNextImage .cShowBuildCaseBox .cItemBase {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  width: 25%;
+  height: calc( 100vw * 0.15 );
+  position: relative;
+  cursor: pointer;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+@media only screen and (max-width: 1040px) {
+  .cPhotoBox .cPhotoSlideBox .cPreImage .cShowBuildCaseBox .cItemTemplate, .cPhotoBox .cPhotoSlideBox .cPreImage .cShowBuildCaseBox .cItemBase, .cPhotoBox .cPhotoSlideBox .cMainImage .cShowBuildCaseBox .cItemTemplate, .cPhotoBox .cPhotoSlideBox .cMainImage .cShowBuildCaseBox .cItemBase, .cPhotoBox .cPhotoSlideBox .cNextImage .cShowBuildCaseBox .cItemTemplate, .cPhotoBox .cPhotoSlideBox .cNextImage .cShowBuildCaseBox .cItemBase {
+    width: 100%;
+    height: calc( 100vw * 0.6 );
+  }
+}
+.cPhotoBox .cPhotoSlideBox .cPreImage .cShowBuildCaseBox .cItemTemplate:hover, .cPhotoBox .cPhotoSlideBox .cPreImage .cShowBuildCaseBox .cItemBase:hover, .cPhotoBox .cPhotoSlideBox .cMainImage .cShowBuildCaseBox .cItemTemplate:hover, .cPhotoBox .cPhotoSlideBox .cMainImage .cShowBuildCaseBox .cItemBase:hover, .cPhotoBox .cPhotoSlideBox .cNextImage .cShowBuildCaseBox .cItemTemplate:hover, .cPhotoBox .cPhotoSlideBox .cNextImage .cShowBuildCaseBox .cItemBase:hover {
+  opacity: 0.7;
+}
+.cPhotoBox .cPhotoSlideBox .cPreImage .cShowBuildCaseBox .cItemTemplate data, .cPhotoBox .cPhotoSlideBox .cPreImage .cShowBuildCaseBox .cItemBase data, .cPhotoBox .cPhotoSlideBox .cMainImage .cShowBuildCaseBox .cItemTemplate data, .cPhotoBox .cPhotoSlideBox .cMainImage .cShowBuildCaseBox .cItemBase data, .cPhotoBox .cPhotoSlideBox .cNextImage .cShowBuildCaseBox .cItemTemplate data, .cPhotoBox .cPhotoSlideBox .cNextImage .cShowBuildCaseBox .cItemBase data {
+  display: none;
+}
+.cPhotoBox .cPhotoSlideBox .cPreImage .cShowBuildCaseBox .cItemTemplate .cImage, .cPhotoBox .cPhotoSlideBox .cPreImage .cShowBuildCaseBox .cItemBase .cImage, .cPhotoBox .cPhotoSlideBox .cMainImage .cShowBuildCaseBox .cItemTemplate .cImage, .cPhotoBox .cPhotoSlideBox .cMainImage .cShowBuildCaseBox .cItemBase .cImage, .cPhotoBox .cPhotoSlideBox .cNextImage .cShowBuildCaseBox .cItemTemplate .cImage, .cPhotoBox .cPhotoSlideBox .cNextImage .cShowBuildCaseBox .cItemBase .cImage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #fff;
+}
+.cPhotoBox .cPhotoSlideBox .cPreImage .cShowBuildCaseBox .cItemTemplate .c360Tag, .cPhotoBox .cPhotoSlideBox .cPreImage .cShowBuildCaseBox .cItemBase .c360Tag, .cPhotoBox .cPhotoSlideBox .cMainImage .cShowBuildCaseBox .cItemTemplate .c360Tag, .cPhotoBox .cPhotoSlideBox .cMainImage .cShowBuildCaseBox .cItemBase .c360Tag, .cPhotoBox .cPhotoSlideBox .cNextImage .cShowBuildCaseBox .cItemTemplate .c360Tag, .cPhotoBox .cPhotoSlideBox .cNextImage .cShowBuildCaseBox .cItemBase .c360Tag {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  position: absolute;
+  width: 25%;
+  height: 25%;
+  border-radius: 5%;
+  background-color: #000;
+  color: #fff;
+  opacity: 0.7;
+  display: none;
+}
+.cPhotoBox .cPhotoSlideBox .cPreImage .cShowBuildCaseBox .cItemTemplate .c360Tag h3, .cPhotoBox .cPhotoSlideBox .cPreImage .cShowBuildCaseBox .cItemBase .c360Tag h3, .cPhotoBox .cPhotoSlideBox .cMainImage .cShowBuildCaseBox .cItemTemplate .c360Tag h3, .cPhotoBox .cPhotoSlideBox .cMainImage .cShowBuildCaseBox .cItemBase .c360Tag h3, .cPhotoBox .cPhotoSlideBox .cNextImage .cShowBuildCaseBox .cItemTemplate .c360Tag h3, .cPhotoBox .cPhotoSlideBox .cNextImage .cShowBuildCaseBox .cItemBase .c360Tag h3 {
+  font-size: calc( 100vw * 0.01 );
+}
+.cPhotoBox .cPhotoSlideBox .cImageControl {
+  position: absolute;
+  top: calc( 100vw * 0.225 );
+  width: 99.7%;
+  height: 0;
+  z-index: 0;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+@media only screen and (max-width: 1040px) {
+  .cPhotoBox .cPhotoSlideBox .cImageControl {
+    display: none;
+  }
+}
+.cPhotoBox .cPhotoSlideBox .cImageControl .cPreButton, .cPhotoBox .cPhotoSlideBox .cImageControl .cNextButton {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  width: calc( 100vw * 0.04 );
+  height: calc( 100vw * 0.04 );
+  margin-left: calc( 100vw * 0.45 );
+  margin-right: calc( 100vw * 0.45 );
+  font-size: calc( 100vw * 0.03 );
+  font-weight: 600;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #008a3a;
+  z-index: 2;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+.cPhotoBox .cPhotoSlideBox .cImageControl .cPreButton:hover, .cPhotoBox .cPhotoSlideBox .cImageControl .cNextButton:hover {
+  background-color: #008a3a;
+  color: #fff;
+}
+
+.cPhotoLightBox {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 3;
+  display: none;
+}
+.cPhotoLightBox .cMask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.cPhotoLightBox .cImageBox {
+  position: relative;
+  width: 55%;
+  height: calc( 100vw * 0.36 );
+  background-color: #fff;
+}
+@media only screen and (max-width: 1040px) {
+  .cPhotoLightBox .cImageBox {
+    width: 99%;
+    height: calc( 100vw * 0.66 );
+  }
+}
+.cPhotoLightBox .cImageBox .cImage, .cPhotoLightBox .cImageBox .cImage_360 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../Image/BuildCase/0_DemoCase/Build/0.jpg");
+}
+.cPhotoLightBox .cImageBox .cDescription {
+  position: absolute;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(3, 23, 33, 0.7);
+  z-index: 4;
+  color: #99C1DA;
+  border: 3px solid #99C1DA;
+  font-size: calc( 100vw * 0.09 );
+}
+.cPhotoLightBox .cImageBox .cDescription pre {
+  padding: calc( 100vw * 0.07 );
+  font-size: calc( 100vw * 0.015 );
+  line-height: calc( 100vw * 0.03 );
+  white-space: pre-wrap;
+}
+@media only screen and (max-width: 1040px) {
+  .cPhotoLightBox .cImageBox .cDescription pre {
+    font-size: calc( 100vw * 0.03 );
+  }
+}
+.cPhotoLightBox .cImageBox .cInfoButton, .cPhotoLightBox .cImageBox .cEscButton {
+  position: absolute;
+  top: calc( 100vw * 0.03 );
+  width: calc( 100vw * 0.02 );
+  height: calc( 100vw * 0.02 );
+  z-index: 5;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  font-weight: 600;
+  font-size: calc( 100vw * 0.015 );
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+@media only screen and (max-width: 1040px) {
+  .cPhotoLightBox .cImageBox .cInfoButton, .cPhotoLightBox .cImageBox .cEscButton {
+    width: calc( 100vw * 0.06 );
+    height: calc( 100vw * 0.06 );
+  }
+}
+.cPhotoLightBox .cImageBox .cInfoButton:hover, .cPhotoLightBox .cImageBox .cEscButton:hover {
+  opacity: 0.7;
+}
+.cPhotoLightBox .cImageBox .cInfoButton {
+  left: calc( 100vw * 0.03 );
+  background-color: #fff;
+  border-radius: calc( 100vw * 0.02 );
+  color: #008a3a;
+}
+.cPhotoLightBox .cImageBox .cEscButton {
+  right: calc( 100vw * 0.03 );
+  font-size: calc( 100vw * 0.03 );
+  color: #008a3a;
+}
+@media only screen and (max-width: 1040px) {
+  .cPhotoLightBox .cImageBox .cEscButton {
+    font-size: calc( 100vw * 0.09 );
+  }
+}
+.cPhotoLightBox .cImageBox .cControlBox {
+  position: absolute;
+  width: 100%;
+  height: calc( 100vw * 0.022 );
+  bottom: calc( 100vw * 0.01 );
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  z-index: 5;
+}
+@media only screen and (max-width: 1040px) {
+  .cPhotoLightBox .cImageBox .cControlBox {
+    bottom: calc( 100vw * 0.03 );
+  }
+}
+.cPhotoLightBox .cImageBox .cControlBox .cLastButton, .cPhotoLightBox .cImageBox .cControlBox .cNextButton {
+  width: calc( 100vw * 0.022 );
+  height: calc( 100vw * 0.022 );
+  margin-left: calc( 100vw * 0.005 );
+  margin-right: calc( 100vw * 0.005 );
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  background-color: #008a3a;
+  color: #fff;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+@media only screen and (max-width: 1040px) {
+  .cPhotoLightBox .cImageBox .cControlBox .cLastButton, .cPhotoLightBox .cImageBox .cControlBox .cNextButton {
+    width: calc( 100vw * 0.066 );
+    height: calc( 100vw * 0.066 );
+  }
+}
+.cPhotoLightBox .cImageBox .cControlBox .cLastButton:hover, .cPhotoLightBox .cImageBox .cControlBox .cNextButton:hover {
+  opacity: 0.7;
+}
+
+.cFooterBox {
+  margin-top: 0 !important;
+}
+
+.cItemTemplate {
+  display: none !important;
+}

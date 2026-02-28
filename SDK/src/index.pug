@@ -1,0 +1,79 @@
+//--- Debug ---
+//- var urlImagePath = "https://www.bst.idv.tw:8081/SPR/Image/"
+
+//--- Release ---
+- var urlImagePath      ="../Image/"
+
+- var urlImageLogoImage = urlImagePath + "Icon/Logo/0.svg"
+
+.cPageBody
+  .cTopBox
+    .cTopBar
+      .cLogo
+        .cImage
+          img( src = urlImageLogoImage )
+      .cAbout
+        h2 關於華春
+      .cBuildCase
+        h2 工程實績
+      .cWinningRecord
+        h2 得獎紀錄
+      .cExperience 
+        h2 經驗分享
+      .cConnection
+        h2 展望/聯絡我們
+    .cTopBar_phone
+      .cText
+        img( src = urlImageLogoText )
+      .cMenu
+        .cShowButton
+          .cLine1
+          .cLine2
+          .cLine3
+        ul.cComboBoxList
+          li.cData.cHome 首頁
+          li.cData.cAbout 關於華春
+          li.cData.cBuildCase 建案實績
+          li.cData.cExperience 經驗分享
+          li.cData.cConnection 展望/聯絡我們
+
+  .cFooterBox
+    .cLogo
+      .cImage
+        img( src = urlImageLogoImage )
+    .cInfoBox
+      .cAddress
+        .cImageBox
+          .cImage
+        .cText
+          .cName 地址
+          .cInfo 高雄市三民區建國一路 411 號 6 樓之 1
+      .cDivider
+      .cPhone
+        .cImageBox
+          .cImage
+        .cText
+          .cName 電話
+          .cInfo (07) 224-0999
+      .cDivider
+      .cFax
+        .cImageBox
+          .cImage
+        .cText
+          .cName 傳真
+          .cInfo (07) 224-6607
+      .cDivider
+      .cEmail
+        .cImageBox
+          .cImage
+        .cText
+          .cName Email 
+          .cInfo building@spring1987.com
+      .cDivider
+      .cContact
+        .cImageBox
+          .cImage
+        .cText
+          .cName 聯絡我們
+  .cCopyrightBox
+    .cCopyright Copyright © 2020華春營造有限公司, All Rights Reserved.

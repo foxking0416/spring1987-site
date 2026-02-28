@@ -1,0 +1,366 @@
+/*--- Debug ---*/
+//$urlImagePath : "https://www.bst.idv.tw:8081/SPR/Image/"
+/*--- Debug End ---*/
+
+/*--- Release --- */
+$urlImagePath : "../Image/"
+/*--- Release End --- */
+
+$urlImageBanner_0 : $urlImagePath + "BuildCase/0_DemoCase/Show/0.jpg"
+$urlImageBanner_1 : $urlImagePath + "BuildCase/0_DemoCase/Show/0.jpg"
+$urlImageBanner_2 : $urlImagePath + "BuildCase/0_DemoCase/Show/0.jpg"
+
+$urlImageDemoCase : $urlImagePath + "BuildCase/0_DemoCase/Build/0.jpg"
+
+$colorDarkGray: #646464
+$colorGray_1: #a0a0a0
+$colorGray_2: #f4f4f4
+$colorGray_3: #4d4d4d
+$colorSprGreen_1: #008a3a
+$colorSprGreen_2: #dddda7
+
+@mixin fRwdControl($point)
+  @if $point == "pc"
+    @media only screen and (max-width: 1920px)
+      @content 
+  @else if $point == "pad" 
+    @media only screen and (max-width: 1040px)  
+      @content 
+  @else if $point == "mobile" 
+    @media only screen and (max-width: 320px)   
+      @content
+
+@mixin fCenterAttributes( $justifyContent:initial, $alignItems:center )
+  display: flex
+  align-items: $alignItems
+  justify-content: $justifyContent
+  
+
+@mixin fButtonAttributes( $w, $h, $radius, $fontSize, $color, $backgroundColor, $borderColor )
+  width: $w
+  height: $h
+  background-color: $backgroundColor
+  border: 1px solid $borderColor
+  border-radius: $radius
+  font-size: $fontSize
+  font-weight: bold
+  color: $color
+  user-select: none
+  cursor: pointer
+  &:hover
+    opacity: 0.7
+
+@mixin fBanneImagerAttributes($url,$width:100vw)
+  width: $width
+  background-size: cover
+  background-repeat: no-repeat
+  background-image: url( $url )
+  border: 0px solid #000
+  padding: 0px
+  margin: 0px
+
+*
+  font-family: '微軟正黑體'
+
+html, body
+  margin: 0
+  padding: 0
+
+.cTopBox
+  height: calc( 100vw * 0.35 )
+  width: 100%
+  +fRwdControl( "pad" )
+    height: calc( 100vw * 0.65 )
+  .cBanner
+    width: 100%
+    height: calc( 100vw * 0.3 )
+    position: absolute
+    overflow: hidden
+    top: calc( 100vw * 0.05 ) // 100px
+    +fRwdControl( "pad" )
+      height: calc( 100vw * 0.6 )
+    .cImage
+      position: absolute
+      width: calc( 100vw * 3 )
+      height: 100%
+      display: flex
+      left: -100vw
+      .cPreImage
+        +fBanneImagerAttributes( $urlImageBanner_0 )
+      .cMainImage
+        +fBanneImagerAttributes( $urlImageBanner_1 )
+      .cNextImage
+        +fBanneImagerAttributes( $urlImageBanner_2 )
+    .cImageControl
+      position: absolute
+      z-index: 1
+      bottom: calc( 100vw * 0.04 )
+      right: calc( 100vw * 0.09 )
+      +fRwdControl( "pad" )
+        bottom: calc( 100vw * 0.08 )
+      +fCenterAttributes( center )
+      .cPreButton,.cNextButton 
+        +fButtonAttributes( calc( 100vw * 0.025 ), calc( 100vw * 0.025 ), 0px, calc( 100vw * 0.01 ),#fff, $colorGray_1, $colorGray_1)
+        +fCenterAttributes( center )
+        +fRwdControl( "pad" )
+          width: calc( 100vw * 0.075 )
+          height: calc( 100vw * 0.075 )
+          font-size: calc( 100vw * 0.03 )
+      .cPreButton
+        margin-right: calc( 100vw * 0.002 )
+        +fRwdControl( "pad" )
+          margin-right: calc( 100vw * 0.012 )
+      .cNextButton
+        margin-left: calc( 100vw * 0.002 )
+        +fRwdControl( "pad" )
+          margin-left: calc( 100vw * 0.012 )
+        
+.cTopInfoBox
+  position: relative
+  width: 100%
+  +fCenterAttributes( center )
+  flex-direction: column
+  padding-bottom: calc( 100vw * 0.04 )
+
+  .cTitle
+    padding-top: calc( 100vw * 0.03 )
+    +fCenterAttributes( center )
+    flex-direction: column
+    h1
+      font-size: calc( 100vw * 0.025 )
+      margin: 0px
+      +fRwdControl("pad")
+        font-size: calc( 100vw * 0.06 )
+    .cLine
+      margin-top: calc( 100vw * 0.005 )
+      width: calc( 100vw * 0.04 )
+      border-bottom: 7px solid $colorSprGreen_1
+      +fRwdControl("pad")
+        width: calc( 100vw * 0.11 )
+  .cExperienceTypeBox_Phone
+    +fCenterAttributes( center )
+    margin-top: calc( 100vw * 0.03 )
+    display: none
+    +fRwdControl("pad")
+      display: flex
+    select
+      width: calc( 100vw * 0.45 )
+      height: calc( 100vw * 0.09 )
+      text-align: center
+      font-size: calc( 100vw * 0.05 )
+      background-color: $colorSprGreen_1
+      color: #fff
+      padding: calc( 100vw * 0.01 )
+  .cExperienceTypeBox
+    margin-top: calc( 100vw * 0.03 )
+    +fCenterAttributes( center )
+    +fRwdControl("pad")
+      display: none
+    .cType_1_Button,.cType_2_Button,.cType_3_Button
+      +fCenterAttributes( center )
+      margin-left: calc( 100vw * 0.02 )
+      margin-right: calc( 100vw * 0.02 )
+      width: calc( 100vw * 0.1 )
+      height: calc( 100vw * 0.02 )
+      font-size: calc( 100vw * 0.01 )
+      font-weight: 600
+      color: $colorSprGreen_1
+      background-color: #fff
+      border: calc( 100vw * 0.0015 ) solid $colorSprGreen_1
+      user-select: none
+      cursor: pointer
+      &:hover
+        background-color: $colorSprGreen_1
+        color: #fff
+  .cTitleInfo
+    margin-top: calc( 100vw * 0.03 )
+    +fCenterAttributes( center )
+    flex-direction: column
+    width: 60%
+    +fRwdControl("pad")
+      width: 90%
+    .cMainInfo
+      par
+        font-size: calc( 100vw * 0.012 )
+        +fRwdControl("pad")
+          font-size: calc( 100vw * 0.035 )
+
+        
+.cPhotoBox
+  position: relative
+  overflow: hidden
+  .cPhotoSlideBox
+    position: relative
+    width: calc( 100vw * 3 )
+    height: calc( 100vw * 0.45 ) // JS 控制
+    display: flex
+    left: -100vw
+    z-index: 0
+    .cPreImage, .cMainImage, .cNextImage
+      height: 100%
+      width: 100vw
+      .cShowBuildCaseBox
+        width: 100%
+        height: 100%
+        display: flex
+        flex-wrap: wrap
+        .cItemTemplate, .cItemBase
+          +fCenterAttributes( center )
+          width: 25%
+          height: calc( 100vw * 0.15 )
+          position: relative
+          cursor: pointer
+          transition-duration: 0.5s
+          +fRwdControl( "pad" )
+            width: 100%
+            height: calc( 100vw * 0.6 )
+          &:hover
+            opacity: 0.7
+          data
+            display: none
+          .cImage
+            position: absolute
+            width: 100%
+            height: 100%
+            background-size: cover
+            background-repeat: no-repeat
+            background-color: #fff // 測試填入 #000
+          .c360Tag
+            +fCenterAttributes( center )
+            position: absolute
+            width: 25%
+            height: 25%
+            border-radius: 5%
+            background-color: #000
+            color: #fff
+            opacity: 0.7
+            display: none // JS 控制
+            h3
+              font-size: calc( 100vw * 0.01 )
+    .cImageControl
+      position: absolute
+      top: calc( 100vw * 0.225 ) // JS 控制
+      width: 99.7%
+      //width: calc( 100vw * 0.03 )
+      height: 0
+      z-index: 0
+      +fRwdControl( "pad" )
+        display: none
+      +fCenterAttributes( center )
+      .cPreButton,.cNextButton
+        +fCenterAttributes( center )
+        width: calc( 100vw * 0.04 )
+        height: calc( 100vw * 0.04 )
+        margin-left: calc( 100vw * 0.45 )
+        margin-right: calc( 100vw * 0.45 )
+        font-size: calc( 100vw * 0.03 )
+        font-weight: 600
+        background-color: rgba( 0,0,0,0.2 )
+        color: $colorSprGreen_1
+        z-index: 2
+        user-select: none
+        cursor: pointer
+        &:hover
+          background-color: $colorSprGreen_1
+          color: #fff
+
+.cPhotoLightBox
+  +fCenterAttributes( center )
+  top: 0
+  position: fixed
+  width: 100%
+  height: 100vh
+  z-index: 3
+  display: none // JS 控制
+  .cMask
+    position: absolute
+    width: 100%
+    height: 100%
+    background-color: rgba( 0,0,0, 0.7 )
+  .cImageBox
+    position: relative
+    width: 55%
+    height: calc( 100vw * 0.36 )
+    background-color: #fff
+    +fRwdControl( "pad" )
+      width: 99%
+      height: calc( 100vw * 0.66 )
+    .cImage,.cImage_360
+      position: absolute
+      width: 100%
+      height: 100%
+      background-size: cover
+      background-repeat: no-repeat
+      background-image: url( $urlImageDemoCase )
+    .cDescription
+      position: absolute
+      +fCenterAttributes( center )
+      width: 100%
+      height: 100%
+      background-color: rgba( 3,23,33, 0.7 )
+      z-index: 4
+      color: #99C1DA
+      border: 3px solid #99C1DA
+      font-size: calc( 100vw * 0.09 )
+      pre
+        padding: calc( 100vw * 0.07 )
+        font-size: calc( 100vw * 0.015 )
+        line-height: calc( 100vw * 0.03 )
+        white-space: pre-wrap
+        +fRwdControl( "pad" )
+          font-size: calc( 100vw * 0.03 )
+    .cInfoButton, .cEscButton
+      position: absolute
+      top: calc( 100vw * 0.03 )
+      width: calc( 100vw * 0.02 )
+      height: calc( 100vw * 0.02 )
+      z-index: 5
+      +fCenterAttributes( center )
+      font-weight: 600
+      font-size: calc( 100vw * 0.015 )
+      user-select: none
+      cursor: pointer
+      +fRwdControl( "pad" )
+        width: calc( 100vw * 0.06 )
+        height: calc( 100vw * 0.06 )
+      &:hover
+        opacity: 0.7
+    .cInfoButton
+      left: calc( 100vw * 0.03 )
+      background-color: #fff
+      border-radius: calc( 100vw * 0.02 )
+      color: $colorSprGreen_1
+    .cEscButton
+      right: calc( 100vw * 0.03 )
+      font-size: calc( 100vw * 0.03 )
+      color: $colorSprGreen_1
+      +fRwdControl( "pad" )
+        font-size: calc( 100vw * 0.09 )
+    .cControlBox
+      position: absolute
+      width: 100%
+      height: calc( 100vw * 0.022 )
+      bottom: calc( 100vw * 0.01 )
+      +fCenterAttributes( center )
+      z-index: 5
+      +fRwdControl( "pad" )
+        bottom: calc( 100vw * 0.03 )
+      .cLastButton,.cNextButton
+        width: calc( 100vw * 0.022 )
+        height: calc( 100vw * 0.022 )
+        margin-left: calc( 100vw * 0.005 )
+        margin-right: calc( 100vw * 0.005 )
+        +fCenterAttributes( center )
+        background-color: $colorSprGreen_1
+        color: #fff
+        user-select: none
+        cursor: pointer
+        +fRwdControl( "pad" )
+          width: calc( 100vw * 0.066 )
+          height: calc( 100vw * 0.066 )
+        &:hover
+          opacity: 0.7
+.cFooterBox
+  margin-top: 0 !important
+.cItemTemplate
+  display: none !important

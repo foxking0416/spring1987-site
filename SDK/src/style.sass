@@ -1,0 +1,213 @@
+/*--- Debug ---*/
+//$urlImagePath : "https://www.bst.idv.tw:8081/SPR/Image/"
+/*--- Debug End ---*/
+
+/*--- Release --- */
+$urlImagePath : "../Image/"
+/*--- Release End --- */
+
+$urlImageIcon_Address: $urlImagePath + "Icon/Footer/Address.svg"
+$urlImageIcon_Phone: $urlImagePath + "Icon/Footer/Phone.svg"
+$urlImageIcon_Contact: $urlImagePath + "Icon/Footer/Contact.svg"
+$urlImageIcon_Email: $urlImagePath + "Icon/Footer/Email.svg"
+$urlImageIcon_FAX: $urlImagePath + "Icon/Footer/FAX.svg"
+
+@mixin fRwdControl($point)
+  @if $point == "pc"
+    @media only screen and (max-width: 1920px)
+      @content 
+  @else if $point == "pad" 
+    @media only screen and (max-width: 1040px)  
+      @content 
+  @else if $point == "mobile" 
+    @media only screen and (max-width: 320px)   
+      @content
+
+@mixin fCenterAttributes( $justifyContent:initial, $alignItems:center )
+  display: flex
+  align-items: $alignItems
+  justify-content: $justifyContent 
+  
+  
+$colorDarkGray: #646464
+$colorGray_1: #a0a0a0
+$colorGray_2: #f4f4f4
+$colorGray_3: #4d4d4d
+$colorSprGreen_1: #008a3a
+$colorSprGreen_2: #dddda7
+
+*
+  font-family: '微軟正黑體'
+
+.cTopBar
+  +fRwdControl("pad")
+    display: none
+  position: fixed
+  top: 0px
+  display: flex
+  height: calc( 100vw * 0.05 ) // 100px
+  width: 100%
+  z-index: 10
+  background-color: #fff
+  box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.3)
+  .cLogo
+    margin-right: auto
+    display: flex
+    cursor: pointer
+    width: 20%
+    margin-left: 9%
+    .cImage
+      width: 100%
+      //padding-top: calc( 100vw * 0.005 )
+      +fCenterAttributes( center )
+      img
+        width: 100%
+        display: block
+  .cAbout, .cBuildCase, .cWinningRecord, .cExperience, .cConnection
+    height: 100%
+    //width: calc( 100vw * 0.15 )
+    color: $colorDarkGray
+    //margin-left: calc( 100vw * 0.025 )
+    font-size: calc( 100vw * 0.007 )
+    //padding-top: calc( 100vw * 0.009 )
+    user-select: none
+    white-space: nowrap
+    cursor: pointer
+    padding-left: calc( 100vw * 0.013 )
+    padding-right: calc( 100vw * 0.013 )
+    +fCenterAttributes( center )
+    &:hover
+      background-color: $colorSprGreen_1
+      color: #fff
+  .cConnection
+    margin-right: 8%
+.cTopBar_phone
+  display: none
+  width: 100%
+  position: fixed
+  top: 0
+  background-color: rgba( 0, 0, 0, 0.7 )
+  z-index: 10
+  +fRwdControl("pad")
+    display: block
+  .cText
+    position: absolute
+    top: calc( 100vw * 0.03 )
+    left: 25%
+    width: 50%
+    z-index: 9
+    img
+      position: absolute
+      top: 0
+      width: 100%
+      z-index: 9
+  .cMenu
+    z-index: 10
+    .cShowButton
+      height: 60px
+      width: 70px
+      margin-top: calc( 100vw * 0.03 )
+      margin-left: calc( 100vw * 0.03 )
+      cursor: pointer
+      .cLine1,.cLine2,.cLine3
+        border: 3.5px solid #FFF
+        background-color: #fff
+        margin-top: 15px
+    ul
+      height: 0px
+      width: 100%
+      font-size: calc( 100vw * 0.06 )
+      border-radius: 30px
+      color: #fff
+      background-color: rgba( 0, 0, 0, 0.7 )
+      list-style: none
+      box-shadow: 3px 3px 15px #000
+      padding: 0px
+      overflow: hidden
+      user-select: none
+      margin-top: 30px
+      margin-bottom: 0px
+      li
+        height: 0px
+        padding: 0px
+        font-size: calc( 100vw * 0.06 )
+        text-align: center
+        &:hover
+          background-color: #00b9fc
+
+.cFooterBox
+  margin-top: calc( 100vw * 0.038 )
+  background-color: $colorGray_2
+  height: calc( 100vw * 0.13 )
+  +fRwdControl("pad")
+    height: calc( 100vw * 1.0 )
+    padding-top: calc( 100vw * 0.038 )
+    padding-left: calc( 100vw * 0.038 )
+  .cLogo
+    +fCenterAttributes( center )
+    height: calc( 100vw * 0.075 )
+  .cInfoBox
+    +fCenterAttributes( center )
+    +fRwdControl("pad")
+      +fCenterAttributes( center, flex-start )
+      flex-direction: column
+    .cDivider
+      height: calc( 100vw * 0.019 )
+      border-right: 2px solid $colorGray_3
+      +fRwdControl("pad")
+        display: none
+    .cAddress, .cPhone, .cFax, .cEmail, .cContact
+      +fCenterAttributes( center )
+      margin-left: calc( 100vw * 0.02 )
+      margin-right: calc( 100vw * 0.02 )
+      color: $colorGray_3
+      font-size: calc( 100vw * 0.009 )
+      +fRwdControl("pad")
+        font-size: calc( 100vw * 0.036 )
+        margin-top: calc( 100vw * 0.06 )
+      .cText
+        line-height: calc( 100vw * 0.015 )
+        +fRwdControl("pad")
+          line-height: calc( 100vw * 0.060 )
+      .cImageBox
+        +fCenterAttributes( center )
+        width: calc( 100vw * 0.02 )
+        height: calc( 100vw * 0.03 )
+        //border: 2px solid $colorGray_3
+        margin-right: calc( 100vw * 0.005 )
+        +fRwdControl("pad")
+          width: calc( 100vw * 0.08 )
+          height: calc( 100vw * 0.12 )
+          margin-right: calc( 100vw * 0.050 )
+        .cImage
+          width: 100%
+          height: 80%
+          background-size: 100%
+          background-repeat: no-repeat
+    .cAddress
+      .cImage
+        background-image: url( $urlImageIcon_Address )
+    .cPhone
+      .cImage
+        background-image: url( $urlImageIcon_Phone )
+    .cFax
+      .cImage
+        background-image: url( $urlImageIcon_FAX )
+    .cEmail
+      .cImage
+        background-image: url( $urlImageIcon_Email )
+    .cContact
+      user-select: none
+      cursor: pointer
+      .cImage
+        background-image: url( $urlImageIcon_Contact )
+        
+.cCopyrightBox
+  +fCenterAttributes( center )
+  height: calc( 100vw * 0.04 )
+  background-color: $colorSprGreen_1
+  color: #fff
+  font-size: calc( 100vw * 0.0085 )
+  +fRwdControl("pad")
+    font-size: calc( 100vw * 0.0340 )
+    height: calc( 100vw * 0.16 )

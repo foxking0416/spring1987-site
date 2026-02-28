@@ -1,0 +1,355 @@
+@charset "UTF-8";
+/*--- Debug --- */
+/*--- Debug End --- */
+/*--- Release --- */
+/*--- Release End --- */
+* {
+  font-family: "微軟正黑體";
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.cTopBox {
+  height: calc( 100vw * 0.35 );
+  width: 100%;
+}
+@media only screen and (max-width: 1040px) {
+  .cTopBox {
+    height: calc( 100vw * 0.65 );
+  }
+}
+.cTopBox .cBanner {
+  width: 100%;
+  height: calc( 100vw * 0.3 );
+  position: absolute;
+  overflow: hidden;
+  top: calc( 100vw * 0.05 );
+}
+@media only screen and (max-width: 1040px) {
+  .cTopBox .cBanner {
+    height: calc( 100vw * 0.6 );
+  }
+}
+.cTopBox .cBanner .cImage {
+  position: absolute;
+  width: calc( 100vw * 3 );
+  height: 100%;
+  display: -webkit-box;
+  display: flex;
+  left: -100vw;
+}
+.cTopBox .cBanner .cImage .cPreImage {
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../Image/BuildCase/0_DemoCase/Show/0.jpg");
+  border: 0px solid #000;
+  padding: 0px;
+  margin: 0px;
+}
+.cTopBox .cBanner .cImage .cMainImage {
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../Image/BuildCase/0_DemoCase/Show/0.jpg");
+  border: 0px solid #000;
+  padding: 0px;
+  margin: 0px;
+}
+.cTopBox .cBanner .cImage .cNextImage {
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../Image/BuildCase/0_DemoCase/Show/0.jpg");
+  border: 0px solid #000;
+  padding: 0px;
+  margin: 0px;
+}
+.cTopBox .cBanner .cImageControl {
+  position: absolute;
+  z-index: 1;
+  bottom: calc( 100vw * 0.04 );
+  right: calc( 100vw * 0.09 );
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+@media only screen and (max-width: 1040px) {
+  .cTopBox .cBanner .cImageControl {
+    bottom: calc( 100vw * 0.08 );
+  }
+}
+.cTopBox .cBanner .cImageControl .cPreButton, .cTopBox .cBanner .cImageControl .cNextButton {
+  width: calc( 100vw * 0.025 );
+  height: calc( 100vw * 0.025 );
+  background-color: #a0a0a0;
+  border: 1px solid #a0a0a0;
+  border-radius: 0px;
+  font-size: calc( 100vw * 0.01 );
+  font-weight: bold;
+  color: #fff;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+.cTopBox .cBanner .cImageControl .cPreButton:hover, .cTopBox .cBanner .cImageControl .cNextButton:hover {
+  opacity: 0.7;
+}
+@media only screen and (max-width: 1040px) {
+  .cTopBox .cBanner .cImageControl .cPreButton, .cTopBox .cBanner .cImageControl .cNextButton {
+    width: calc( 100vw * 0.075 );
+    height: calc( 100vw * 0.075 );
+    font-size: calc( 100vw * 0.03 );
+  }
+}
+.cTopBox .cBanner .cImageControl .cPreButton {
+  margin-right: calc( 100vw * 0.002 );
+}
+@media only screen and (max-width: 1040px) {
+  .cTopBox .cBanner .cImageControl .cPreButton {
+    margin-right: calc( 100vw * 0.012 );
+  }
+}
+.cTopBox .cBanner .cImageControl .cNextButton {
+  margin-left: calc( 100vw * 0.002 );
+}
+@media only screen and (max-width: 1040px) {
+  .cTopBox .cBanner .cImageControl .cNextButton {
+    margin-left: calc( 100vw * 0.012 );
+  }
+}
+
+.cWinningRecordBox {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  padding-bottom: calc( 100vw * 0.04 );
+}
+.cWinningRecordBox .cBackgroundImage {
+  background-image: url("../Image/About/0.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 110%;
+  position: absolute;
+  opacity: 0.25;
+  z-index: -1;
+}
+.cWinningRecordBox .cTitle {
+  padding-top: calc( 100vw * 0.03 );
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+}
+.cWinningRecordBox .cTitle h1 {
+  font-size: calc( 100vw * 0.025 );
+  margin: 0px;
+}
+@media only screen and (max-width: 1040px) {
+  .cWinningRecordBox .cTitle h1 {
+    font-size: calc( 100vw * 0.06 );
+  }
+}
+.cWinningRecordBox .cTitle .cLine {
+  margin-top: calc( 100vw * 0.005 );
+  width: calc( 100vw * 0.04 );
+  border-bottom: 7px solid #008a3a;
+}
+@media only screen and (max-width: 1040px) {
+  .cWinningRecordBox .cTitle .cLine {
+    width: calc( 100vw * 0.11 );
+  }
+}
+.cWinningRecordBox .cTitleInfo {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+}
+.cWinningRecordBox .cTitleInfo .cMainInfo h3 {
+  font-size: calc( 100vw * 0.01 );
+}
+@media only screen and (max-width: 1040px) {
+  .cWinningRecordBox .cTitleInfo .cMainInfo h3 {
+    font-size: calc( 100vw * 0.035 );
+  }
+}
+.cWinningRecordBox .cContent {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+.cWinningRecordBox .cContent .cRecordBox {
+  width: 100%;
+}
+.cWinningRecordBox .cContent .cRecordBox .cDataTemplate, .cWinningRecordBox .cContent .cRecordBox .cDataBase {
+  margin-top: calc( 100vw * 0.015 );
+  width: 100%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+.cWinningRecordBox .cContent .cRecordBox .cDataTemplate .cYearBox, .cWinningRecordBox .cContent .cRecordBox .cDataBase .cYearBox {
+  width: 33%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: end;
+          justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+}
+@media only screen and (max-width: 1040px) {
+  .cWinningRecordBox .cContent .cRecordBox .cDataTemplate .cYearBox, .cWinningRecordBox .cContent .cRecordBox .cDataBase .cYearBox {
+    width: 20%;
+  }
+}
+.cWinningRecordBox .cContent .cRecordBox .cDataTemplate .cYearBox .cConnectionLine, .cWinningRecordBox .cContent .cRecordBox .cDataBase .cYearBox .cConnectionLine {
+  width: calc( 100vw * 0.05 );
+  height: 10px;
+  position: relative;
+}
+.cWinningRecordBox .cContent .cRecordBox .cDataTemplate .cYearBox .cConnectionLine .cLine, .cWinningRecordBox .cContent .cRecordBox .cDataBase .cYearBox .cConnectionLine .cLine {
+  position: absolute;
+  right: calc( 100vw * 0.025 );
+  height: 10px;
+  border: 1px solid #008a3a;
+  z-index: 0;
+}
+@media only screen and (max-width: 1040px) {
+  .cWinningRecordBox .cContent .cRecordBox .cDataTemplate .cYearBox .cConnectionLine .cLine, .cWinningRecordBox .cContent .cRecordBox .cDataBase .cYearBox .cConnectionLine .cLine {
+    right: calc( 100vw * 0.075 );
+  }
+}
+.cWinningRecordBox .cContent .cRecordBox .cDataTemplate .cYearBox .cYearIcon, .cWinningRecordBox .cContent .cRecordBox .cDataBase .cYearBox .cYearIcon {
+  margin-top: calc( 100vw * 0.012 );
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  right: 10%;
+  top: 0px;
+  width: calc( 100vw * 0.05 );
+  height: calc( 100vw * 0.05 );
+  border-radius: calc( 100vw * 0.05 );
+  border: calc( 100vw * 0.0015 ) dashed #008a3a;
+  background-color: #fff;
+  z-index: 1;
+}
+@media only screen and (max-width: 1040px) {
+  .cWinningRecordBox .cContent .cRecordBox .cDataTemplate .cYearBox .cYearIcon, .cWinningRecordBox .cContent .cRecordBox .cDataBase .cYearBox .cYearIcon {
+    width: calc( 100vw * 0.15 );
+    height: calc( 100vw * 0.15 );
+    border-radius: calc( 100vw * 0.15 );
+    border: calc( 100vw * 0.005 ) dashed #008a3a;
+  }
+}
+.cWinningRecordBox .cContent .cRecordBox .cDataTemplate .cYearBox .cYearIcon .cInfoBox, .cWinningRecordBox .cContent .cRecordBox .cDataBase .cYearBox .cYearIcon .cInfoBox {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  background-color: #008a3a;
+  width: 82%;
+  height: 82%;
+  border-radius: calc( 100vw * 0.05 );
+  color: #fff;
+  font-size: calc( 100vw * 0.012 );
+  font-weight: 600;
+  line-height: calc( 100vw * 0.012 );
+}
+@media only screen and (max-width: 1040px) {
+  .cWinningRecordBox .cContent .cRecordBox .cDataTemplate .cYearBox .cYearIcon .cInfoBox, .cWinningRecordBox .cContent .cRecordBox .cDataBase .cYearBox .cYearIcon .cInfoBox {
+    font-size: calc( 100vw * 0.035 );
+    line-height: calc( 100vw * 0.037 );
+    border-radius: calc( 100vw * 0.15 );
+  }
+}
+.cWinningRecordBox .cContent .cRecordBox .cDataTemplate .cProjectBox, .cWinningRecordBox .cContent .cRecordBox .cDataBase .cProjectBox {
+  width: 67%;
+  padding-left: 3%;
+}
+@media only screen and (max-width: 1040px) {
+  .cWinningRecordBox .cContent .cRecordBox .cDataTemplate .cProjectBox, .cWinningRecordBox .cContent .cRecordBox .cDataBase .cProjectBox {
+    width: 80%;
+  }
+}
+.cWinningRecordBox .cContent .cRecordBox .cDataTemplate .cProjectBox .cProjectTemplate, .cWinningRecordBox .cContent .cRecordBox .cDataTemplate .cProjectBox .cProjectBase, .cWinningRecordBox .cContent .cRecordBox .cDataBase .cProjectBox .cProjectTemplate, .cWinningRecordBox .cContent .cRecordBox .cDataBase .cProjectBox .cProjectBase {
+  margin-top: calc( 100vw * 0.012 );
+  font-size: calc( 100vw * 0.012 );
+  line-height: calc( 100vw * 0.02 );
+  font-weight: 600;
+}
+@media only screen and (max-width: 1040px) {
+  .cWinningRecordBox .cContent .cRecordBox .cDataTemplate .cProjectBox .cProjectTemplate, .cWinningRecordBox .cContent .cRecordBox .cDataTemplate .cProjectBox .cProjectBase, .cWinningRecordBox .cContent .cRecordBox .cDataBase .cProjectBox .cProjectTemplate, .cWinningRecordBox .cContent .cRecordBox .cDataBase .cProjectBox .cProjectBase {
+    margin-top: calc( 100vw * 0.024 );
+    font-size: calc( 100vw * 0.04 );
+    line-height: calc( 100vw * 0.05 );
+    padding-right: calc( 100vw * 0.04 );
+  }
+}
+.cWinningRecordBox .cContent .cRecordBox .cDataTemplate .cProjectBox .cProjectTemplate .cWinningName, .cWinningRecordBox .cContent .cRecordBox .cDataTemplate .cProjectBox .cProjectBase .cWinningName, .cWinningRecordBox .cContent .cRecordBox .cDataBase .cProjectBox .cProjectTemplate .cWinningName, .cWinningRecordBox .cContent .cRecordBox .cDataBase .cProjectBox .cProjectBase .cWinningName {
+  color: #008a3a;
+}
+@media only screen and (max-width: 1040px) {
+  .cWinningRecordBox .cContent .cRecordBox .cDataTemplate .cProjectBox .cProjectTemplate .cWinningName, .cWinningRecordBox .cContent .cRecordBox .cDataTemplate .cProjectBox .cProjectBase .cWinningName, .cWinningRecordBox .cContent .cRecordBox .cDataBase .cProjectBox .cProjectTemplate .cWinningName, .cWinningRecordBox .cContent .cRecordBox .cDataBase .cProjectBox .cProjectBase .cWinningName {
+    margin-top: calc( 100vw * 0.01 );
+  }
+}
+
+.cFooterBox {
+  margin-top: 0 !important;
+}
+
+.cDataTemplate, .cProjectTemplate {
+  display: none !important;
+}

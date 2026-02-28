@@ -1,0 +1,584 @@
+@charset "UTF-8";
+/*--- Debug ---*/
+/*--- Debug End ---*/
+/*--- Release --- */
+/*--- Release End --- */
+* {
+  font-family: "微軟正黑體";
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.cGoToControlBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: fixed;
+  bottom: calc( 100vw * 0.03 );
+  right: calc( 100vw * 0.03 );
+  z-index: 2;
+  cursor: pointer;
+}
+@media only screen and (max-width: 1040px) {
+  .cGoToControlBox {
+    flex-direction: row;
+    right: calc( 100vw * 0.345 );
+  }
+}
+.cGoToControlBox .cGoTop, .cGoToControlBox .cGoBack, .cGoToControlBox .cGoBottom {
+  width: calc( 100vw * 0.02 );
+  height: calc( 100vw * 0.02 );
+  background-color: rgba(255, 255, 255, 0.35);
+}
+@media only screen and (max-width: 1040px) {
+  .cGoToControlBox .cGoTop, .cGoToControlBox .cGoBack, .cGoToControlBox .cGoBottom {
+    width: calc( 100vw * 0.1 );
+    height: calc( 100vw * 0.1 );
+  }
+}
+.cGoToControlBox .cGoTop .cImage, .cGoToControlBox .cGoBack .cImage, .cGoToControlBox .cGoBottom .cImage {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.cGoToControlBox .cGoTop:hover, .cGoToControlBox .cGoBack:hover, .cGoToControlBox .cGoBottom:hover {
+  background-color: rgba(0, 138, 58, 0.3);
+  width: calc( 100vw * 0.025 );
+  height: calc( 100vw * 0.025 );
+}
+@media only screen and (max-width: 1040px) {
+  .cGoToControlBox .cGoTop:hover, .cGoToControlBox .cGoBack:hover, .cGoToControlBox .cGoBottom:hover {
+    width: calc( 100vw * 0.15 );
+    height: calc( 100vw * 0.15 );
+  }
+}
+.cGoToControlBox .cGoTop:hover .cImage, .cGoToControlBox .cGoBack:hover .cImage, .cGoToControlBox .cGoBottom:hover .cImage {
+  filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.7));
+}
+.cGoToControlBox .cGoTop .cImage {
+  background-image: url("../Image/Icon/GoToControl/top.svg");
+}
+.cGoToControlBox .cGoBack .cImage {
+  background-image: url("../Image/Icon/GoToControl/last.svg");
+}
+.cGoToControlBox .cGoBottom .cImage {
+  background-image: url("../Image/Icon/GoToControl/bottom.svg");
+}
+
+.cTopBox {
+  height: calc( 100vw * 0.35 );
+  width: 100%;
+}
+@media only screen and (max-width: 1040px) {
+  .cTopBox {
+    height: calc( 100vw * 0.65 );
+  }
+}
+.cTopBox .cBanner {
+  width: 100%;
+  height: calc( 100vw * 0.3 );
+  position: absolute;
+  overflow: hidden;
+  top: calc( 100vw * 0.05 );
+}
+@media only screen and (max-width: 1040px) {
+  .cTopBox .cBanner {
+    height: calc( 100vw * 0.6 );
+  }
+}
+.cTopBox .cBanner .cImage {
+  position: absolute;
+  width: calc( 100vw * 3 );
+  height: 100%;
+  display: flex;
+  left: -100vw;
+}
+.cTopBox .cBanner .cImage .cPreImage {
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../Image/BuildCase/0_DemoCase/Show/0.jpg");
+  border: 0px solid #000;
+  padding: 0px;
+  margin: 0px;
+}
+.cTopBox .cBanner .cImage .cMainImage {
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../Image/BuildCase/0_DemoCase/Show/0.jpg");
+  border: 0px solid #000;
+  padding: 0px;
+  margin: 0px;
+}
+.cTopBox .cBanner .cImage .cNextImage {
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../Image/BuildCase/0_DemoCase/Show/0.jpg");
+  border: 0px solid #000;
+  padding: 0px;
+  margin: 0px;
+}
+.cTopBox .cBanner .cImageControl {
+  position: absolute;
+  z-index: 1;
+  bottom: calc( 100vw * 0.04 );
+  right: calc( 100vw * 0.09 );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media only screen and (max-width: 1040px) {
+  .cTopBox .cBanner .cImageControl {
+    bottom: calc( 100vw * 0.08 );
+  }
+}
+.cTopBox .cBanner .cImageControl .cPreButton, .cTopBox .cBanner .cImageControl .cNextButton {
+  width: calc( 100vw * 0.025 );
+  height: calc( 100vw * 0.025 );
+  background-color: #a0a0a0;
+  border: 1px solid #a0a0a0;
+  border-radius: 0px;
+  font-size: calc( 100vw * 0.01 );
+  font-weight: bold;
+  color: #fff;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cTopBox .cBanner .cImageControl .cPreButton:hover, .cTopBox .cBanner .cImageControl .cNextButton:hover {
+  opacity: 0.7;
+}
+@media only screen and (max-width: 1040px) {
+  .cTopBox .cBanner .cImageControl .cPreButton, .cTopBox .cBanner .cImageControl .cNextButton {
+    width: calc( 100vw * 0.075 );
+    height: calc( 100vw * 0.075 );
+    font-size: calc( 100vw * 0.03 );
+  }
+}
+.cTopBox .cBanner .cImageControl .cPreButton {
+  margin-right: calc( 100vw * 0.002 );
+}
+@media only screen and (max-width: 1040px) {
+  .cTopBox .cBanner .cImageControl .cPreButton {
+    margin-right: calc( 100vw * 0.012 );
+  }
+}
+.cTopBox .cBanner .cImageControl .cNextButton {
+  margin-left: calc( 100vw * 0.002 );
+}
+@media only screen and (max-width: 1040px) {
+  .cTopBox .cBanner .cImageControl .cNextButton {
+    margin-left: calc( 100vw * 0.012 );
+  }
+}
+.cTopBox .cBanner .cInfoBanner {
+  position: absolute;
+  z-index: 1;
+  color: #fff;
+  height: calc( 100vw * 0.015 );
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+  bottom: calc( 100vw * 0.016 );
+  right: calc( 100vw * 0.09 );
+  font-size: calc( 100vw * 0.012 );
+}
+@media only screen and (max-width: 1040px) {
+  .cTopBox .cBanner .cInfoBanner {
+    font-size: calc( 100vw * 0.036 );
+    height: calc( 100vw * 0.045 );
+  }
+}
+.cTopBox .cBanner .cInfoBanner .cInfo {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  top: calc( 0vw * 0.015 );
+}
+.cTopBox .cBanner .cInfoBanner .cInfo .cPreInfo, .cTopBox .cBanner .cInfoBanner .cInfo .cMainInfo, .cTopBox .cBanner .cInfoBanner .cInfo .cNextInfo {
+  line-height: calc( 100vw * 0.014 );
+  height: calc( 100vw * 0.015 );
+}
+@media only screen and (max-width: 1040px) {
+  .cTopBox .cBanner .cInfoBanner .cInfo .cPreInfo, .cTopBox .cBanner .cInfoBanner .cInfo .cMainInfo, .cTopBox .cBanner .cInfoBanner .cInfo .cNextInfo {
+    line-height: calc( 100vw * 0.042 );
+    height: calc( 100vw * 0.045 );
+  }
+}
+
+.cBuildInfoBox {
+  width: 100%;
+  height: calc( 100vw * 0.27 );
+  background-color: #dddda7;
+}
+@media only screen and (max-width: 1040px) {
+  .cBuildInfoBox {
+    flex-direction: column;
+    height: calc( 100vw * 1.2 );
+    padding-top: calc( 100vw * 0.06 );
+  }
+}
+.cBuildInfoBox .cTitle {
+  margin-left: calc( 100vw * 0.12 );
+  padding-top: calc( 100vw * 0.03 );
+}
+@media only screen and (max-width: 1040px) {
+  .cBuildInfoBox .cTitle {
+    margin: 0;
+    padding-left: calc( 100vw * 0.07);
+    padding-right: calc( 100vw * 0.07);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+.cBuildInfoBox .cTitle h1 {
+  font-size: calc( 100vw * 0.025 );
+  margin: 0px;
+}
+@media only screen and (max-width: 1040px) {
+  .cBuildInfoBox .cTitle h1 {
+    font-size: calc( 100vw * 0.075 );
+    text-align: center;
+  }
+}
+.cBuildInfoBox .cTitle .cLine {
+  margin-left: calc( 100vw * 0.005 );
+  margin-top: calc( 100vw * 0.005 );
+  width: calc( 100vw * 0.04 );
+  border-bottom: 7px solid #008a3a;
+}
+@media only screen and (max-width: 1040px) {
+  .cBuildInfoBox .cTitle .cLine {
+    width: calc( 100vw * 0.12 );
+    margin-top: calc( 100vw * 0.03 );
+  }
+}
+.cBuildInfoBox .cContent {
+  display: flex;
+}
+@media only screen and (max-width: 1040px) {
+  .cBuildInfoBox .cContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+.cBuildInfoBox .cContent .cDetailBox, .cBuildInfoBox .cContent .cMapBox {
+  width: 50%;
+  height: calc( 100vw * 0.17 );
+}
+@media only screen and (max-width: 1040px) {
+  .cBuildInfoBox .cContent .cDetailBox, .cBuildInfoBox .cContent .cMapBox {
+    width: 70%;
+    height: calc( 100vw * 0.40 );
+  }
+}
+.cBuildInfoBox .cContent .cDetailBox .cStartYear, .cBuildInfoBox .cContent .cDetailBox .cFinishYear, .cBuildInfoBox .cContent .cDetailBox .cBoss, .cBuildInfoBox .cContent .cDetailBox .cDesign {
+  margin-left: calc( 100vw * 0.125 );
+  margin-top: calc( 100vw * 0.015 );
+  font-size: calc( 100vw * 0.0105 );
+  display: flex;
+  font-weight: 600;
+}
+@media only screen and (max-width: 1040px) {
+  .cBuildInfoBox .cContent .cDetailBox .cStartYear, .cBuildInfoBox .cContent .cDetailBox .cFinishYear, .cBuildInfoBox .cContent .cDetailBox .cBoss, .cBuildInfoBox .cContent .cDetailBox .cDesign {
+    margin-left: 0;
+    margin-top: calc( 100vw * 0.030 );
+    font-size: calc( 100vw * 0.0315 );
+  }
+}
+.cBuildInfoBox .cContent .cDetailBox .cStartYear data, .cBuildInfoBox .cContent .cDetailBox .cFinishYear data, .cBuildInfoBox .cContent .cDetailBox .cBoss data, .cBuildInfoBox .cContent .cDetailBox .cDesign data {
+  margin-left: calc( 100vw * 0.005 );
+}
+.cBuildInfoBox .cContent .cDetailBox .cStartYear {
+  margin-top: calc( 100vw * 0.03 );
+}
+@media only screen and (max-width: 1040px) {
+  .cBuildInfoBox .cContent .cDetailBox .cStartYear {
+    margin-top: calc( 100vw * 0.09 );
+  }
+}
+.cBuildInfoBox .cContent .cMapBox .cMap {
+  margin-top: calc( 100vw * 0.03 );
+  width: 100%;
+  height: 90%;
+  background-color: #fff;
+}
+
+.cPhotoBox {
+  position: relative;
+  overflow: hidden;
+}
+.cPhotoBox .cPhotoSlideBox {
+  position: relative;
+  width: calc( 100vw * 3 );
+  height: calc( 100vw * 0.45 );
+  display: flex;
+  left: -100vw;
+  z-index: 0;
+}
+.cPhotoBox .cPhotoSlideBox .cPreImage, .cPhotoBox .cPhotoSlideBox .cMainImage, .cPhotoBox .cPhotoSlideBox .cNextImage {
+  height: 100%;
+  width: 100vw;
+}
+.cPhotoBox .cPhotoSlideBox .cPreImage .cShowBuildCaseBox, .cPhotoBox .cPhotoSlideBox .cMainImage .cShowBuildCaseBox, .cPhotoBox .cPhotoSlideBox .cNextImage .cShowBuildCaseBox {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.cPhotoBox .cPhotoSlideBox .cPreImage .cShowBuildCaseBox .cItemTemplate, .cPhotoBox .cPhotoSlideBox .cPreImage .cShowBuildCaseBox .cItemBase, .cPhotoBox .cPhotoSlideBox .cMainImage .cShowBuildCaseBox .cItemTemplate, .cPhotoBox .cPhotoSlideBox .cMainImage .cShowBuildCaseBox .cItemBase, .cPhotoBox .cPhotoSlideBox .cNextImage .cShowBuildCaseBox .cItemTemplate, .cPhotoBox .cPhotoSlideBox .cNextImage .cShowBuildCaseBox .cItemBase {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+  height: calc( 100vw * 0.15 );
+  position: relative;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+@media only screen and (max-width: 1040px) {
+  .cPhotoBox .cPhotoSlideBox .cPreImage .cShowBuildCaseBox .cItemTemplate, .cPhotoBox .cPhotoSlideBox .cPreImage .cShowBuildCaseBox .cItemBase, .cPhotoBox .cPhotoSlideBox .cMainImage .cShowBuildCaseBox .cItemTemplate, .cPhotoBox .cPhotoSlideBox .cMainImage .cShowBuildCaseBox .cItemBase, .cPhotoBox .cPhotoSlideBox .cNextImage .cShowBuildCaseBox .cItemTemplate, .cPhotoBox .cPhotoSlideBox .cNextImage .cShowBuildCaseBox .cItemBase {
+    width: 100%;
+    height: calc( 100vw * 0.6 );
+  }
+}
+.cPhotoBox .cPhotoSlideBox .cPreImage .cShowBuildCaseBox .cItemTemplate:hover, .cPhotoBox .cPhotoSlideBox .cPreImage .cShowBuildCaseBox .cItemBase:hover, .cPhotoBox .cPhotoSlideBox .cMainImage .cShowBuildCaseBox .cItemTemplate:hover, .cPhotoBox .cPhotoSlideBox .cMainImage .cShowBuildCaseBox .cItemBase:hover, .cPhotoBox .cPhotoSlideBox .cNextImage .cShowBuildCaseBox .cItemTemplate:hover, .cPhotoBox .cPhotoSlideBox .cNextImage .cShowBuildCaseBox .cItemBase:hover {
+  opacity: 0.7;
+}
+.cPhotoBox .cPhotoSlideBox .cPreImage .cShowBuildCaseBox .cItemTemplate data, .cPhotoBox .cPhotoSlideBox .cPreImage .cShowBuildCaseBox .cItemBase data, .cPhotoBox .cPhotoSlideBox .cMainImage .cShowBuildCaseBox .cItemTemplate data, .cPhotoBox .cPhotoSlideBox .cMainImage .cShowBuildCaseBox .cItemBase data, .cPhotoBox .cPhotoSlideBox .cNextImage .cShowBuildCaseBox .cItemTemplate data, .cPhotoBox .cPhotoSlideBox .cNextImage .cShowBuildCaseBox .cItemBase data {
+  display: none;
+}
+.cPhotoBox .cPhotoSlideBox .cPreImage .cShowBuildCaseBox .cItemTemplate .cImage, .cPhotoBox .cPhotoSlideBox .cPreImage .cShowBuildCaseBox .cItemBase .cImage, .cPhotoBox .cPhotoSlideBox .cMainImage .cShowBuildCaseBox .cItemTemplate .cImage, .cPhotoBox .cPhotoSlideBox .cMainImage .cShowBuildCaseBox .cItemBase .cImage, .cPhotoBox .cPhotoSlideBox .cNextImage .cShowBuildCaseBox .cItemTemplate .cImage, .cPhotoBox .cPhotoSlideBox .cNextImage .cShowBuildCaseBox .cItemBase .cImage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #fff;
+}
+.cPhotoBox .cPhotoSlideBox .cPreImage .cShowBuildCaseBox .cItemTemplate .c360Tag, .cPhotoBox .cPhotoSlideBox .cPreImage .cShowBuildCaseBox .cItemTemplate .cVideoTag, .cPhotoBox .cPhotoSlideBox .cPreImage .cShowBuildCaseBox .cItemBase .c360Tag, .cPhotoBox .cPhotoSlideBox .cPreImage .cShowBuildCaseBox .cItemBase .cVideoTag, .cPhotoBox .cPhotoSlideBox .cMainImage .cShowBuildCaseBox .cItemTemplate .c360Tag, .cPhotoBox .cPhotoSlideBox .cMainImage .cShowBuildCaseBox .cItemTemplate .cVideoTag, .cPhotoBox .cPhotoSlideBox .cMainImage .cShowBuildCaseBox .cItemBase .c360Tag, .cPhotoBox .cPhotoSlideBox .cMainImage .cShowBuildCaseBox .cItemBase .cVideoTag, .cPhotoBox .cPhotoSlideBox .cNextImage .cShowBuildCaseBox .cItemTemplate .c360Tag, .cPhotoBox .cPhotoSlideBox .cNextImage .cShowBuildCaseBox .cItemTemplate .cVideoTag, .cPhotoBox .cPhotoSlideBox .cNextImage .cShowBuildCaseBox .cItemBase .c360Tag, .cPhotoBox .cPhotoSlideBox .cNextImage .cShowBuildCaseBox .cItemBase .cVideoTag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 25%;
+  height: 25%;
+  border-radius: 5%;
+  background-color: #000;
+  color: #fff;
+  opacity: 0.7;
+  display: none;
+}
+.cPhotoBox .cPhotoSlideBox .cPreImage .cShowBuildCaseBox .cItemTemplate .c360Tag h3, .cPhotoBox .cPhotoSlideBox .cPreImage .cShowBuildCaseBox .cItemTemplate .cVideoTag h3, .cPhotoBox .cPhotoSlideBox .cPreImage .cShowBuildCaseBox .cItemBase .c360Tag h3, .cPhotoBox .cPhotoSlideBox .cPreImage .cShowBuildCaseBox .cItemBase .cVideoTag h3, .cPhotoBox .cPhotoSlideBox .cMainImage .cShowBuildCaseBox .cItemTemplate .c360Tag h3, .cPhotoBox .cPhotoSlideBox .cMainImage .cShowBuildCaseBox .cItemTemplate .cVideoTag h3, .cPhotoBox .cPhotoSlideBox .cMainImage .cShowBuildCaseBox .cItemBase .c360Tag h3, .cPhotoBox .cPhotoSlideBox .cMainImage .cShowBuildCaseBox .cItemBase .cVideoTag h3, .cPhotoBox .cPhotoSlideBox .cNextImage .cShowBuildCaseBox .cItemTemplate .c360Tag h3, .cPhotoBox .cPhotoSlideBox .cNextImage .cShowBuildCaseBox .cItemTemplate .cVideoTag h3, .cPhotoBox .cPhotoSlideBox .cNextImage .cShowBuildCaseBox .cItemBase .c360Tag h3, .cPhotoBox .cPhotoSlideBox .cNextImage .cShowBuildCaseBox .cItemBase .cVideoTag h3 {
+  font-size: calc( 100vw * 0.01 );
+}
+.cPhotoBox .cPhotoSlideBox .cImageControl {
+  position: absolute;
+  top: calc( 100vw * 0.225 );
+  width: 99.7%;
+  height: 0;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media only screen and (max-width: 1040px) {
+  .cPhotoBox .cPhotoSlideBox .cImageControl {
+    display: none;
+  }
+}
+.cPhotoBox .cPhotoSlideBox .cImageControl .cPreButton, .cPhotoBox .cPhotoSlideBox .cImageControl .cNextButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc( 100vw * 0.04 );
+  height: calc( 100vw * 0.04 );
+  margin-left: calc( 100vw * 0.45 );
+  margin-right: calc( 100vw * 0.45 );
+  font-size: calc( 100vw * 0.03 );
+  font-weight: 600;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #008a3a;
+  z-index: 2;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+.cPhotoBox .cPhotoSlideBox .cImageControl .cPreButton:hover, .cPhotoBox .cPhotoSlideBox .cImageControl .cNextButton:hover {
+  background-color: #008a3a;
+  color: #fff;
+}
+
+.cPhotoLightBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 3;
+  display: none;
+}
+.cPhotoLightBox .cMask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.cPhotoLightBox .cImageBox {
+  position: relative;
+  width: 55%;
+  height: calc( 100vw * 0.36 );
+  background-color: #fff;
+}
+@media only screen and (max-width: 1040px) {
+  .cPhotoLightBox .cImageBox {
+    width: 99%;
+    height: calc( 100vw * 0.66 );
+  }
+}
+.cPhotoLightBox .cImageBox .cImage, .cPhotoLightBox .cImageBox .cImage_360 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../Image/Icon/Loading.gif");
+}
+.cPhotoLightBox .cImageBox .cDescription {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 4;
+  color: #FFF;
+  border: 3px solid #FFF;
+  font-size: calc( 100vw * 0.09 );
+}
+.cPhotoLightBox .cImageBox .cDescription pre {
+  padding: calc( 100vw * 0.07 );
+  font-size: calc( 100vw * 0.015 );
+  line-height: calc( 100vw * 0.03 );
+  white-space: pre-wrap;
+}
+@media only screen and (max-width: 1040px) {
+  .cPhotoLightBox .cImageBox .cDescription pre {
+    font-size: calc( 100vw * 0.03 );
+  }
+}
+.cPhotoLightBox .cImageBox .cInfoButton, .cPhotoLightBox .cImageBox .cEscButton {
+  position: absolute;
+  top: calc( 100vw * 0.03 );
+  width: calc( 100vw * 0.02 );
+  height: calc( 100vw * 0.02 );
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: calc( 100vw * 0.015 );
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+@media only screen and (max-width: 1040px) {
+  .cPhotoLightBox .cImageBox .cInfoButton, .cPhotoLightBox .cImageBox .cEscButton {
+    width: calc( 100vw * 0.06 );
+    height: calc( 100vw * 0.06 );
+  }
+}
+.cPhotoLightBox .cImageBox .cInfoButton:hover, .cPhotoLightBox .cImageBox .cEscButton:hover {
+  opacity: 0.7;
+}
+.cPhotoLightBox .cImageBox .cInfoButton {
+  left: calc( 100vw * 0.03 );
+  background-color: #fff;
+  border-radius: calc( 100vw * 0.02 );
+  color: #008a3a;
+}
+.cPhotoLightBox .cImageBox .cEscButton {
+  right: calc( 100vw * 0.03 );
+  font-size: calc( 100vw * 0.03 );
+  color: #008a3a;
+}
+@media only screen and (max-width: 1040px) {
+  .cPhotoLightBox .cImageBox .cEscButton {
+    font-size: calc( 100vw * 0.09 );
+  }
+}
+.cPhotoLightBox .cImageBox .cControlBox {
+  position: absolute;
+  width: 100%;
+  height: calc( 100vw * 0.022 );
+  bottom: calc( 100vw * 0.01 );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+@media only screen and (max-width: 1040px) {
+  .cPhotoLightBox .cImageBox .cControlBox {
+    bottom: calc( 100vw * 0.03 );
+  }
+}
+.cPhotoLightBox .cImageBox .cControlBox .cLastButton, .cPhotoLightBox .cImageBox .cControlBox .cNextButton {
+  width: calc( 100vw * 0.022 );
+  height: calc( 100vw * 0.022 );
+  margin-left: calc( 100vw * 0.005 );
+  margin-right: calc( 100vw * 0.005 );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #008a3a;
+  color: #fff;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+@media only screen and (max-width: 1040px) {
+  .cPhotoLightBox .cImageBox .cControlBox .cLastButton, .cPhotoLightBox .cImageBox .cControlBox .cNextButton {
+    width: calc( 100vw * 0.066 );
+    height: calc( 100vw * 0.066 );
+  }
+}
+.cPhotoLightBox .cImageBox .cControlBox .cLastButton:hover, .cPhotoLightBox .cImageBox .cControlBox .cNextButton:hover {
+  opacity: 0.7;
+}
+
+.cFooterBox {
+  margin-top: 0 !important;
+}
+
+.cItemTemplate {
+  display: none !important;
+}

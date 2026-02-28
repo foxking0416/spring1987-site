@@ -1,0 +1,510 @@
+@charset "UTF-8";
+/*--- Debug --- */
+/*--- Debug End --- */
+/*--- Release --- */
+/*--- Release End --- */
+* {
+  font-family: "微軟正黑體";
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.cTopBox {
+  height: calc( 100vw * 0.35 );
+  width: 100%;
+}
+@media only screen and (max-width: 1040px) {
+  .cTopBox {
+    height: calc( 100vw * 0.65 );
+  }
+}
+.cTopBox .cBanner {
+  width: 100%;
+  height: calc( 100vw * 0.3 );
+  position: absolute;
+  overflow: hidden;
+  top: calc( 100vw * 0.05 );
+}
+@media only screen and (max-width: 1040px) {
+  .cTopBox .cBanner {
+    height: calc( 100vw * 0.6 );
+  }
+}
+.cTopBox .cBanner .cImage {
+  position: absolute;
+  width: calc( 100vw * 3 );
+  height: 100%;
+  display: -webkit-box;
+  display: flex;
+  left: -100vw;
+}
+.cTopBox .cBanner .cImage .cPreImage {
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../Image/BuildCase/0_DemoCase/Show/0.jpg");
+  border: 0px solid #000;
+  padding: 0px;
+  margin: 0px;
+}
+.cTopBox .cBanner .cImage .cMainImage {
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../Image/BuildCase/0_DemoCase/Show/0.jpg");
+  border: 0px solid #000;
+  padding: 0px;
+  margin: 0px;
+}
+.cTopBox .cBanner .cImage .cNextImage {
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../Image/BuildCase/0_DemoCase/Show/0.jpg");
+  border: 0px solid #000;
+  padding: 0px;
+  margin: 0px;
+}
+.cTopBox .cBanner .cImageControl {
+  position: absolute;
+  z-index: 1;
+  bottom: calc( 100vw * 0.04 );
+  right: calc( 100vw * 0.09 );
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+@media only screen and (max-width: 1040px) {
+  .cTopBox .cBanner .cImageControl {
+    bottom: calc( 100vw * 0.08 );
+  }
+}
+.cTopBox .cBanner .cImageControl .cPreButton, .cTopBox .cBanner .cImageControl .cNextButton {
+  width: calc( 100vw * 0.025 );
+  height: calc( 100vw * 0.025 );
+  background-color: #a0a0a0;
+  border: 1px solid #a0a0a0;
+  border-radius: 0px;
+  font-size: calc( 100vw * 0.01 );
+  font-weight: bold;
+  color: #fff;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+.cTopBox .cBanner .cImageControl .cPreButton:hover, .cTopBox .cBanner .cImageControl .cNextButton:hover {
+  opacity: 0.7;
+}
+@media only screen and (max-width: 1040px) {
+  .cTopBox .cBanner .cImageControl .cPreButton, .cTopBox .cBanner .cImageControl .cNextButton {
+    width: calc( 100vw * 0.075 );
+    height: calc( 100vw * 0.075 );
+    font-size: calc( 100vw * 0.03 );
+  }
+}
+.cTopBox .cBanner .cImageControl .cPreButton {
+  margin-right: calc( 100vw * 0.002 );
+}
+@media only screen and (max-width: 1040px) {
+  .cTopBox .cBanner .cImageControl .cPreButton {
+    margin-right: calc( 100vw * 0.012 );
+  }
+}
+.cTopBox .cBanner .cImageControl .cNextButton {
+  margin-left: calc( 100vw * 0.002 );
+}
+@media only screen and (max-width: 1040px) {
+  .cTopBox .cBanner .cImageControl .cNextButton {
+    margin-left: calc( 100vw * 0.012 );
+  }
+}
+.cTopBox .cBanner .cInfoBanner {
+  position: absolute;
+  z-index: 1;
+  color: #fff;
+  height: calc( 100vw * 0.015 );
+  overflow: hidden;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  bottom: calc( 100vw * 0.016 );
+  right: calc( 100vw * 0.09 );
+  font-size: calc( 100vw * 0.012 );
+}
+@media only screen and (max-width: 1040px) {
+  .cTopBox .cBanner .cInfoBanner {
+    font-size: calc( 100vw * 0.036 );
+    height: calc( 100vw * 0.045 );
+  }
+}
+.cTopBox .cBanner .cInfoBanner .cInfo {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  position: relative;
+  top: calc( 0vw * 0.015 );
+}
+.cTopBox .cBanner .cInfoBanner .cInfo .cPreInfo, .cTopBox .cBanner .cInfoBanner .cInfo .cMainInfo, .cTopBox .cBanner .cInfoBanner .cInfo .cNextInfo {
+  line-height: calc( 100vw * 0.014 );
+  height: calc( 100vw * 0.015 );
+}
+@media only screen and (max-width: 1040px) {
+  .cTopBox .cBanner .cInfoBanner .cInfo .cPreInfo, .cTopBox .cBanner .cInfoBanner .cInfo .cMainInfo, .cTopBox .cBanner .cInfoBanner .cInfo .cNextInfo {
+    line-height: calc( 100vw * 0.042 );
+    height: calc( 100vw * 0.045 );
+  }
+}
+
+.cConnectionBox {
+  position: relative;
+}
+.cConnectionBox .cContent {
+  position: relative;
+  background-color: #dddda7;
+  height: calc( 100vw * 0.37 );
+  width: 100%;
+  -webkit-clip-path: circle(100%);
+          clip-path: circle(100%);
+  z-index: 1;
+}
+@media only screen and (max-width: 1040px) {
+  .cConnectionBox .cContent {
+    height: calc( 100vw * 1.6 );
+  }
+}
+.cConnectionBox .cContent .cTitle {
+  padding-top: calc( 100vw * 0.03 );
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+}
+.cConnectionBox .cContent .cTitle h1 {
+  font-size: calc( 100vw * 0.025 );
+  margin: 0px;
+}
+@media only screen and (max-width: 1040px) {
+  .cConnectionBox .cContent .cTitle h1 {
+    font-size: calc( 100vw * 0.06 );
+  }
+}
+.cConnectionBox .cContent .cTitle .cLine {
+  margin-top: calc( 100vw * 0.005 );
+  width: calc( 100vw * 0.04 );
+  border-bottom: 7px solid #008a3a;
+}
+@media only screen and (max-width: 1040px) {
+  .cConnectionBox .cContent .cTitle .cLine {
+    width: calc( 100vw * 0.11 );
+  }
+}
+.cConnectionBox .cContent remind {
+  font-size: calc( 100vw * 0.010 );
+  width: calc( 100vw * 0.3 );
+  margin-left: calc( 100vw * 0.18 );
+  color: #e27676;
+}
+@media only screen and (max-width: 1040px) {
+  .cConnectionBox .cContent remind {
+    font-size: calc( 100vw * 0.03 );
+  }
+}
+.cConnectionBox .cContent form {
+  display: -webkit-box;
+  display: flex;
+}
+@media only screen and (max-width: 1040px) {
+  .cConnectionBox .cContent form {
+    display: block;
+  }
+}
+.cConnectionBox .cContent form .cBox_1 {
+  width: 50%;
+}
+.cConnectionBox .cContent form .cBox_1 .cName, .cConnectionBox .cContent form .cBox_1 .cPhone, .cConnectionBox .cContent form .cBox_1 .cContactTime, .cConnectionBox .cContent form .cBox_1 .cEmail {
+  width: calc( 100vw * 0.293 );
+  height: calc( 100vw * 0.03 );
+  margin-left: auto;
+  margin-right: calc( 100vw * 0.02 );
+  margin-top: calc( 100vw * 0.015 );
+}
+@media only screen and (max-width: 1040px) {
+  .cConnectionBox .cContent form .cBox_1 .cName, .cConnectionBox .cContent form .cBox_1 .cPhone, .cConnectionBox .cContent form .cBox_1 .cContactTime, .cConnectionBox .cContent form .cBox_1 .cEmail {
+    width: calc( 100vw * 0.7 );
+    height: calc( 100vw * 0.06 );
+    margin-left: calc( 100vw * 0.15 );
+    margin-top: calc( 100vw * 0.05 );
+  }
+}
+.cConnectionBox .cContent form .cBox_1 input {
+  font-family: 微軟正黑體;
+  width: 100%;
+  height: 100%;
+  font-size: calc( 100vw * 0.015 );
+  padding-left: calc( 100vw * 0.005 );
+  padding-right: calc( 100vw * 0.005 );
+}
+@media only screen and (max-width: 1040px) {
+  .cConnectionBox .cContent form .cBox_1 input {
+    font-size: calc( 100vw * 0.05 );
+  }
+}
+.cConnectionBox .cContent form .cBox_2 {
+  width: 50%;
+}
+.cConnectionBox .cContent form .cBox_2 .cDemand {
+  width: calc( 100vw * 0.3 );
+  height: calc( 100vw * 0.165 );
+  margin-top: calc( 100vw * 0.015 );
+}
+@media only screen and (max-width: 1040px) {
+  .cConnectionBox .cContent form .cBox_2 .cDemand {
+    width: calc( 100vw * 0.7 );
+    height: calc( 100vw * 0.5 );
+    margin-top: calc( 100vw * 0.05 );
+    margin-left: calc( 100vw * 0.15 );
+  }
+}
+.cConnectionBox .cContent form .cBox_2 .cDemand textarea {
+  font-family: 微軟正黑體;
+  width: 100%;
+  height: 97%;
+  font-size: calc( 100vw * 0.015 );
+  padding-top: calc( 100vw * 0.006 );
+  padding-left: calc( 100vw * 0.005 );
+  padding-right: calc( 100vw * 0.005 );
+}
+@media only screen and (max-width: 1040px) {
+  .cConnectionBox .cContent form .cBox_2 .cDemand textarea {
+    font-size: calc( 100vw * 0.05 );
+  }
+}
+.cConnectionBox .cContent .cSentButtom {
+  font-size: calc( 100vw * 0.015 );
+  width: 63%;
+  border: 2px solid #008a3a;
+  margin-top: calc( 100vw * 0.015 );
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-top: calc( 100vw * 0.005 );
+  padding-bottom: calc( 100vw * 0.005 );
+  background-color: #008a3a;
+  color: #fff;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+@media only screen and (max-width: 1040px) {
+  .cConnectionBox .cContent .cSentButtom {
+    width: 70%;
+    font-size: calc( 100vw * 0.05 );
+    margin-top: calc( 100vw * 0.05 );
+  }
+}
+.cConnectionBox .cContent .cSentButtom:hover {
+  background-color: #fff;
+  border: 2px solid #008a3a;
+  color: #008a3a;
+  font-weight: bold;
+}
+.cConnectionBox .cSentSuccessImage {
+  position: absolute;
+  width: calc( 100vw * 0.079 );
+  height: calc( 100vw * 0.079 );
+  left: calc( 100vw * 0.457 );
+  top: calc( 100vw * 0.147 );
+  background-color: #008a3a;
+  border-radius: calc( 100vw * 0.05 );
+  opacity: 0;
+}
+@media only screen and (max-width: 1040px) {
+  .cConnectionBox .cSentSuccessImage {
+    top: calc( 100vw * 0.7 );
+  }
+}
+.cConnectionBox .cSentSuccessImage .cLine_1 {
+  position: absolute;
+  width: calc( 100vw * 0.025 );
+  height: calc( 100vw * 0.025 );
+  left: calc( 100vw * 0.025 );
+  top: calc( 100vw * 0.020 );
+  border-bottom: calc( 100vw * 0.005 ) solid #fff;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.cConnectionBox .cSentSuccessImage .cLine_2 {
+  position: absolute;
+  width: calc( 100vw * 0.04 );
+  height: calc( 100vw * 0.04 );
+  left: calc( 100vw * 0.012 );
+  top: calc( 100vw * 0.005 );
+  border-right: calc( 100vw * 0.005 ) solid #fff;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.cConnectionBox .cSentSuccessText {
+  position: absolute;
+  color: #008a3a;
+  top: calc( 100vw * 0.25);
+  left: calc( 100vw * 0.28 );
+  font-size: calc( 100vw * 0.016);
+  font-weight: bold;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  opacity: 0;
+}
+@media only screen and (max-width: 1040px) {
+  .cConnectionBox .cSentSuccessText {
+    font-size: calc( 100vw * 0.05);
+    left: calc( 100vw * 0.0 );
+    padding-left: 5%;
+    padding-right: 5%;
+    top: calc( 100vw * 0.85);
+  }
+}
+
+.cIdeaBox {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  padding-bottom: calc( 100vw * 0.04 );
+}
+.cIdeaBox .cBackgroundImage {
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 110%;
+  position: absolute;
+  opacity: 0.1;
+  z-index: -1;
+}
+.cIdeaBox .cTitle {
+  padding-top: calc( 100vw * 0.03 );
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+}
+.cIdeaBox .cTitle h1 {
+  font-size: calc( 100vw * 0.025 );
+  margin: 0px;
+}
+@media only screen and (max-width: 1040px) {
+  .cIdeaBox .cTitle h1 {
+    font-size: calc( 100vw * 0.06 );
+  }
+}
+.cIdeaBox .cTitle .cLine {
+  margin-top: calc( 100vw * 0.005 );
+  width: calc( 100vw * 0.04 );
+  border-bottom: 7px solid #008a3a;
+}
+@media only screen and (max-width: 1040px) {
+  .cIdeaBox .cTitle .cLine {
+    width: calc( 100vw * 0.11 );
+  }
+}
+.cIdeaBox .cSloganBox {
+  margin-top: calc( 100vw * 0.03 );
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  text-align: center;
+}
+@media only screen and (max-width: 1040px) {
+  .cIdeaBox .cSloganBox {
+    width: 90%;
+  }
+}
+.cIdeaBox .cSloganBox info {
+  font-size: calc( 100vw * 0.014 );
+  line-height: calc( 100vw * 0.03 );
+  font-weight: 600;
+  color: #008a3a;
+}
+@media only screen and (max-width: 1040px) {
+  .cIdeaBox .cSloganBox info {
+    font-size: calc( 100vw * 0.045 );
+    line-height: calc( 100vw * 0.08 );
+  }
+}
+.cIdeaBox .cMapBox {
+  margin-top: calc( 100vw * 0.03 );
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  width: 50%;
+  height: calc( 100vw * 0.18 );
+}
+@media only screen and (max-width: 1040px) {
+  .cIdeaBox .cMapBox {
+    width: 100%;
+    height: calc( 100vw * 0.45 );
+  }
+}
+.cIdeaBox .cMapBox .cMap {
+  width: 100%;
+  height: 100%;
+}
+
+.cFooterBox {
+  margin-top: 0 !important;
+}

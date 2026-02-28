@@ -1,0 +1,995 @@
+@charset "UTF-8";
+/*--- Debug ---*/
+/*--- Debug End ---*/
+/*--- Release --- */
+/*--- Release End --- */
+* {
+  font-family: "微軟正黑體";
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.cTopBox {
+  height: calc( 100vw * 0.35 );
+  width: 100%;
+}
+@media only screen and (max-width: 1040px) {
+  .cTopBox {
+    height: calc( 100vw * 0.65 );
+  }
+}
+.cTopBox .cBanner {
+  width: 100%;
+  height: calc( 100vw * 0.3 );
+  position: absolute;
+  overflow: hidden;
+  top: calc( 100vw * 0.05 );
+}
+@media only screen and (max-width: 1040px) {
+  .cTopBox .cBanner {
+    height: calc( 100vw * 0.6 );
+  }
+}
+.cTopBox .cBanner .cImage {
+  position: absolute;
+  width: calc( 100vw * 3 );
+  height: 100%;
+  display: flex;
+  left: -100vw;
+}
+.cTopBox .cBanner .cImage .cPreImage {
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../Image/Home/Banner/0.jpg");
+  border: 0px solid #000;
+  padding: 0px;
+  margin: 0px;
+}
+.cTopBox .cBanner .cImage .cMainImage {
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../Image/Home/Banner/0.jpg");
+  border: 0px solid #000;
+  padding: 0px;
+  margin: 0px;
+}
+.cTopBox .cBanner .cImage .cNextImage {
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../Image/Home/Banner/0.jpg");
+  border: 0px solid #000;
+  padding: 0px;
+  margin: 0px;
+}
+.cTopBox .cBanner .cImageControl {
+  position: absolute;
+  z-index: 1;
+  bottom: calc( 100vw * 0.04 );
+  right: calc( 100vw * 0.09 );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media only screen and (max-width: 1040px) {
+  .cTopBox .cBanner .cImageControl {
+    bottom: calc( 100vw * 0.08 );
+  }
+}
+.cTopBox .cBanner .cImageControl .cPreButton, .cTopBox .cBanner .cImageControl .cNextButton {
+  width: calc( 100vw * 0.025 );
+  height: calc( 100vw * 0.025 );
+  background-color: #a0a0a0;
+  border: 1px solid #a0a0a0;
+  border-radius: 0px;
+  font-size: calc( 100vw * 0.01 );
+  font-weight: bold;
+  color: #fff;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cTopBox .cBanner .cImageControl .cPreButton:hover, .cTopBox .cBanner .cImageControl .cNextButton:hover {
+  opacity: 0.7;
+}
+@media only screen and (max-width: 1040px) {
+  .cTopBox .cBanner .cImageControl .cPreButton, .cTopBox .cBanner .cImageControl .cNextButton {
+    width: calc( 100vw * 0.075 );
+    height: calc( 100vw * 0.075 );
+    font-size: calc( 100vw * 0.03 );
+  }
+}
+.cTopBox .cBanner .cImageControl .cPreButton {
+  margin-right: calc( 100vw * 0.002 );
+}
+@media only screen and (max-width: 1040px) {
+  .cTopBox .cBanner .cImageControl .cPreButton {
+    margin-right: calc( 100vw * 0.012 );
+  }
+}
+.cTopBox .cBanner .cImageControl .cNextButton {
+  margin-left: calc( 100vw * 0.002 );
+}
+@media only screen and (max-width: 1040px) {
+  .cTopBox .cBanner .cImageControl .cNextButton {
+    margin-left: calc( 100vw * 0.012 );
+  }
+}
+.cTopBox .cBanner .cInfoBanner {
+  position: absolute;
+  z-index: 1;
+  color: #fff;
+  height: calc( 100vw * 0.015 );
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+  bottom: calc( 100vw * 0.016 );
+  right: calc( 100vw * 0.09 );
+  font-size: calc( 100vw * 0.012 );
+}
+@media only screen and (max-width: 1040px) {
+  .cTopBox .cBanner .cInfoBanner {
+    font-size: calc( 100vw * 0.030 );
+    height: calc( 100vw * 0.045 );
+  }
+}
+.cTopBox .cBanner .cInfoBanner .cInfo {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  top: calc( 0vw * 0.015 );
+}
+.cTopBox .cBanner .cInfoBanner .cInfo .cPreInfo, .cTopBox .cBanner .cInfoBanner .cInfo .cMainInfo, .cTopBox .cBanner .cInfoBanner .cInfo .cNextInfo {
+  line-height: calc( 100vw * 0.014 );
+  height: calc( 100vw * 0.015 );
+}
+@media only screen and (max-width: 1040px) {
+  .cTopBox .cBanner .cInfoBanner .cInfo .cPreInfo, .cTopBox .cBanner .cInfoBanner .cInfo .cMainInfo, .cTopBox .cBanner .cInfoBanner .cInfo .cNextInfo {
+    line-height: calc( 100vw * 0.042 );
+    height: calc( 100vw * 0.045 );
+  }
+}
+
+.cOriginBox {
+  display: flex;
+  width: 100%;
+  height: calc( 100vw * 0.27 );
+  background-color: #dddda7;
+}
+@media only screen and (max-width: 1040px) {
+  .cOriginBox {
+    flex-direction: column;
+    height: calc( 100vw * 1.2 );
+    padding-top: calc( 100vw * 0.06 );
+  }
+}
+.cOriginBox .cLeftInfo {
+  width: 60%;
+}
+@media only screen and (max-width: 1040px) {
+  .cOriginBox .cLeftInfo {
+    width: 100%;
+  }
+}
+.cOriginBox .cLeftInfo .cTitle {
+  margin-left: calc( 100vw * 0.12 );
+  margin-top: calc( 100vw * 0.03 );
+}
+@media only screen and (max-width: 1040px) {
+  .cOriginBox .cLeftInfo .cTitle {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+.cOriginBox .cLeftInfo .cTitle h1 {
+  font-size: calc( 100vw * 0.025 );
+  margin: 0px;
+}
+@media only screen and (max-width: 1040px) {
+  .cOriginBox .cLeftInfo .cTitle h1 {
+    font-size: calc( 100vw * 0.075 );
+  }
+}
+.cOriginBox .cLeftInfo .cTitle .cLine {
+  margin-left: calc( 100vw * 0.005 );
+  margin-top: calc( 100vw * 0.005 );
+  width: calc( 100vw * 0.04 );
+  border-bottom: 7px solid #008a3a;
+}
+@media only screen and (max-width: 1040px) {
+  .cOriginBox .cLeftInfo .cTitle .cLine {
+    width: calc( 100vw * 0.12 );
+  }
+}
+.cOriginBox .cLeftInfo .cInfoBox {
+  margin-left: calc( 100vw * 0.125 );
+  margin-top: calc( 100vw * 0.015 );
+  font-size: calc( 100vw * 0.0105 );
+}
+@media only screen and (max-width: 1040px) {
+  .cOriginBox .cLeftInfo .cInfoBox {
+    margin-left: 0;
+    margin-top: calc( 100vw * 0.045 );
+    font-size: calc( 100vw * 0.0315 );
+    padding-left: calc( 100vw * 0.08 );
+    padding-right: calc( 100vw * 0.08 );
+  }
+}
+.cOriginBox .cLeftInfo .cInfoBox .cSlogan_1, .cOriginBox .cLeftInfo .cInfoBox .cSlogan_2, .cOriginBox .cLeftInfo .cInfoBox .cSlogan_3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: calc( 100vw * 0.007 );
+  font-size: calc( 100vw * 0.012 );
+  color: #008a3a;
+  font-weight: 600;
+}
+@media only screen and (max-width: 1040px) {
+  .cOriginBox .cLeftInfo .cInfoBox .cSlogan_1, .cOriginBox .cLeftInfo .cInfoBox .cSlogan_2, .cOriginBox .cLeftInfo .cInfoBox .cSlogan_3 {
+    font-size: calc( 100vw * 0.036 );
+    margin-top: calc( 100vw * 0.021 );
+  }
+}
+.cOriginBox .cLeftInfo .cAboutButton {
+  width: calc( 100vw * 0.085 );
+  height: calc( 100vw * 0.03 );
+  background-color: #008a3a;
+  border: 1px solid #008a3a;
+  border-radius: 0px;
+  font-size: calc( 100vw * 0.012 );
+  font-weight: bold;
+  color: #fff;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: calc( 100vw * 0.007 );
+  margin-left: calc( 100vw * 0.125 );
+}
+.cOriginBox .cLeftInfo .cAboutButton:hover {
+  opacity: 0.7;
+}
+@media only screen and (max-width: 1040px) {
+  .cOriginBox .cLeftInfo .cAboutButton {
+    margin-left: auto;
+    margin-right: auto;
+    width: calc( 100vw * 0.24 );
+    height: calc( 100vw * 0.09 );
+    font-size: calc( 100vw * 0.036 );
+    margin-top: calc( 100vw * 0.06 );
+  }
+}
+.cOriginBox .cRightImage {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: initial;
+}
+@media only screen and (max-width: 1040px) {
+  .cOriginBox .cRightImage {
+    width: 100%;
+    height: calc( 100vw * 0.5 );
+  }
+}
+.cOriginBox .cRightImage .cImage {
+  margin-left: 10%;
+  background-image: url("../Image/Home/About/0.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 70%;
+  height: 60%;
+}
+@media only screen and (max-width: 1040px) {
+  .cOriginBox .cRightImage .cImage {
+    margin-left: auto;
+    margin-right: auto;
+    margin: auto;
+    height: 80%;
+  }
+}
+
+.cBuildCaseBox {
+  position: relative;
+  height: calc( 100vw * 0.7 );
+}
+.cBuildCaseBox .cTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: calc( 100vw * 0.03 );
+}
+.cBuildCaseBox .cTitle h1 {
+  font-size: calc( 100vw * 0.025 );
+  margin: 0px;
+}
+@media only screen and (max-width: 1040px) {
+  .cBuildCaseBox .cTitle h1 {
+    font-size: calc( 100vw * 0.075 );
+  }
+}
+.cBuildCaseBox .cTitle .cLine {
+  margin-top: calc( 100vw * 0.009 );
+  width: calc( 100vw * 0.04 );
+  border-bottom: 7px solid #008a3a;
+}
+@media only screen and (max-width: 1040px) {
+  .cBuildCaseBox .cTitle .cLine {
+    width: calc( 100vw * 0.12 );
+  }
+}
+.cBuildCaseBox .cTitle .cInfo {
+  font-size: calc( 100vw * 0.011 );
+  margin-top: calc( 100vw * 0.011 );
+}
+@media only screen and (max-width: 1040px) {
+  .cBuildCaseBox .cTitle .cInfo {
+    font-size: calc( 100vw * 0.033 );
+    margin-top: calc( 100vw * 0.030 );
+  }
+}
+.cBuildCaseBox .cBuildCaseSystem {
+  position: absolute;
+  top: calc( 100vw * 0.07 );
+  width: 100%;
+  overflow: hidden;
+}
+@media only screen and (max-width: 1040px) {
+  .cBuildCaseBox .cBuildCaseSystem {
+    top: calc( 100vw * 0.2 );
+  }
+}
+.cBuildCaseBox .cBuildCaseSystem .cMainSearchBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: calc( 100vw * 0.02 );
+}
+@media only screen and (max-width: 1040px) {
+  .cBuildCaseBox .cBuildCaseSystem .cMainSearchBox {
+    display: none;
+  }
+}
+.cBuildCaseBox .cBuildCaseSystem .cMainSearchBox .cBuildTypeButton, .cBuildCaseBox .cBuildCaseSystem .cMainSearchBox .cAreaButton, .cBuildCaseBox .cBuildCaseSystem .cMainSearchBox .cTimeButton, .cBuildCaseBox .cBuildCaseSystem .cMainSearchBox .cMoneyButton, .cBuildCaseBox .cBuildCaseSystem .cMainSearchBox .cWonderfulButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: calc( 100vw * 0.0058 );
+  margin-right: calc( 100vw * 0.0058 );
+  width: calc( 100vw * 0.1065 );
+  height: calc( 100vw * 0.0225 );
+  background-color: #fff;
+  border: 2px solid #008a3a;
+  font-size: calc( 100vw * 0.012 );
+  font-weight: bold;
+  color: #008a3a;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+.cBuildCaseBox .cBuildCaseSystem .cMainSearchBox .cBuildTypeButton:hover, .cBuildCaseBox .cBuildCaseSystem .cMainSearchBox .cAreaButton:hover, .cBuildCaseBox .cBuildCaseSystem .cMainSearchBox .cTimeButton:hover, .cBuildCaseBox .cBuildCaseSystem .cMainSearchBox .cMoneyButton:hover, .cBuildCaseBox .cBuildCaseSystem .cMainSearchBox .cWonderfulButton:hover {
+  background-color: #008a3a;
+  color: #fff;
+}
+.cBuildCaseBox .cBuildCaseSystem .cMainSearch_PhoneBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  height: calc( 100vw * 0.2 );
+}
+@media only screen and (max-width: 1040px) {
+  .cBuildCaseBox .cBuildCaseSystem .cMainSearch_PhoneBox {
+    display: flex;
+  }
+}
+.cBuildCaseBox .cBuildCaseSystem .cMainSearch_PhoneBox select {
+  width: calc( 100vw * 0.6 );
+  height: calc( 100vw * 0.1 );
+  font-size: calc( 100vw * 0.036 );
+  background-color: #008a3a;
+  color: #fff;
+  text-align: center;
+  -moz-text-align-last: center;
+       text-align-last: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_BuildType, .cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Area, .cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Time, .cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Money, .cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Wonderful, .cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Phone_Area {
+  height: calc( 100vw * 0.040 );
+}
+@media only screen and (max-width: 1040px) {
+  .cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_BuildType, .cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Area, .cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Time, .cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Money, .cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Wonderful, .cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Phone_Area {
+    height: calc( 100vw * 0.3 );
+    flex-wrap: wrap;
+  }
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_BuildType {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: calc( 100vw * 0.02 );
+}
+@media only screen and (max-width: 1040px) {
+  .cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_BuildType {
+    height: calc( 100vw * 0.45 );
+  }
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_BuildType .cSubButtonBase {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc( 100vw * 0.05 );
+  height: calc( 100vw * 0.05 );
+  margin-left: calc( 100vw * 0.006 );
+  margin-right: calc( 100vw * 0.006 );
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+@media only screen and (max-width: 1040px) {
+  .cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_BuildType .cSubButtonBase {
+    width: calc( 100vw * 0.15 );
+    height: calc( 100vw * 0.15 );
+    margin-left: calc( 100vw * 0.012 );
+    margin-right: calc( 100vw * 0.012 );
+  }
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_BuildType .cSubButtonBase data {
+  display: none;
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_BuildType .cSubButtonBase .cImage {
+  width: 80%;
+  height: 90%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_BuildType .cBuild_Button .cImage {
+  background-image: url("../Image/Icon/BuildCaseSystem/BuildType/0_0.png");
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_BuildType .cBuild_Button:hover .cImage {
+  background-image: url("../Image/Icon/BuildCaseSystem/BuildType/0_1.png");
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_BuildType .cLandscape_Button .cImage {
+  background-image: url("../Image/Icon/BuildCaseSystem/BuildType/1_0.png");
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_BuildType .cLandscape_Button:hover .cImage {
+  background-image: url("../Image/Icon/BuildCaseSystem/BuildType/1_1.png");
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_BuildType .cDecoration_Button .cImage {
+  background-image: url("../Image/Icon/BuildCaseSystem/BuildType/2_0.png");
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_BuildType .cDecoration_Button:hover .cImage {
+  background-image: url("../Image/Icon/BuildCaseSystem/BuildType/2_1.png");
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_BuildType .cPlant_Button .cImage {
+  background-image: url("../Image/Icon/BuildCaseSystem/BuildType/3_0.png");
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_BuildType .cPlant_Button:hover .cImage {
+  background-image: url("../Image/Icon/BuildCaseSystem/BuildType/3_1.png");
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_BuildType .cCement_Button .cImage {
+  background-image: url("../Image/Icon/BuildCaseSystem/BuildType/4_0.png");
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_BuildType .cCement_Button:hover .cImage {
+  background-image: url("../Image/Icon/BuildCaseSystem/BuildType/4_1.png");
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_BuildType .cSport_Button .cImage {
+  background-image: url("../Image/Icon/BuildCaseSystem/BuildType/5_0.png");
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_BuildType .cSport_Button:hover .cImage {
+  background-image: url("../Image/Icon/BuildCaseSystem/BuildType/5_1.png");
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_BuildType .cWood_Button .cImage {
+  background-image: url("../Image/Icon/BuildCaseSystem/BuildType/6_0.png");
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_BuildType .cWood_Button:hover .cImage {
+  background-image: url("../Image/Icon/BuildCaseSystem/BuildType/6_1.png");
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_BuildType .cTemple_Button .cImage {
+  background-image: url("../Image/Icon/BuildCaseSystem/BuildType/7_0.png");
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_BuildType .cTemple_Button:hover .cImage {
+  background-image: url("../Image/Icon/BuildCaseSystem/BuildType/7_1.png");
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_BuildType .cHistoricSite_Button .cImage {
+  background-image: url("../Image/Icon/BuildCaseSystem/BuildType/8_0.png");
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_BuildType .cHistoricSite_Button:hover .cImage {
+  background-image: url("../Image/Icon/BuildCaseSystem/BuildType/8_1.png");
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_BuildType .cGreenbuild_Button .cImage {
+  background-image: url("../Image/Icon/BuildCaseSystem/BuildType/9_0.png");
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_BuildType .cGreenbuild_Button:hover .cImage {
+  background-image: url("../Image/Icon/BuildCaseSystem/BuildType/9_1.png");
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_BuildType .cAll_Button .cImage {
+  background-image: url("../Image/Icon/BuildCaseSystem/BuildType/10_0.png");
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_BuildType .cAll_Button:hover .cImage {
+  background-image: url("../Image/Icon/BuildCaseSystem/BuildType/10_1.png");
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: calc( 100vw * 0.02 );
+}
+@media only screen and (max-width: 1040px) {
+  .cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Area {
+    display: none;
+  }
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Area .cSubButtonBase {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-right: 2px solid #000;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Area .cSubButtonBase:hover .cArea_Button {
+  border-bottom: 5px solid #008a3a;
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Area .cSubButtonBase .cArea_Button {
+  font-size: calc( 100vw * 0.015 );
+  font-weight: bold;
+  margin-left: calc( 100vw * 0.01 );
+  margin-right: calc( 100vw * 0.01 );
+  padding-bottom: calc( 100vw * 0.003 );
+  border-bottom: 5px solid rgba(0, 0, 0, 0);
+  cursor: pointer;
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Area .cSubButtonBase .cArea_Button data {
+  display: none;
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Area .cSubButtonBase .SubAreaBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc( 100vw * 0.012 );
+  font-weight: bold;
+  margin-top: calc( 100vw * 0.01 );
+  margin-left: calc( 100vw * 0.005 );
+  margin-right: calc( 100vw * 0.005 );
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Area .cSubButtonBase .SubAreaBox .cAreaBase {
+  margin-left: calc( 100vw * 0.005 );
+  margin-right: calc( 100vw * 0.005 );
+  cursor: pointer;
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Area .cSubButtonBase .SubAreaBox .cAreaBase data {
+  display: none;
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Area .cSubButtonBase .SubAreaBox .cAreaBase:hover {
+  color: #008a3a;
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Area .cAll_Button {
+  border-right: 0px solid #000;
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Phone_Area {
+  display: none;
+}
+@media only screen and (max-width: 1040px) {
+  .cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Phone_Area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Phone_Area select {
+  width: calc( 100vw * 0.6 );
+  height: calc( 100vw * 0.1 );
+  font-size: calc( 100vw * 0.036 );
+  background-color: #dddda7;
+  color: #000;
+  text-align: center;
+  -moz-text-align-last: center;
+       text-align-last: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: calc( 100vw * 0.02 );
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Time .cNearToFar_Button, .cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Time .cFarToNear_Button, .cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Time .cAll_Button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc( 100vw * 0.06 );
+  height: calc( 100vw * 0.06 );
+  margin-left: calc( 100vw * 0.02 );
+  margin-right: calc( 100vw * 0.02 );
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+@media only screen and (max-width: 1040px) {
+  .cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Time .cNearToFar_Button, .cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Time .cFarToNear_Button, .cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Time .cAll_Button {
+    width: calc( 100vw * 0.18 );
+    height: calc( 100vw * 0.18 );
+    margin-left: calc( 100vw * 0.06 );
+    margin-right: calc( 100vw * 0.06 );
+  }
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Time .cNearToFar_Button data, .cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Time .cFarToNear_Button data, .cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Time .cAll_Button data {
+  display: none;
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Time .cNearToFar_Button .cImage, .cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Time .cFarToNear_Button .cImage, .cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Time .cAll_Button .cImage {
+  width: 100%;
+  height: 90%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Time .cNearToFar_Button .cImage {
+  background-image: url("../Image/Icon/BuildCaseSystem/Time/0_0.svg");
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Time .cNearToFar_Button:hover .cImage {
+  background-image: url("../Image/Icon/BuildCaseSystem/Time/0_1.svg");
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Time .cFarToNear_Button .cImage {
+  background-image: url("../Image/Icon/BuildCaseSystem/Time/1_0.svg");
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Time .cFarToNear_Button:hover .cImage {
+  background-image: url("../Image/Icon/BuildCaseSystem/Time/1_1.svg");
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Time .cAll_Button .cImage {
+  background-image: url("../Image/Icon/BuildCaseSystem/Time/2_0.svg");
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Time .cAll_Button:hover .cImage {
+  background-image: url("../Image/Icon/BuildCaseSystem/Time/2_1.svg");
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Money {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: calc( 100vw * 0.02 );
+}
+@media only screen and (max-width: 1040px) {
+  .cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Money {
+    height: calc( 100vw * 0.35 );
+  }
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Money .cSubButtonBase {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc( 100vw * 0.06 );
+  height: calc( 100vw * 0.06 );
+  margin-left: calc( 100vw * 0.01 );
+  margin-right: calc( 100vw * 0.01 );
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+@media only screen and (max-width: 1040px) {
+  .cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Money .cSubButtonBase {
+    width: calc( 100vw * 0.18 );
+    height: calc( 100vw * 0.18 );
+  }
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Money .cSubButtonBase data {
+  display: none;
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Money .cSubButtonBase .cImage {
+  width: 100%;
+  height: 90%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Money .c1000_Button .cImage {
+  background-image: url("../Image/Icon/BuildCaseSystem/Money/0_0.svg");
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Money .c1000_Button:hover .cImage {
+  background-image: url("../Image/Icon/BuildCaseSystem/Money/0_1.svg");
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Money .c1000-2500_Button .cImage {
+  background-image: url("../Image/Icon/BuildCaseSystem/Money/1_0.svg");
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Money .c1000-2500_Button:hover .cImage {
+  background-image: url("../Image/Icon/BuildCaseSystem/Money/1_1.svg");
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Money .c2500-5000_Button .cImage {
+  background-image: url("../Image/Icon/BuildCaseSystem/Money/2_0.svg");
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Money .c2500-5000_Button:hover .cImage {
+  background-image: url("../Image/Icon/BuildCaseSystem/Money/2_1.svg");
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Money .c5000-10000_Button .cImage {
+  background-image: url("../Image/Icon/BuildCaseSystem/Money/3_0.svg");
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Money .c5000-10000_Button:hover .cImage {
+  background-image: url("../Image/Icon/BuildCaseSystem/Money/3_1.svg");
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Money .c10000_Button .cImage {
+  background-image: url("../Image/Icon/BuildCaseSystem/Money/4_0.svg");
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Money .c10000_Button:hover .cImage {
+  background-image: url("../Image/Icon/BuildCaseSystem/Money/4_1.svg");
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Money .cAll_Button .cImage {
+  background-image: url("../Image/Icon/BuildCaseSystem/Money/5_0.svg");
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Money .cAll_Button:hover .cImage {
+  background-image: url("../Image/Icon/BuildCaseSystem/Money/5_1.svg");
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Wonderful {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: calc( 100vw * 0.02 );
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Wonderful .cWonderful_Button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc( 100vw * 0.06 );
+  height: calc( 100vw * 0.06 );
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+@media only screen and (max-width: 1040px) {
+  .cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Wonderful .cWonderful_Button {
+    width: calc( 100vw * 0.18 );
+    height: calc( 100vw * 0.18 );
+  }
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Wonderful .cWonderful_Button data {
+  display: none;
+}
+.cBuildCaseBox .cBuildCaseSystem .cSubSearchBox_Wonderful .cWonderful_Button .cImage {
+  width: 100%;
+  height: 80%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: url("../Image/Icon/BuildCaseSystem/Wonderful/0_0.svg");
+}
+.cBuildCaseBox .cBuildCaseSystem .cNoCaseInfoBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc( 100vw * 0.3 );
+  width: 100vw;
+  font-size: calc( 100vw * 0.016 );
+  color: #008a3a;
+}
+.cBuildCaseBox .cBuildCaseSystem .cNoCaseInfoBox .cInfoBox {
+  margin-top: calc( 100vw * 0.02 );
+  height: 95%;
+  width: 95%;
+  border: 2px solid #008a3a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox {
+  position: relative;
+  width: calc( 100vw * 3 );
+  height: calc( 100vw * 0.3 );
+  display: flex;
+  left: -100vw;
+}
+@media only screen and (max-width: 1040px) {
+  .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox {
+    height: auto;
+  }
+}
+.cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage {
+  height: 100%;
+  width: 100vw;
+}
+.cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage .cShowBuildCaseBox, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage .cShowBuildCaseBox, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage .cShowBuildCaseBox {
+  margin-top: calc( 100vw * 0.02 );
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage .cShowBuildCaseBox .cItemTemplate, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage .cShowBuildCaseBox .cItemBase, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage .cShowBuildCaseBox .cItemTemplate, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage .cShowBuildCaseBox .cItemBase, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage .cShowBuildCaseBox .cItemTemplate, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage .cShowBuildCaseBox .cItemBase {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: calc( 100vw * 0.15 );
+}
+@media only screen and (max-width: 1040px) {
+  .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage .cShowBuildCaseBox .cItemTemplate, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage .cShowBuildCaseBox .cItemBase, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage .cShowBuildCaseBox .cItemTemplate, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage .cShowBuildCaseBox .cItemBase, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage .cShowBuildCaseBox .cItemTemplate, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage .cShowBuildCaseBox .cItemBase {
+    width: 100%;
+    height: calc( 100vw * 0.3 );
+  }
+}
+.cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage .cShowBuildCaseBox .cItemTemplate data, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage .cShowBuildCaseBox .cItemBase data, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage .cShowBuildCaseBox .cItemTemplate data, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage .cShowBuildCaseBox .cItemBase data, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage .cShowBuildCaseBox .cItemTemplate data, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage .cShowBuildCaseBox .cItemBase data {
+  display: none;
+}
+.cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage .cShowBuildCaseBox .cItemTemplate .cImage, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage .cShowBuildCaseBox .cItemBase .cImage, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage .cShowBuildCaseBox .cItemTemplate .cImage, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage .cShowBuildCaseBox .cItemBase .cImage, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage .cShowBuildCaseBox .cItemTemplate .cImage, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage .cShowBuildCaseBox .cItemBase .cImage {
+  width: 99%;
+  height: 98.5%;
+  background-image: url("../Image/BuildCase/0_DemoCase/Show/0.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-color: #000;
+}
+.cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage .cShowBuildCaseBox .cItemTemplate .cImage:hover .cDetaiInfo, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage .cShowBuildCaseBox .cItemBase .cImage:hover .cDetaiInfo, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage .cShowBuildCaseBox .cItemTemplate .cImage:hover .cDetaiInfo, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage .cShowBuildCaseBox .cItemBase .cImage:hover .cDetaiInfo, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage .cShowBuildCaseBox .cItemTemplate .cImage:hover .cDetaiInfo, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage .cShowBuildCaseBox .cItemBase .cImage:hover .cDetaiInfo {
+  width: 50%;
+  height: 100%;
+}
+.cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage .cShowBuildCaseBox .cItemTemplate .cImage:hover .cDetaiInfo .cDetaiInfoBox, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage .cShowBuildCaseBox .cItemBase .cImage:hover .cDetaiInfo .cDetaiInfoBox, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage .cShowBuildCaseBox .cItemTemplate .cImage:hover .cDetaiInfo .cDetaiInfoBox, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage .cShowBuildCaseBox .cItemBase .cImage:hover .cDetaiInfo .cDetaiInfoBox, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage .cShowBuildCaseBox .cItemTemplate .cImage:hover .cDetaiInfo .cDetaiInfoBox, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage .cShowBuildCaseBox .cItemBase .cImage:hover .cDetaiInfo .cDetaiInfoBox {
+  width: 100%;
+  height: 100%;
+}
+.cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage .cShowBuildCaseBox .cItemTemplate .cImage:hover .cDetaiInfo .cDetaiInfoBox .cTitle, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage .cShowBuildCaseBox .cItemBase .cImage:hover .cDetaiInfo .cDetaiInfoBox .cTitle, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage .cShowBuildCaseBox .cItemTemplate .cImage:hover .cDetaiInfo .cDetaiInfoBox .cTitle, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage .cShowBuildCaseBox .cItemBase .cImage:hover .cDetaiInfo .cDetaiInfoBox .cTitle, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage .cShowBuildCaseBox .cItemTemplate .cImage:hover .cDetaiInfo .cDetaiInfoBox .cTitle, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage .cShowBuildCaseBox .cItemBase .cImage:hover .cDetaiInfo .cDetaiInfoBox .cTitle {
+  width: 80%;
+  height: 30%;
+  opacity: 1;
+}
+.cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage .cShowBuildCaseBox .cItemTemplate .cImage:hover .cDetaiInfo .cDetaiInfoBox .cTitle h1, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage .cShowBuildCaseBox .cItemBase .cImage:hover .cDetaiInfo .cDetaiInfoBox .cTitle h1, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage .cShowBuildCaseBox .cItemTemplate .cImage:hover .cDetaiInfo .cDetaiInfoBox .cTitle h1, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage .cShowBuildCaseBox .cItemBase .cImage:hover .cDetaiInfo .cDetaiInfoBox .cTitle h1, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage .cShowBuildCaseBox .cItemTemplate .cImage:hover .cDetaiInfo .cDetaiInfoBox .cTitle h1, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage .cShowBuildCaseBox .cItemBase .cImage:hover .cDetaiInfo .cDetaiInfoBox .cTitle h1 {
+  font-size: calc( 100vw * 0.012 );
+}
+.cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage .cShowBuildCaseBox .cItemTemplate .cImage:hover .cDetaiInfo .cDetaiInfoBox .cStartYear, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage .cShowBuildCaseBox .cItemTemplate .cImage:hover .cDetaiInfo .cDetaiInfoBox .cFinishYear, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage .cShowBuildCaseBox .cItemTemplate .cImage:hover .cDetaiInfo .cDetaiInfoBox .cBoss, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage .cShowBuildCaseBox .cItemTemplate .cImage:hover .cDetaiInfo .cDetaiInfoBox .cDesign, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage .cShowBuildCaseBox .cItemBase .cImage:hover .cDetaiInfo .cDetaiInfoBox .cStartYear, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage .cShowBuildCaseBox .cItemBase .cImage:hover .cDetaiInfo .cDetaiInfoBox .cFinishYear, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage .cShowBuildCaseBox .cItemBase .cImage:hover .cDetaiInfo .cDetaiInfoBox .cBoss, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage .cShowBuildCaseBox .cItemBase .cImage:hover .cDetaiInfo .cDetaiInfoBox .cDesign, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage .cShowBuildCaseBox .cItemTemplate .cImage:hover .cDetaiInfo .cDetaiInfoBox .cStartYear, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage .cShowBuildCaseBox .cItemTemplate .cImage:hover .cDetaiInfo .cDetaiInfoBox .cFinishYear, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage .cShowBuildCaseBox .cItemTemplate .cImage:hover .cDetaiInfo .cDetaiInfoBox .cBoss, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage .cShowBuildCaseBox .cItemTemplate .cImage:hover .cDetaiInfo .cDetaiInfoBox .cDesign, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage .cShowBuildCaseBox .cItemBase .cImage:hover .cDetaiInfo .cDetaiInfoBox .cStartYear, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage .cShowBuildCaseBox .cItemBase .cImage:hover .cDetaiInfo .cDetaiInfoBox .cFinishYear, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage .cShowBuildCaseBox .cItemBase .cImage:hover .cDetaiInfo .cDetaiInfoBox .cBoss, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage .cShowBuildCaseBox .cItemBase .cImage:hover .cDetaiInfo .cDetaiInfoBox .cDesign, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage .cShowBuildCaseBox .cItemTemplate .cImage:hover .cDetaiInfo .cDetaiInfoBox .cStartYear, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage .cShowBuildCaseBox .cItemTemplate .cImage:hover .cDetaiInfo .cDetaiInfoBox .cFinishYear, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage .cShowBuildCaseBox .cItemTemplate .cImage:hover .cDetaiInfo .cDetaiInfoBox .cBoss, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage .cShowBuildCaseBox .cItemTemplate .cImage:hover .cDetaiInfo .cDetaiInfoBox .cDesign, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage .cShowBuildCaseBox .cItemBase .cImage:hover .cDetaiInfo .cDetaiInfoBox .cStartYear, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage .cShowBuildCaseBox .cItemBase .cImage:hover .cDetaiInfo .cDetaiInfoBox .cFinishYear, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage .cShowBuildCaseBox .cItemBase .cImage:hover .cDetaiInfo .cDetaiInfoBox .cBoss, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage .cShowBuildCaseBox .cItemBase .cImage:hover .cDetaiInfo .cDetaiInfoBox .cDesign {
+  font-size: calc( 100vw * 0.01 );
+  width: 100%;
+  height: 10%;
+  opacity: 1;
+  display: flex;
+}
+.cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage .cShowBuildCaseBox .cItemTemplate .cImage:hover .cDetaiInfo .cMap, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage .cShowBuildCaseBox .cItemBase .cImage:hover .cDetaiInfo .cMap, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage .cShowBuildCaseBox .cItemTemplate .cImage:hover .cDetaiInfo .cMap, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage .cShowBuildCaseBox .cItemBase .cImage:hover .cDetaiInfo .cMap, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage .cShowBuildCaseBox .cItemTemplate .cImage:hover .cDetaiInfo .cMap, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage .cShowBuildCaseBox .cItemBase .cImage:hover .cDetaiInfo .cMap {
+  width: 33%;
+  height: 100%;
+}
+.cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage .cShowBuildCaseBox .cItemTemplate .cImage .cDetaiInfo, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage .cShowBuildCaseBox .cItemBase .cImage .cDetaiInfo, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage .cShowBuildCaseBox .cItemTemplate .cImage .cDetaiInfo, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage .cShowBuildCaseBox .cItemBase .cImage .cDetaiInfo, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage .cShowBuildCaseBox .cItemTemplate .cImage .cDetaiInfo, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage .cShowBuildCaseBox .cItemBase .cImage .cDetaiInfo {
+  position: relative;
+  width: 0%;
+  height: 100%;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.7);
+  margin-left: auto;
+  transition-duration: 0.5s;
+  overflow: hidden;
+}
+@media only screen and (max-width: 1040px) {
+  .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage .cShowBuildCaseBox .cItemTemplate .cImage .cDetaiInfo, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage .cShowBuildCaseBox .cItemBase .cImage .cDetaiInfo, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage .cShowBuildCaseBox .cItemTemplate .cImage .cDetaiInfo, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage .cShowBuildCaseBox .cItemBase .cImage .cDetaiInfo, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage .cShowBuildCaseBox .cItemTemplate .cImage .cDetaiInfo, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage .cShowBuildCaseBox .cItemBase .cImage .cDetaiInfo {
+    display: none;
+  }
+}
+.cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage .cShowBuildCaseBox .cItemTemplate .cImage .cDetaiInfo .cDetaiInfoBox, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage .cShowBuildCaseBox .cItemBase .cImage .cDetaiInfo .cDetaiInfoBox, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage .cShowBuildCaseBox .cItemTemplate .cImage .cDetaiInfo .cDetaiInfoBox, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage .cShowBuildCaseBox .cItemBase .cImage .cDetaiInfo .cDetaiInfoBox, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage .cShowBuildCaseBox .cItemTemplate .cImage .cDetaiInfo .cDetaiInfoBox, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage .cShowBuildCaseBox .cItemBase .cImage .cDetaiInfo .cDetaiInfoBox {
+  width: 0%;
+  height: 0%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+  padding-left: calc( 100vw * 0.01 );
+  z-index: 2;
+}
+.cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage .cShowBuildCaseBox .cItemTemplate .cImage .cDetaiInfo .cDetaiInfoBox .cTitle, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage .cShowBuildCaseBox .cItemBase .cImage .cDetaiInfo .cDetaiInfoBox .cTitle, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage .cShowBuildCaseBox .cItemTemplate .cImage .cDetaiInfo .cDetaiInfoBox .cTitle, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage .cShowBuildCaseBox .cItemBase .cImage .cDetaiInfo .cDetaiInfoBox .cTitle, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage .cShowBuildCaseBox .cItemTemplate .cImage .cDetaiInfo .cDetaiInfoBox .cTitle, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage .cShowBuildCaseBox .cItemBase .cImage .cDetaiInfo .cDetaiInfoBox .cTitle {
+  width: 0%;
+  height: 0%;
+  margin: 0;
+  display: flex;
+  align-items: flex-start;
+  opacity: 0;
+  transition-delay: 0.1s;
+  transition-duration: 0.5s;
+}
+.cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage .cShowBuildCaseBox .cItemTemplate .cImage .cDetaiInfo .cDetaiInfoBox .cTitle h1, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage .cShowBuildCaseBox .cItemBase .cImage .cDetaiInfo .cDetaiInfoBox .cTitle h1, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage .cShowBuildCaseBox .cItemTemplate .cImage .cDetaiInfo .cDetaiInfoBox .cTitle h1, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage .cShowBuildCaseBox .cItemBase .cImage .cDetaiInfo .cDetaiInfoBox .cTitle h1, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage .cShowBuildCaseBox .cItemTemplate .cImage .cDetaiInfo .cDetaiInfoBox .cTitle h1, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage .cShowBuildCaseBox .cItemBase .cImage .cDetaiInfo .cDetaiInfoBox .cTitle h1 {
+  font-size: 0;
+  margin: 0;
+}
+.cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage .cShowBuildCaseBox .cItemTemplate .cImage .cDetaiInfo .cDetaiInfoBox .cStartYear, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage .cShowBuildCaseBox .cItemTemplate .cImage .cDetaiInfo .cDetaiInfoBox .cFinishYear, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage .cShowBuildCaseBox .cItemTemplate .cImage .cDetaiInfo .cDetaiInfoBox .cBoss, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage .cShowBuildCaseBox .cItemTemplate .cImage .cDetaiInfo .cDetaiInfoBox .cDesign, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage .cShowBuildCaseBox .cItemBase .cImage .cDetaiInfo .cDetaiInfoBox .cStartYear, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage .cShowBuildCaseBox .cItemBase .cImage .cDetaiInfo .cDetaiInfoBox .cFinishYear, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage .cShowBuildCaseBox .cItemBase .cImage .cDetaiInfo .cDetaiInfoBox .cBoss, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage .cShowBuildCaseBox .cItemBase .cImage .cDetaiInfo .cDetaiInfoBox .cDesign, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage .cShowBuildCaseBox .cItemTemplate .cImage .cDetaiInfo .cDetaiInfoBox .cStartYear, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage .cShowBuildCaseBox .cItemTemplate .cImage .cDetaiInfo .cDetaiInfoBox .cFinishYear, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage .cShowBuildCaseBox .cItemTemplate .cImage .cDetaiInfo .cDetaiInfoBox .cBoss, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage .cShowBuildCaseBox .cItemTemplate .cImage .cDetaiInfo .cDetaiInfoBox .cDesign, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage .cShowBuildCaseBox .cItemBase .cImage .cDetaiInfo .cDetaiInfoBox .cStartYear, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage .cShowBuildCaseBox .cItemBase .cImage .cDetaiInfo .cDetaiInfoBox .cFinishYear, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage .cShowBuildCaseBox .cItemBase .cImage .cDetaiInfo .cDetaiInfoBox .cBoss, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage .cShowBuildCaseBox .cItemBase .cImage .cDetaiInfo .cDetaiInfoBox .cDesign, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage .cShowBuildCaseBox .cItemTemplate .cImage .cDetaiInfo .cDetaiInfoBox .cStartYear, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage .cShowBuildCaseBox .cItemTemplate .cImage .cDetaiInfo .cDetaiInfoBox .cFinishYear, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage .cShowBuildCaseBox .cItemTemplate .cImage .cDetaiInfo .cDetaiInfoBox .cBoss, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage .cShowBuildCaseBox .cItemTemplate .cImage .cDetaiInfo .cDetaiInfoBox .cDesign, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage .cShowBuildCaseBox .cItemBase .cImage .cDetaiInfo .cDetaiInfoBox .cStartYear, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage .cShowBuildCaseBox .cItemBase .cImage .cDetaiInfo .cDetaiInfoBox .cFinishYear, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage .cShowBuildCaseBox .cItemBase .cImage .cDetaiInfo .cDetaiInfoBox .cBoss, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage .cShowBuildCaseBox .cItemBase .cImage .cDetaiInfo .cDetaiInfoBox .cDesign {
+  position: relative;
+  font-size: 0;
+  width: 0;
+  height: 0;
+  display: flex;
+  margin-top: calc( 100vw * 0.001 );
+  opacity: 0;
+  transition-delay: 0.1s;
+  transition-duration: 0.5s;
+  display: none;
+}
+.cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage .cShowBuildCaseBox .cItemTemplate .cImage .cDetaiInfo .cDetaiInfoBox .cStartYear detaiData, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage .cShowBuildCaseBox .cItemTemplate .cImage .cDetaiInfo .cDetaiInfoBox .cFinishYear detaiData, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage .cShowBuildCaseBox .cItemTemplate .cImage .cDetaiInfo .cDetaiInfoBox .cBoss detaiData, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage .cShowBuildCaseBox .cItemTemplate .cImage .cDetaiInfo .cDetaiInfoBox .cDesign detaiData, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage .cShowBuildCaseBox .cItemBase .cImage .cDetaiInfo .cDetaiInfoBox .cStartYear detaiData, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage .cShowBuildCaseBox .cItemBase .cImage .cDetaiInfo .cDetaiInfoBox .cFinishYear detaiData, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage .cShowBuildCaseBox .cItemBase .cImage .cDetaiInfo .cDetaiInfoBox .cBoss detaiData, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage .cShowBuildCaseBox .cItemBase .cImage .cDetaiInfo .cDetaiInfoBox .cDesign detaiData, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage .cShowBuildCaseBox .cItemTemplate .cImage .cDetaiInfo .cDetaiInfoBox .cStartYear detaiData, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage .cShowBuildCaseBox .cItemTemplate .cImage .cDetaiInfo .cDetaiInfoBox .cFinishYear detaiData, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage .cShowBuildCaseBox .cItemTemplate .cImage .cDetaiInfo .cDetaiInfoBox .cBoss detaiData, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage .cShowBuildCaseBox .cItemTemplate .cImage .cDetaiInfo .cDetaiInfoBox .cDesign detaiData, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage .cShowBuildCaseBox .cItemBase .cImage .cDetaiInfo .cDetaiInfoBox .cStartYear detaiData, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage .cShowBuildCaseBox .cItemBase .cImage .cDetaiInfo .cDetaiInfoBox .cFinishYear detaiData, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage .cShowBuildCaseBox .cItemBase .cImage .cDetaiInfo .cDetaiInfoBox .cBoss detaiData, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage .cShowBuildCaseBox .cItemBase .cImage .cDetaiInfo .cDetaiInfoBox .cDesign detaiData, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage .cShowBuildCaseBox .cItemTemplate .cImage .cDetaiInfo .cDetaiInfoBox .cStartYear detaiData, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage .cShowBuildCaseBox .cItemTemplate .cImage .cDetaiInfo .cDetaiInfoBox .cFinishYear detaiData, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage .cShowBuildCaseBox .cItemTemplate .cImage .cDetaiInfo .cDetaiInfoBox .cBoss detaiData, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage .cShowBuildCaseBox .cItemTemplate .cImage .cDetaiInfo .cDetaiInfoBox .cDesign detaiData, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage .cShowBuildCaseBox .cItemBase .cImage .cDetaiInfo .cDetaiInfoBox .cStartYear detaiData, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage .cShowBuildCaseBox .cItemBase .cImage .cDetaiInfo .cDetaiInfoBox .cFinishYear detaiData, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage .cShowBuildCaseBox .cItemBase .cImage .cDetaiInfo .cDetaiInfoBox .cBoss detaiData, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage .cShowBuildCaseBox .cItemBase .cImage .cDetaiInfo .cDetaiInfoBox .cDesign detaiData {
+  margin-left: calc( 100vw * 0.002 );
+}
+.cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage .cShowBuildCaseBox .cItemTemplate .cImage .cDetaiInfo .cDetaiInfoBox .cStartYear, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage .cShowBuildCaseBox .cItemBase .cImage .cDetaiInfo .cDetaiInfoBox .cStartYear, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage .cShowBuildCaseBox .cItemTemplate .cImage .cDetaiInfo .cDetaiInfoBox .cStartYear, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage .cShowBuildCaseBox .cItemBase .cImage .cDetaiInfo .cDetaiInfoBox .cStartYear, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage .cShowBuildCaseBox .cItemTemplate .cImage .cDetaiInfo .cDetaiInfoBox .cStartYear, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage .cShowBuildCaseBox .cItemBase .cImage .cDetaiInfo .cDetaiInfoBox .cStartYear {
+  margin-top: calc( 100vw * 0.02 );
+}
+.cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage .cShowBuildCaseBox .cItemTemplate .cImage .cDetaiInfo .cMap, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage .cShowBuildCaseBox .cItemBase .cImage .cDetaiInfo .cMap, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage .cShowBuildCaseBox .cItemTemplate .cImage .cDetaiInfo .cMap, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage .cShowBuildCaseBox .cItemBase .cImage .cDetaiInfo .cMap, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage .cShowBuildCaseBox .cItemTemplate .cImage .cDetaiInfo .cMap, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage .cShowBuildCaseBox .cItemBase .cImage .cDetaiInfo .cMap {
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: calc( 100vw * 0.001 );
+  right: calc( 100vw * 0.005 );
+  background-size: 100%;
+  background-image: url("../Image/BuildCase/0_DemoCase/map.png");
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+.cBuildCaseBox .cBuildCaseSystem .cPageControlBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: calc( 100vw * 0.03 );
+}
+@media only screen and (max-width: 1040px) {
+  .cBuildCaseBox .cBuildCaseSystem .cPageControlBox {
+    display: none;
+  }
+}
+.cBuildCaseBox .cBuildCaseSystem .cPageControlBox .cPreButton, .cBuildCaseBox .cBuildCaseSystem .cPageControlBox .cNextButton, .cBuildCaseBox .cBuildCaseSystem .cPageControlBox .cPageTemplate, .cBuildCaseBox .cBuildCaseSystem .cPageControlBox .cPageBase {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc( 100vw * 0.025 );
+  height: calc( 100vw * 0.025 );
+  background-color: #fff;
+  border: 2px solid #008a3a;
+  font-size: calc( 100vw * 0.01 );
+  font-weight: bold;
+  color: #008a3a;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+.cBuildCaseBox .cBuildCaseSystem .cPageControlBox .cPreButton:hover, .cBuildCaseBox .cBuildCaseSystem .cPageControlBox .cNextButton:hover, .cBuildCaseBox .cBuildCaseSystem .cPageControlBox .cPageTemplate:hover, .cBuildCaseBox .cBuildCaseSystem .cPageControlBox .cPageBase:hover {
+  background-color: #008a3a;
+  color: #fff;
+}
+.cBuildCaseBox .cBuildCaseSystem .cPageControlBox .cPageTemplate, .cBuildCaseBox .cBuildCaseSystem .cPageControlBox .cPageBase {
+  border: 2px solid rgba(0, 0, 0, 0);
+}
+.cBuildCaseBox .cBuildCaseSystem .cPageControlBox .cPageTemplate:hover, .cBuildCaseBox .cBuildCaseSystem .cPageControlBox .cPageBase:hover {
+  border: 2px solid #008a3a;
+}
+.cBuildCaseBox .cBuildCaseSystem .cPageControlBox .cPageBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cItemTemplate {
+  display: none !important;
+}
+
+.cPageTemplate {
+  display: none !important;
+}
