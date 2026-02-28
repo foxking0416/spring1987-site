@@ -13,7 +13,7 @@ const DEF_DATABASE_PROJECT_PATH = DEF_DATABASE_PATH + "Project.json";
 const DEF_BUILD_CASE_BIOLD_TYPE_10_1_ICON = DEF_IMAGE_FILE_PATH + "Icon/BuildCaseSystem/BuildType/10_1.png"
 
 const DEF_ALL = "all";
-const DEF_SHOW_FOLDER_NAME = "Show";
+const DEF_SHOW_FOLDER_NAME = "show";
 
 const DEF_URL_KEY = "Info";
 const DEF_URL_VAULE_BUILD_CASE = "BuildCase";

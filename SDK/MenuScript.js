@@ -498,7 +498,7 @@ function CreateFooter(){
 
 
 	const kCopyright = $("<div></div>").attr("class", "cCopyright");
-	$( kCopyright ).text( "Copyright © 2021華春營造有限公司, All Rights Reserved." );
+	$( kCopyright ).text( "Copyright © 2026華春營造有限公司, All Rights Reserved." );
 	const kcCopyrightBox = $(".cCopyrightBox");
 	$( kCopyright ).appendTo( kcCopyrightBox );
 }

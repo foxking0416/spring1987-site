@@ -1,7 +1,7 @@
 const DEF_BUILD_WORK_NAME = "工程階段";
 const DEF_IMAGE_FILE_PATH = "../Image/"
 const DEF_BUILD_CASE_IMAGE_PATH = DEF_IMAGE_FILE_PATH + "BuildCase/";
-const DEF_BUILD_CASE_SHOW_IMAGE_PATH = "Show/"
+const DEF_BUILD_CASE_SHOW_IMAGE_PATH = "show/"
 const DEF_BUILD_CASE_BUILD_IMAGE_PATH = "build"
 
 const DEF_HOME_HTML_PATH = "../Home/"
