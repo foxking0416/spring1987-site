@@ -1,0 +1,34 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(while read f)",
+      "Bash(do basename \"$f\")",
+      "Bash(done)",
+      "Bash(git add WinningRecord/index.html WinningRecord/script.js WinningRecord/style.css \"Image/WinningRecord/Awards/\")",
+      "Bash(git add About/script.js About/style.css BuildCase/style.css Connection/style.css Experience/script.js Experience/style.css Home/script.js Home/style.css WinningRecord/script.js WinningRecord/style.css)",
+      "Bash(git commit:*)",
+      "Bash(git push origin main)",
+      "Bash(git add Database/Experience.json)",
+      "Bash(python3:*)",
+      "Bash(xargs -I {} sh -c 'echo \"\"{}:\"\"; ls {} | wc -l')",
+      "Bash(git mv \"Image/BuildCase/0_DemoCase/Build\" \"Image/BuildCase/0_DemoCase/build_temp\")",
+      "Bash(git mv \"Image/BuildCase/0_DemoCase/build_temp\" \"Image/BuildCase/0_DemoCase/build\")",
+      "Bash(xargs ls -la)",
+      "Bash(magick --version)",
+      "Bash(convert --version)",
+      "Bash(cjpeg -version)",
+      "Bash(jpegoptim --version)",
+      "Bash(node --version)",
+      "Bash(npm --version)",
+      "Bash(powershell -Command \"Get-Command magick -ErrorAction SilentlyContinue; Get-Command convert -ErrorAction SilentlyContinue; [System.Reflection.Assembly]::LoadWithPartialName\\(''System.Drawing''\\) | Out-Null; ''System.Drawing available''\")",
+      "Bash(python -c \"from PIL import Image; print\\(''Pillow OK''\\)\")",
+      "Bash(python -:*)",
+      "Bash(python -c \"import jsmin; print\\(''jsmin OK''\\)\")",
+      "Bash(python -c \"import rcssmin; print\\(''rcssmin OK''\\)\")",
+      "Bash(python -c \"import csscompressor; print\\(''csscompressor OK''\\)\")",
+      "Bash(pip install jsmin rcssmin --quiet)",
+      "Bash(python -c \"import jsmin, rcssmin; print\\(''OK''\\)\")",
+      "Bash(git add -A)"
+    ]
+  }
+}
