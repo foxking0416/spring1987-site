@@ -11,7 +11,7 @@ GetBannerData();
 function GetBannerData(){
 	$.ajax({
 		url: DEF_DATABASE_EXPERIENCE_PATH,
-		method: "post",
+		method: "get",
 		data: {},
 		dataType: "json",
 		success: function(res){

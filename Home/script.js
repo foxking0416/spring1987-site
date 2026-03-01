@@ -808,7 +808,7 @@ function ProcessBannerData( kDataList ){
 function GetBannerData(){
 	$.ajax({
 		url: DEF_DATABASE_HOME_PATH,
-		method: "post",
+		method: "get",
 		data: {},
 		dataType: "json",
 		success: function(res){
@@ -940,7 +940,7 @@ function GetAllBuildData(){
 	}
 	$.ajax({
 		url: DEF_DATABASE_PROJECT_PATH,
-		method: "post",
+		method: "get",
 		data: {},
 		dataType: "json",
 		success: function(res){

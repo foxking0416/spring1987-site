@@ -54,7 +54,7 @@ function ConnectionButton(){
 function GetBannerData(){
 	$.ajax({
 		url: DEF_DATABASE_EXPERIENCE_PATH,
-		method: "post",
+		method: "get",
 		data: {},
 		dataType: "json",
 		success: function(res){
@@ -86,7 +86,7 @@ function ProcessBannerData( kDataList ){
 function GetTypeData(){
 	$.ajax({
 		url: DEF_DATABASE_EXPERIENCE_PATH,
-		method: "post",
+		method: "get",
 		data: {},
 		dataType: "json",
 		success: function(res){

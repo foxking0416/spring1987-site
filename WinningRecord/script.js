@@ -30,7 +30,7 @@ function UpdateConnectionLine(){
 function GetBannerData(){
 	$.ajax({
 		url: DEF_DATABASE_WINNING_PATH,
-		method: "post",
+		method: "get",
 		data: {},
 		dataType: "json",
 		success: function(res){
@@ -62,7 +62,7 @@ function ProcessBannerData( kDataList ){
 function GetWinningRecordData(){
     $.ajax({
 		url: DEF_DATABASE_WINNING_PATH,
-		method: "post",
+		method: "get",
 		data: {},
 		dataType: "json",
 		success: function(res){

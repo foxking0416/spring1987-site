@@ -842,7 +842,7 @@ html, body {
 .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage .cShowBuildCaseBox .cItemTemplate .cImage, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cPreImage .cShowBuildCaseBox .cItemBase .cImage, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage .cShowBuildCaseBox .cItemTemplate .cImage, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cMainImage .cShowBuildCaseBox .cItemBase .cImage, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage .cShowBuildCaseBox .cItemTemplate .cImage, .cBuildCaseBox .cBuildCaseSystem .cBuildCaseSlideBox .cNextImage .cShowBuildCaseBox .cItemBase .cImage {
   width: 99%;
   height: 98.5%;
-  background-image: url("../Image/BuildCase/0_DemoCase/Show/0.jpg");
+  background-image: url("../Image/BuildCase/0_DemoCase/show/0.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
   background-color: #000;
